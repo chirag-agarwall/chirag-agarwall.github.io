@@ -1,7 +1,7 @@
 ---
 title: "CrossEncoders: A complex neural network compression framework"
 collection: publications
-permalink: /publication/2018-paper-title-number-3
+permalink:
 excerpt:
 date: 2018-10-01
 venue: 'IS&T Electronic Imaging'

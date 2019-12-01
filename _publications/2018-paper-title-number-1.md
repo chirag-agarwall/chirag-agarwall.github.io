@@ -1,7 +1,7 @@
 ---
 title: "Using Adipose Measures from Electronic Health Record Imaging Based Data for Discovery"
 collection: publications
-permalink: /publication/2018-paper-title-number-1
+permalink:
 excerpt:
 date: 2018-10-01
 venue: 'Journal of Obesity'

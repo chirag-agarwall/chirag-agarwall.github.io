@@ -1,7 +1,7 @@
 ---
 title: "Improving Adversarial Robustness by Encouraging Discriminative Features"
 collection: publications
-permalink: /publication/2019-paper-title-number-3
+permalink:
 excerpt:
 date: 2019-10-01
 venue: 'arXiv'

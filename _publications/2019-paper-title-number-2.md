@@ -1,7 +1,7 @@
 ---
 title: "Removing input features via a generative model to explain their attributions to classifier’s decisions"
 collection: publications
-permalink: /publication/2019-paper-title-number-2
+permalink:
 excerpt:
 date: 2019-10-01
 venue: 'arXiv'

@@ -1,11 +1,11 @@
 ---
 title: "Convergence of backpropagation with momentum for network architectures with skip connections"
 collection: publications
-permalink: /publication/2019-paper-title-number-4
+permalink:
 excerpt:
 date: 2019-10-01
 venue: 'Journal of Computational Mathematics'
-paperurl: 'Under review'
+paperurl: 'https://arxiv.org/abs/1705.07404'
 citation:
 ---
 
