@@ -9,37 +9,40 @@ redirect_from:
 
 {% include base_path %}
 
+[Download Complete Resume](Chirag_Agarwal_Resume.pdf)
+======
+
 Education
 ======
-* B.Tech in Electronics and Communication Engg., Future Institute of Engg. & Management, 2012
-* M.S. in Electrical & Computer Engg., UIC, 2017
 * Ph.D in Computer Vision and Deep Learning, UIC, 2020 (expected)
+* M.S. in Electrical & Computer Engg., UIC, 2017
+* B.Tech in Electronics and Communication Engg., Future Institute of Engg. & Management, 2012
 
 Work experience
 ======
 * Summer 2019: Research Assistant
   * Auburn University
-  * Explainable AI & Generative models
+  * Work: Explainable AI & Generative models
   * Supervisor: Dr. Anh Nguyen
 
 * Summer 2018: Computer Vision/Augmented Reality Intern
   * Robert Bosch LLC
-  * Discriminative Feature learning using DNN
+  * Work: Discriminative Feature learning using DNN
   * Supervisor: Dr. Ye Mao
 
 * Spring 2018: Imaging Science Intern
   * Tempus Labs Inc.
-  * Unsupervised ML methods for studying pathology images.
+  * Work: Unsupervised ML methods for studying pathology images.
   * Supervisor: Dr. Stephen Yip
 
 * Summer 2017: Research and Development Intern
   * Kitware Inc.
-  * Object detection and segmentation
+  * Work: Object detection and segmentation
   * Supervisor: Dr. Eran Swears
   
 * Summer 2016: Research Intern
   * Geisinger Health Systems
-  * Active contour models
+  * Work: Active contour models
   * Supervisor: Dr. Mohammad Arbabshirani
 
 <!-- Skills
