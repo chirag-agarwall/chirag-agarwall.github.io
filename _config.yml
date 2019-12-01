@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Chirag Agarwal / Site Title"
+title                    : "Chirag Agarwal"
 title_separator          : "-"
 name                     : &name "Chirag Agarwal"
 description              : &description "Ph.D. Candidate"
@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Chirag Agarwal"
-  avatar           : "images/chirag_agarwal_photograph.jpg"
+  avatar           : "chirag_agarwal_photograph.jpg"
   bio              : "Computer Vision | Deep Learning"
   location         : "Chicago, IL"
   employer         :
