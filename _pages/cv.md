@@ -11,9 +11,9 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.Tech in Electronics and Communication Engg., Future Institute of Engg. & Management, 2012
+* M.S. in Electrical & Computer Engg., UIC, 2017
+* Ph.D in Computer Vision and Deep Learning, UIC, 2020 (expected)
 
 Work experience
 ======
