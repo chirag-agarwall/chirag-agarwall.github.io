@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-[Download Complete Resume](Chirag_Agarwal_Resume.pdf)
+[Download](Chirag_Agarwal_Resume.pdf)
 ======
 
 Education
