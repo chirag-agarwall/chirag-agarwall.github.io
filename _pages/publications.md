@@ -13,7 +13,7 @@ You can also find my articles on <u><a href="https://scholar.google.com/citation
 *ICIP, 2019.*
 
 ### [Convergence of backpropagation with momentum for network architectures with skip connections](https://arxiv.org/abs/1705.07404)
-*Journal of Computational Mathematics, (Under review)*
+*Journal of Computational Mathematics, 2019.*
 
 ### [An Explainable Adversarial Robustness Metric for Deep Learning Neural Networks](https://arxiv.org/abs/1806.01477)
 *arXiv, 2018.*
