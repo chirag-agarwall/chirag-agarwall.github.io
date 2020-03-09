@@ -6,6 +6,8 @@ author_profile: true
 ---
 You can also find my articles on <u><a href="https://scholar.google.com/citations?user=AFEjd1QAAAAJ&hl=en">my Google Scholar profile</a>.</u>
 
+### [SAM: The sensitivity of attribution methods to hyperparameters.]() *Computer Vision and Pattern Recognition (CVPR), 2020.*
+
 ### [Removing input features via a generative model to explain their attributions to classifier’s decisions](https://arxiv.org/pdf/1910.04256.pdf)
 *arXiv, 2019.*
 
