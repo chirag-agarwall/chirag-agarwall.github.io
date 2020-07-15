@@ -13,8 +13,8 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Computer Vision and Deep Learning, University of Illinois at Chicago, 2020 (expected)
-* M.S. in Electrical & Computer Engg., University of Illinois at Chicago, 2017
+* Ph.D in Computer Vision and Deep Learning, University of Illinois at Chicago, 2020
+* M.S. in Electrical & Computer Engg., University of Illinois at Chicago, 2018
 * B.Tech in Electronics and Communication Engg., Future Institute of Engg. & Management, 2012
 
 Work experience
@@ -73,5 +73,6 @@ Talks
   
 Service and leadership
 ======
-* Reviewing Conference papers:: ICIP, ICLR
+* Program Committee: Workshop on Human Interpretability in Machine Learning (WHI), 2020
+* Reviewing Conference papers: ICIP (2019, 2020), WHI (2020)
 * President of UIC ECE Journal Club
