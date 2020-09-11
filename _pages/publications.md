@@ -9,7 +9,7 @@ You can also find my articles on <u><a href="https://scholar.google.com/citation
 ### [Intriguing generalization and simplicity of adversarially trained neural networks.](https://arxiv.org/abs/2006.09373)
 *ICML, WHI Workshop, 2020 (Spotlight presentation).*
 
-### [Estimating Example Difficulty using Variance of Gradients.]()
+### [Estimating Example Difficulty using Variance of Gradients.](https://arxiv.org/pdf/2008.11600.pdf)
 *ICML, WHI Workshop, 2020 (Poster presentation).*
 
 ### [Deep-URL: A Model-Aware Approach To Blind Deconvolution Based On Deep Unfolded Richardson-Lucy Network.](https://arxiv.org/abs/2002.01053)
@@ -18,7 +18,7 @@ You can also find my articles on <u><a href="https://scholar.google.com/citation
 ### [SAM: The sensitivity of attribution methods to hyperparameters.](https://arxiv.org/pdf/2003.08754.pdf)
 *CVPR, 2020 (Oral Acceptance).*
 
-### [Removing input features via a generative model to explain their attributions to classifier’s decisions](https://arxiv.org/pdf/1910.04256.pdf)
+### [Explaining image classifiers by removing input features using generative models](https://arxiv.org/pdf/1910.04256.pdf)
 *arXiv, 2019.*
 
 ### [Improving Adversarial Robustness by Encouraging Discriminative Features](https://ieeexplore.ieee.org/document/8803601)
