@@ -5,10 +5,10 @@ permalink: /talks/
 author_profile: true
 ---
 
-### [ML Collective]()
+### [ML Collective](ML_collective_VOG.pptx)
 *San Francisco, USA*
 
-### [An Intro to ML for GeoSpatial data]()
+### [An Intro to ML for GeoSpatial data](jaipuria_machine_learning_webinar.pptx)
 *Department of Statistics and Geography, Jaipuria College, Kolkata, India.*
 
 {% include base_path %}
