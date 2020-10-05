@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "[CV](Chirag_Agarwal_Resume.pdf)"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-### [Download](Chirag_Agarwal_Resume.pdf)
+<!-- ### [Download](Chirag_Agarwal_Resume.pdf)
 
 Education
 ======
@@ -42,7 +42,7 @@ Work experience
 * Summer 2016: Research Intern
   * Geisinger Health Systems
   * Research: Active contour models
-  * Supervisor: Dr. Mohammad Arbabshirani
+  * Supervisor: Dr. Mohammad Arbabshirani -->
 
 <!-- Skills
 ======
@@ -71,8 +71,8 @@ Talks
     {% include archive-single-cv.html %}
   {% endfor %}</ul> -->
   
-Service and leadership
+<!-- Service and leadership
 ======
 * Program Committee: Workshop on Human Interpretability in Machine Learning (WHI), 2020
 * Reviewing Conference papers: ICIP (2019, 2020), WHI (2020)
-* President of UIC ECE Journal Club
+* President of UIC ECE Journal Club -->
