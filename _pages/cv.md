@@ -1,4 +1,5 @@
-[CV](Chirag_Agarwal_Resume.pdf)
+<!-- [CV](Chirag_Agarwal_Resume.pdf) -->
+<u><a href="Chirag_Agarwal_Resume.pdf">CV</a>.</u>
 <!-- ---
 layout: archive
 title: "CV"
