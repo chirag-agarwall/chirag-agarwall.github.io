@@ -1,15 +1,13 @@
-<!-- [CV](Chirag_Agarwal_Resume.pdf) -->
-<u><a href="Chirag_Agarwal_Resume.pdf">CV</a>.</u>
-<!-- ---
+---
 layout: archive
 title: "CV"
-permalink: /cv/
+permalink: <a href="Chirag_Agarwal_Resume.pdf">CV</a>
 author_profile: true
 redirect_from:
   - /resume
 ---
 
-{% include base_path %} -->
+{% include base_path %}
 
 <!-- ### [Download](Chirag_Agarwal_Resume.pdf)
 

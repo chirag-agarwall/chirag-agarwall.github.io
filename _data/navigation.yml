@@ -16,9 +16,7 @@ main:
   #   url: /year-archive/
     
   - title: "CV"
-    url: <u><a href="Chirag_Agarwal_Resume.pdf">CV</a></u>
-  #  url: /cv/
-
+    url: /cv/
     
   # - title: "Guide"
   #   url: /markdown/
