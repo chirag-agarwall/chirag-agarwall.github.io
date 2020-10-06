@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: [CV](Chirag_Agarwal_Resume.pdf)
+title: "[CV](Chirag_Agarwal_Resume.pdf)"
 permalink: [CV](Chirag_Agarwal_Resume.pdf)
 author_profile: true
 redirect_from:
