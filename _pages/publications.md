@@ -6,13 +6,14 @@ author_profile: true
 ---
 You can also find my articles on <u><a href="https://scholar.google.com/citations?user=AFEjd1QAAAAJ&hl=en">my Google Scholar profile</a>.</u>
 
-### [Explaining image classifiers by removing input features using generative models](https://arxiv.org/pdf/1910.04256.pdf), *Asian Conference on Computer Vision (ACCV), 2020; Poster presentation (acceptance rate: ~22%).*
+### [Explaining image classifiers by removing input features using generative models](https://arxiv.org/pdf/1910.04256.pdf), 
+*Asian Conference on Computer Vision (ACCV), 2020; Poster presentation (acceptance rate: ~22%).*
 
 ### [Intriguing generalization and simplicity of adversarially trained neural networks.](https://arxiv.org/abs/2006.09373)
-*International Conference on Machine Learning, WHI Workshop, 2020 (Spotlight presentation).*
+*International Conference on Machine Learning, WHI Workshop, 2020; Spotlight presentation.*
 
 ### [Estimating Example Difficulty using Variance of Gradients.](https://arxiv.org/pdf/2008.11600.pdf)
-*International Conference on Machine Learning, WHI Workshop, 2020 (Poster presentation).*
+*International Conference on Machine Learning, WHI Workshop, 2020; Poster presentation.*
 
 ### [Deep-URL: A Model-Aware Approach To Blind Deconvolution Based On Deep Unfolded Richardson-Lucy Network.](https://arxiv.org/abs/2002.01053)
 *IEEE Conference on Image Processing (ICIP), 2020; (acceptance rate ~42%).*
