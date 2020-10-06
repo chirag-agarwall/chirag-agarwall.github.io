@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: "CV"
-permalink: <a href="Chirag_Agarwal_Resume.pdf">CV</a>
+title: [CV](Chirag_Agarwal_Resume.pdf)
+permalink: [CV](Chirag_Agarwal_Resume.pdf)
 author_profile: true
 redirect_from:
   - /resume
