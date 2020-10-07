@@ -1,4 +1,5 @@
----
+[CV](Chirag_Agarwal_Resume.pdf)
+<!-- ---
 layout: archive
 title: "CV"
 permalink: /cv/
@@ -7,7 +8,7 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+{% include base_path %} -->
 
 <!-- ### [Download](Chirag_Agarwal_Resume.pdf)
 
