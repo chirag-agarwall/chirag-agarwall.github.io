@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: ""
-permalink: [Download](Chirag_Agarwal_Resume.pdf)
+permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
