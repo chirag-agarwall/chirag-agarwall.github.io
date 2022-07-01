@@ -7450,6 +7450,8 @@ h1, h2, h3, h4, h5,
 #colorlib-main {
   width: 100%;
   float: right;
+  height: 100vh;
+  
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
@@ -7457,7 +7459,7 @@ h1, h2, h3, h4, h5,
   transition: all 0.5s ease; }
   @media (min-width: 992px) {
     #colorlib-main {
-      width: 75%; } }
+      width: 72%; } }
 
 .colorlib-nav-toggle {
   cursor: pointer;
@@ -8025,17 +8027,25 @@ textarea.form-control {
   -ms-border-radius: 50%;
   border-radius: 50%; }
 
+  .desc {
+    margin-top: -3%;
+    text-align: left;
+  }
+
 .about-author .desc h3 {
   font-size: 20px; }
 
 .ftco-section {
-  padding: 6em 1.8em;
+  /*padding: 6em 1.8em;*/
   position: relative; }
 
 .ftco-footer {
   font-size: 14px;
   background: #132238;
-  padding: 6em 0; }
+  margin-top: -2rem;
+  text-align: center;
+  /*padding: 6em 0;*/
+   }
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;
     letter-spacing: .1em; }
@@ -8541,3 +8551,61 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+   /* @keyframes news-list {
+     0% {
+    transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(0, -100%,);
+    }
+}*/
+
+.news-list ul li {
+  padding: 5px 0;
+}
+
+
+
+.news-list ul {
+  /* animation properties */
+  -moz-transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  
+  -moz-animation: my-animation 10s linear infinite;
+  -webkit-animation: my-animation 10s linear infinite;
+  animation: my-animation 10s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateY(50%); }
+  to { -moz-transform: translateY(-40%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateY(50%); }
+  to { -webkit-transform: translateY(-40%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+  }
+  to {
+    -moz-transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    transform: translateY(-40%);
+  }
+}
+
+.news-list ul:hover {
+    animation-play-state: paused;
+}
+
+a:hover {
+    text-decoration: underline; }
