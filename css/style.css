@@ -2029,3 +2029,133 @@ pre code {
   justify-content: center;
 }
 
+.top-text {
+  top: 0;
+}
+
+#top #av-burger-menu-ul {
+  vertical-align: top;
+}
+
+.header-name {
+  font-size: 2rem;
+}
+
+.toggle-label {
+  width:80px;
+  height:25px;
+  position: relative;
+  top: 3px;
+  display: block;
+  background: #ebebeb;
+  border-radius: 200px;
+  box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+  cursor: pointer;
+}
+
+.toggle-label:after {
+  content: "";
+  width:20px;
+  height: 20px;
+  position: absolute;
+  top:3px;
+  left:3px;
+  background: linear-gradient(180deg,#ffcc89,#d8860b);
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+#darkmode-toggle, #darkmode-toggle2 {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+#darkmode-toggle:checked + .toggle-label, #darkmode-toggle2:checked + .toggle-label {
+  background: #242424;
+}
+#darkmode-toggle:checked + .toggle-label:after, #darkmode-toggle2:checked + .toggle-label:after{
+  left:80px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg,#777,#3a3a3a);
+}
+.toggle-label, .toggle-label:after {
+  transition: 0.3s
+}
+
+.toggle-label:active:after{ 
+  width: 260px; 
+}
+
+.main-talk, .main-publ {
+  margin-top: 60px;
+}
+
+.main-index {
+  margin-top: 36px;
+}
+
+
+.toggle-label svg {
+  position: absolute;
+  width: 120px;
+  top:4px;
+  z-index: 100;
+}
+.toggle-label svg.sun {
+  left:-47px;
+  fill:#fff;
+  transition: 0.3s;
+}
+.toggle-label svg.moon {
+  left: 10px;
+  fill:#7e7e7e;
+  transition: 0.3s;
+}
+#darkmode-toggle:checked + .toggle-label svg.sun, #darkmode-toggle2:checked + .toggle-label svg.sun {
+  fill:#7e7e7e;
+}
+#darkmode-toggle:checked + .toggle-label svg.moon, #darkmode-toggle2:checked + .toggle-label svg.moon {
+  fill:#fff;
+}
+
+#twitter-widget-1 {
+  display: none !important;
+}
+
+.timeline-Tweet-text {
+  font-size: 18px !important;
+}
+
+.mobile-toggle {
+  display: none;
+}
+
+.background-image {
+  height: 400px;
+}
+
+
+.dark-mode .main_color, .dark-mode div .main_color .tabcontainer .active_tab_content, .dark-mode div .main_color .tabcontainer .active_tab {
+  background-color: #292F33;
+  color: white;
+}
+
+.dark-mode .main_color h3, .dark-mode .main_color h1 {
+  color:  #2698ba;
+}
+
+.dark-mode #twitter-widget-1 {
+  display: block !important;
+}
+
+.dark-mode #twitter-widget-0 {
+  display: none !important;
+}
+
+.dark-mode #header_main {
+      background-color: #1c1c1d;
+}
+
+.dark-mode .main_color a, .dark-mode .main_color .dark-mode .widget_first, .dark-mode .main_color strong, .dark-mode .main_color b, .dark-mode .main_color b a, .dark-mode .main_color strong a, .dark-mode .main_color #js_sort_items a:hover, .dark-mode .main_color #js_sort_items a.active_sort, .dark-mode .main_color .av-sort-by-term a.active_sort,.dark-mode .main_color .special_amp, .dark-mode .main_color .taglist a.activeFilter, .dark-mode .main_color #commentform .required, .dark-mode #top .main_color .av-no-color.av-icon-style-border a.av-icon-char, .dark-mode .html_elegant-blog #top .main_color .blog-categories a, .dark-mode .html_elegant-blog #top .main_color .blog-categories a:hover {
+    color: #2b7bb9;
+}

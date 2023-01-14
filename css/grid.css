@@ -106,9 +106,9 @@ body .unit.alpha, body .units.alpha {
   }
   
 .responsive #top #wrap_all .av-break-at-tablet-flextable, .responsive .av-layout-grid-container.av-break-at-tablet {
-	display: block;	
+    display: block; 
   }
-	
+    
 .responsive #top #wrap_all .av-flex-cells .no_margin{
     height:auto !important;
     overflow: hidden;
@@ -140,16 +140,95 @@ body .unit.alpha, body .units.alpha {
   .responsive .publication-scholar {
     display: block;
   }
-  
+
+.responsive #darkmode-toggle2 {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.responsive .toggle-label:active:after{ 
+  width: 50px; 
+}
+
+
+.responsive #twitter-widget-1 {
+  display: none !important;
+}
+
+.responsive .timeline-Tweet-text {
+  font-size: 18px !important;
+}
+
+
+.responsive .dark-mode .main_color, .responsive .dark-mode div .main_color .tabcontainer .active_tab_content, .responsive .dark-mode div .main_color .tabcontainer .active_tab {
+  background-color: #292F33;
+  color: white;
+}
+
+.responsive .dark-mode .main_color h3, .responsive .dark-mode .main_color h1 {
+  color:  #2698ba;
+}
+
+.responsive .dark-mode #twitter-widget-1 {
+  display: block !important;
+}
+
+.responsive .dark-mode #twitter-widget-0 {
+  display: none !important;
+}
+
+.responsive .dark-mode #header_main {
+      background-color: #1c1c1d;
+}
+
+.responsive .dark-mode .main_color a, .responsive .dark-mode .main_color .widget_first,.responsive .dark-mode .main_color strong, .responsive .dark-mode .main_color b,.responsive .dark-mode .main_color b a,.responsive .dark-mode .main_color strong a, .responsive .dark-mode .main_color #js_sort_items a:hover,.responsive .dark-mode .main_color #js_sort_items a.active_sort,.responsive .dark-mode .main_color .av-sort-by-term a.active_sort, .responsive .dark-mode .main_color .special_amp,.responsive .dark-mode .main_color .taglist a.activeFilter,.responsive .dark-mode .main_color #commentform .required,.responsive .dark-mode #top .main_color .av-no-color.av-icon-style-border a.av-icon-char, .responsive .dark-mode .html_elegant-blog #top .main_color .blog-categories a,.responsive .dark-mode .html_elegant-blog #top .main_color .blog-categories a:hover {
+    color: #2b7bb9;
+}
+
+.responsive .mobile-toggle {
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  display: inline-block;
+}
+
+.responsive .background-image {
+  height: 1200px;
+}
+
+.responsive .dark-mode .av-burger-overlay-scroll {
+  background-color:  #1c1c1d !important;
+}
+
+.responsive .top-text {
+  top: 50px;
+}
+
+.responsive .header-name {
+  font-size: 1.5rem
+}
+
+.responsive .main-talk, .main-publ {
+  margin-top: 0;
+}
+
+.responsive .main-index {
+  margin-top: 0;
+}
+
 
 }
+
+
 
 
 /*  #Mobile (Portrait)
 ================================================== */
 
 @media only screen and (max-width: 767px) {
-	
+    
   .responsive .boxed #wrap_all { overflow: hidden; /*needed for mobile menu scrolling */ }
   .responsive #top { overflow-x: hidden; }
   .responsive .boxed#top, .responsive #top.boxed .stretch_full , 
@@ -177,26 +256,35 @@ body .unit.alpha, body .units.alpha {
   }
   
   .responsive #top #wrap_all .av-flex-cells .no_margin{
-	  display: block;
-	  margin: 0;
-	  height:auto !important;
-	  overflow: hidden;
-	  padding-left:8% !important;
-	  padding-right:8% !important;
+      display: block;
+      margin: 0;
+      height:auto !important;
+      overflow: hidden;
+      padding-left:8% !important;
+      padding-right:8% !important;
   }
   
   .responsive #top #wrap_all .av-flex-cells .no_margin .flex_cell_inner{
-	    width: 100%;
-		max-width: 100%;
-		margin: 0 auto;  
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;  
   }
   
   .responsive #top #wrap_all .av-flex-cells .no_margin.av-zero-padding{
-	  padding-left:0% !important;
-	  padding-right:0% !important;
+      padding-left:0% !important;
+      padding-right:0% !important;
   }
   
   .responsive #top #wrap_all .flex_column:empty{margin:0;}
+
+
+  
+.responsive .dark-mode .main_color, .responsive .dark-mode div .main_color .tabcontainer .active_tab_content, .responsive .dark-mode div .main_color .tabcontainer .active_tab, .responsive .dark-mode .main_color .active_tab_content {
+  background-color: #292F33 !important;
+  color: white;
+}
+
+
 }
 /* #Mobile (Landscape)
 ================================================== */
@@ -370,24 +458,24 @@ div .av_one_tenth {
 ================================================== */
 
 #top .flex_column_table{
-	display: table;
-	table-layout: fixed;
-	width:100%;
-	float: left;	/* added 4.7.4.1 to fix equal height after individual height columns  */
+    display: table;
+    table-layout: fixed;
+    width:100%;
+    float: left;    /* added 4.7.4.1 to fix equal height after individual height columns  */
 }
 
 #top .flex_column_table.av-equal-height-column-flextable:not(:first-child){ 
-	margin-top: 50px;  /* added 4.7.5.1 to fix inconsistent layout equal height after individual height columns but remove when first entry  */
+    margin-top: 50px;  /* added 4.7.5.1 to fix inconsistent layout equal height after individual height columns but remove when first entry  */
 }
 
 #top .flex_column_table_cell{
-	float:none;
-	display: table-cell;
+    float:none;
+    display: table-cell;
 }
 
 #top .av-flex-placeholder{
-	display: table-cell;
-	width: 6%;
+    display: table-cell;
+    width: 6%;
 }
 
 .av-align-top{ vertical-align: top; }
