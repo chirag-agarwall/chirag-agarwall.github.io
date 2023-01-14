@@ -2020,7 +2020,7 @@ pre code {
 }
 
 .talk-grid {
-  display: flex; gap: 40px;
+  display: flex; gap: 10%;
   flex-direction: row;
 }
 
