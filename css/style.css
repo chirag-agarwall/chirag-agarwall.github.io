@@ -2082,9 +2082,9 @@ pre code {
   transition: 0.3s
 }
 
-.toggle-label:active:after{ 
-  width: 260px; 
-}
+/*.toggle-label:active:after{ 
+  width: 85px; 
+}*/
 
 .main-talk, .main-publ {
   margin-top: 60px;
