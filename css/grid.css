@@ -132,6 +132,10 @@ body .unit.alpha, body .units.alpha {
     margin: 0;
   }
 
+  .responsive .single-pdf {
+    margin-left: 15%;
+  }
+
   .responsive .talk-grid {
     flex-direction: column;
     display: flex; gap: 40px;
@@ -165,10 +169,6 @@ body .unit.alpha, body .units.alpha {
 .responsive .dark-mode .main_color, .responsive .dark-mode div .main_color .tabcontainer .active_tab_content, .responsive .dark-mode div .main_color .tabcontainer .active_tab {
   background-color: #292F33;
   color: white;
-}
-
-.responsive .dark-mode .main_color h3, .responsive .dark-mode .main_color h1 {
-  color:  #2698ba;
 }
 
 .responsive .dark-mode #twitter-widget-1 {

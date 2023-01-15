@@ -2014,6 +2014,10 @@ pre code {
   margin-left: 30%;
 }
 
+.single-pdf {
+    margin-left: 45%;
+  }
+
 .talk-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
@@ -2094,6 +2098,18 @@ pre code {
   margin-top: 36px;
 }
 
+.dark-mode .light-theme {
+  display: none;
+}
+
+.dark-theme {
+  display: none;
+}
+
+.dark-mode .dark-theme {
+  display: block;
+}
+
 
 .toggle-label svg {
   position: absolute;
@@ -2122,10 +2138,6 @@ pre code {
   display: none !important;
 }
 
-.timeline-Tweet-text {
-  font-size: 18px !important;
-}
-
 .mobile-toggle {
   display: none;
 }
@@ -2134,14 +2146,27 @@ pre code {
   height: 400px;
 }
 
+#top #header.header_color.av_header_transparency .av-main-nav > li > a .avia-menu-text, .header_color a {
+    color: #1a80d4; 
+}
+
+.av_header_transparency #header_main {
+  background: #e1e1e1;
+    color: #1a80d4;
+}
+
 
 .dark-mode .main_color, .dark-mode div .main_color .tabcontainer .active_tab_content, .dark-mode div .main_color .tabcontainer .active_tab {
   background-color: #292F33;
   color: white;
 }
 
-.dark-mode .main_color h3, .dark-mode .main_color h1 {
+.dark-mode .main_color h1 {
   color:  #2698ba;
+}
+
+.dark-mode .main_color h3 {
+  color: white;
 }
 
 .dark-mode #twitter-widget-1 {

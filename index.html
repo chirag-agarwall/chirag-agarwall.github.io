@@ -47,7 +47,7 @@
 
     <div id='wrap_all'>
         <header id='header'
-            class='all_colors header_color light_bg_color  av_header_top av_logo_left av_main_nav_header av_menu_right av_slim av_header_sticky av_header_shrinking_disabled av_header_stretch_disabled av_mobile_menu_tablet av_header_transparency av_header_searchicon av_header_unstick_top_disabled av_bottom_nav_disabled  av_header_border_disabled av_header_transparency' 
+            class='all_colors header_color light_bg_color  av_header_top av_logo_left av_main_nav_header av_menu_right av_slim av_header_sticky av_header_shrinking_disabled av_header_stretch_disabled av_mobile_menu_tablet av_header_transparency av_header_searchicon av_header_unstick_top_disabled av_bottom_nav_disabled  av_header_border_disabled' 
             role="banner" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
             <div id='header_main' class='container_wrap container_wrap_logo'>
                 <div class='container av-logo-container'>
@@ -335,14 +335,21 @@
                                                             ".timeline-Tweet-text{line-height: 16px !important;}" +
                                                             ".timeline-Tweet-text{font-weight: 400 !important;}";
 
+                                                            "#twitter-widget-1{width: 100% !important;}" +
+                                                            ".timeline-Tweet-text{font-size:12px !important;}" +
+                                                            ".timeline-Tweet-text{line-height: 16px !important;}" +
+                                                            ".timeline-Tweet-text{font-weight: 400 !important;}";
+
 
                                                         function customTwitter() {
                                                             var w = document.getElementById("twitter-widget-0").contentDocument;
+                                                            var w1 = document.getElementById("twitter-widget-1").contentDocument;
 
                                                             var s = document.createElement("style");
                                                             s.innerHTML = widgetCSS;
                                                             s.type = "text/css";
                                                             w.head.appendChild(s);
+                                                            w1.head.appendChild(s);
                                                         }
                                                     </script> 
                                                 </div>
