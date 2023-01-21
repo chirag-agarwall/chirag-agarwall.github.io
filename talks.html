@@ -38,7 +38,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/aos.css">
@@ -53,7 +53,7 @@
 
 </head>
 
-<body id="top" itemscope="itemscope" itemtype="https://schema.org/WebPage" class="dark-mode">
+<body id="top" itemscope="itemscope" itemtype="https://schema.org/WebPage">
     <div id='wrap_all'>
 
 
@@ -66,7 +66,7 @@
                         <span class='logo avia-standard-logo header-name' ><a
                                 href='https://chirag126.github.io/' >Chirag Agarwal</a></span>
                         <span class="mobile-toggle">
-                               <input type="checkbox" id="darkmode-toggle2" onchange="toggleTheme()" checked />
+                               <input type="checkbox" id="darkmode-toggle2" onchange="toggleTheme()" />
                                         <label for="darkmode-toggle2" class="toggle-label">
                                             <svg height="18px" width="18px" version="1.1" id="_x34_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000" class="sun">
 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
@@ -93,14 +93,14 @@
                                     </li>
                                     <li id="menu-item-787"
                                         class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-3">
-                                        <a href="publications.html"><span class="avia-bullet"></span><span
+                                        <a href="publications.html" ><span class="avia-bullet"></span><span
                                                 class="avia-menu-text">Publications</span><span
                                                 class="avia-menu-fx"><span class="avia-arrow-wrap"><span
                                                         class="avia-arrow"></span></span></span></a>
                                     </li>
                                     <li id="menu-item-835"
                                         class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item menu-item-top-level menu-item-top-level-4">
-                                        <a href="talks.html"><span class="avia-bullet"></span><span
+                                        <a href="talks.html" ><span class="avia-bullet"></span><span
                                                 class="avia-menu-text">Talks</span><span class="avia-menu-fx"><span
                                                     class="avia-arrow-wrap"><span
                                                         class="avia-arrow"></span></span></span></a>
@@ -112,9 +112,9 @@
                                                 class="avia-menu-fx"><span class="avia-arrow-wrap"><span
                                                         class="avia-arrow"></span></span></span></a>
                                     </li> -->
-                                    <li id="menu-item-835"
+                                    <li id="menu-item-835" 
                                         class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-4">
-                                        <input type="checkbox" id="darkmode-toggle" onchange="toggleTheme()" checked />
+                                        <input type="checkbox" id="darkmode-toggle" onchange="toggleTheme()" />
                                         <label for="darkmode-toggle" class="toggle-label">
                                             <svg height="18px" width="18px" version="1.1" id="_x34_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000" class="sun">
 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
@@ -153,14 +153,14 @@
                                 </ul>
                             </div>
                             <ul class='noLightbox social_bookmarks icon_count_2'>
-                                <li><a href="https://github.com/chirag126"><i class="icon-github"
+                                <li><a href="https://github.com/chirag126" target="_blank"><i class="icon-github"
                                             style="font-size: 2em"></i> </a></li>
-                                <li style="margin-left: 10px"><a href="https://twitter.com/_cagarwal"><i class="icon-twitter"
+                                <li style="margin-left: 10px"><a href="https://twitter.com/_cagarwal" target="_blank"><i class="icon-twitter"
                                             style="font-size: 2em"></i></a></li>
                                 <li style="margin-left: 10px"><a
-                                        href="https://scholar.google.com/citations?hl=en&user=AFEjd1QAAAAJ&view_op=list_works&sortby=pubdate"><i
+                                        href="https://scholar.google.com/citations?hl=en&user=AFEjd1QAAAAJ&view_op=list_works&sortby=pubdate" target="_blank"><i
                                             class="icon-google" style="font-size: 2em"></i></a></li>
-                                <li style="margin-left: 10px"><a href="https://www.linkedin.com/in/chirag-agarwal-0a6a43a1/"><i
+                                <li style="margin-left: 10px"><a href="https://www.linkedin.com/in/chirag-agarwal-0a6a43a1/" target="_blank"><i
                                             class="icon-linkedin" style="font-size: 2em"></i></a></li>
                             </ul>
                         </nav>
@@ -261,11 +261,31 @@
         <!-- end wrap_all -->
     </div>
      <script type="text/javascript">
+        // function setTheme() {
+        //     var themes = location.href.split('?')
+        //     if(themes.length > 1) {
+        //         var theme = themes[1] === "dark-mode" ? "dark-mode" : "";
+        //           document.getElementById("darkmode-toggle").checked = theme ? true : false;
+        //      var element = document.body;
+        //         element.classList.add(theme);
+              
+        //     } else {
+        //         var element = document.body;
+        //         // element.classList.add("dark-mode");
+        //         document.getElementById("darkmode-toggle").checked = false;
+        //     }
+        // }
+
         function toggleTheme() {
           var element = document.body;
           element.classList.toggle("dark-mode");
-
         }
+
+        // function updateTheme(href) {
+        //     var element = document.body;
+        //     var theme = element.classList[0] ? "dark-mode" : "light";
+        //     location.href = href + '?' + theme;
+        // }
     </script>
 
     <script type='text/javascript' src='js/menu.js' id='avia-module-menu-js'></script>

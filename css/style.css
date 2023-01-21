@@ -1999,7 +1999,7 @@ pre code {
 }
 
 .publication-icon {
-  font-size: 77px;
+  font-size: 63px;
 }
 
 .publication-icon-margin {
@@ -2153,6 +2153,10 @@ pre code {
 .av_header_transparency #header_main {
   background: #e1e1e1;
     color: #1a80d4;
+}
+
+.main_color a {
+  color:  rgb(29, 155, 240);
 }
 
 
