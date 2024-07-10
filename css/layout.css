@@ -23,11 +23,13 @@
     }
     
     
-    #header_main .container, .main_menu ul:first-child > li a{ height:88px; line-height: 88px; }
+    #header_main .container, .main_menu ul:first-child > li a{ 
+        height:88px;
+     line-height: 88px; }
     
     
     /* sticky variation*/
-    .html_header_top.html_header_sticky #main{ padding-top:88px; } 
+    .html_header_top.html_header_sticky #home #main{ padding-top: 100px; } 
     .html_header_top.html_header_transparency #header{ position: absolute; }
     .html_header_top.html_header_sticky #header{ position: fixed; }
     .html_header_top.html_header_sticky.html_bottom_nav_header #main{ padding-top:140px; }
@@ -83,7 +85,9 @@
     .html_header_top.html_bottom_nav_header.html_logo_right .main_menu ul:first-child{width:auto; float:right;}
     
     /*top bar variation*/
-    .html_header_top.html_header_topbar_active.html_header_sticky #top #main{ padding-top:119px; } 
+    .html_header_top.html_header_topbar_active.html_header_sticky #top #main{ 
+        padding-top:119px;
+         } 
     .html_header_top.html_header_topbar_active.html_header_sticky.html_large #top #main{ padding-top:147px; } 
     .html_header_top.html_header_topbar_active.html_header_sticky.html_bottom_nav_header #top #main{ padding-top:170px; }
     .html_header_top.html_header_topbar_active.html_header_sticky.html_large.html_bottom_nav_header #top #main{ padding-top:198px; }
@@ -139,9 +143,13 @@
     float: left;
     }
     
-    .avia-menu.av_menu_icon_beside{padding-right:25px; margin-right:25px; border-right-width: 1px; border-right-style: solid;  
+    .avia-menu.av_menu_icon_beside{
+       /* padding-right:25px; 
+        margin-right:25px;*/
+     /*border-right-width: 1px; 
+     border-right-style: solid;  
         -webkit-transition: border-color 0.2s ease-in-out;
-        transition: border-color 0.2s ease-in-out;
+        transition: border-color 0.2s ease-in-out;*/
     }
     .fallback_menu + .social_bookmarks { padding-left: 18px; }
     
@@ -204,7 +212,7 @@
     
     
     /*transparent header*/
-    .html_header_transparency #main{padding-top: 0 !important;}
+    /*.html_header_transparency #main{padding-top: 0 !important;}*/
     #top .av_header_transparency .main_menu ul:first-child > li > a:hover, #top #wrap_all .av_header_transparency .sub_menu > ul > li > a:hover{ opacity: 0.8; }
     
     #top .av_header_transparency.av_alternate_logo_active .logo a > img,
@@ -251,7 +259,7 @@
     /*scrolldown header*/
     #top .av_header_scrolldown{
     -webkit-transition: opacity 0.6s ease-out, margin 0.6s ease-out;
-    transition: opacity 0.6s ease-out, margin 0.6s ease-out;
+    transition: opacity 0.6s ease-out, margin 0.6s ease-out, height 0.6s ease-out;
     margin-top:0px;
     }
     #top .av_header_scrolldown.av_header_transparency{opacity: 0;margin-top:-250px !important;}
@@ -266,6 +274,11 @@
     
     /*perma hidden*/
     #top .header_hidden{display:none;}
+
+    #top .header-name {
+      font-size: 2rem;
+      margin-left: 10%;
+    }
     
      
     /*header separator variations*/
@@ -728,8 +741,8 @@
     
     /*logo*/
     div .logo{ 
-        float: left; 
-        position: absolute; 
+        /*float: left; */
+        /*position: absolute; */
         left: 0; 
         z-index: 1;
     }
@@ -776,9 +789,40 @@
     .av_header_transparency .logo .subtext.avia-svg-logo-sub svg{
         opacity: 1;
     }
+
+    .header_flex {
+        display: flex; 
+        justify-content: center;
+    }
+    .header_title {
+        display: none;
+    }
+
+    @media (max-width: 990px) {
+        .header_title {
+            display: flex;
+         }
+    }
+
+    #header_main {
+        background-color: #3e4435;
+    }
+
+     #home .av_header_transparency .header_title {
+        display: flex;
+        height: 45%;
+     }
+
+     #home .av_header_transparency #header_main .container {
+        height:150px;
+     }
+                
     
     /*menu*/
-    .main_menu{ clear:none; position: absolute; z-index: 100; line-height:30px; height:100%; margin:0; right:0; }
+    .main_menu{ clear:none; 
+        /*position: absolute; */
+        z-index: 100; 
+        line-height:30px; height:100%; margin:0; right:0; }
     .main_menu .pointer_arrow_wrap{display:none;}
     
     .av-main-nav-wrap{float:left; position: relative; z-index: 3;}
@@ -801,8 +845,8 @@
     padding:0 13px;
     font-weight: normal;
     font-size:12px;
-    font-weight: 600;
     font-size: 13px;
+    letter-spacing: 3px;
     -webkit-transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, border-color 0.4s ease-in-out;
     transition: 		background-color 0.4s ease-in-out, color 0.4s ease-in-out, border-color 0.4s ease-in-out;
     }
@@ -1446,9 +1490,9 @@
     padding:0;
     -webkit-transition: all 0.2s ease-in-out;
     transition: 		all 0.2s ease-in-out;
-    border-right-style: solid;
+    /*border-right-style: solid;
     border-right-width: 1px;
-    display: block;
+*/    display: block;
     width:30px;
     }
     
@@ -1499,9 +1543,27 @@
     #top #wrap_all .av-social-link-vk:hover 	   	 a{color:#fff; background-color:#597BA5; }
     #top #wrap_all .av-social-link-reddit:hover 	 a{color:#fff; background-color:#FF4500; }
     #top #wrap_all .av-social-link-yelp:hover 	 a{color:#fff; background-color:#d32323; }
-    
-    
-    
+
+    #top .responsive_wrap {
+        display: flex;
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    #top .open_position {
+        width: 180px;
+        background-color: #C2C8CB;
+        color:black;
+        border-radius: 50px;
+        align-self: center;
+        line-height: 40px;
+        height: min-content;
+        /*padding-left: 40px;*/
+    }
+
+    #top .open_position_responsive {
+        display: none;
+    }
     
     #top .av-section-bottom-logo .social_bookmarks, 
     .html_bottom_nav_header #top .av-logo-container .social_bookmarks{
@@ -1526,7 +1588,10 @@
     
     #top .av-logo-container .social_bookmarks li a{border-radius: 100px;}
     
-    
+    .latest_research {
+        display: flex;
+        flex-direction: row;
+    }
     
     
     
@@ -2392,6 +2457,55 @@
             .responsive .avia-cookiemessage-bottom-left,
             .responsive .avia-cookiemessage-top-right,
             .responsive .avia-cookiemessage-bottom-right{ width: 35%; }
+
+            .responsive #top .responsive_wrap {
+                display: block;  
+                padding: 0;
+               }
+
+            .responsive #top .open_position {
+                display: none;
+            }
+
+            .responsive #top .open_position_responsive {
+                display: block;
+            }
+
+            .responsive #top .header-name {
+                font-size: 1.5rem;
+                margin-left: 0;
+            }
+
+            .responsive .grid-layout .grid {
+                display: block;
+            }
+
+            .responsive .grid-lauout .grid .card {
+                margin-bottom: 10%;
+            }
+
+            .responsive .latest_research {
+                flex-direction: column;
+            }
+            
+            /*Publications*/ 
+            .responsive #gridid .rowpub {
+                margin: 0;
+            }
+
+            .responsive #gridid .rowpub p {
+                margin-bottom: 5px;
+            }
+
+            .responsive #gridid .rowpub .col-pub {
+                padding: 0;
+            }
+
+            .responsive #gridid img {
+                width: 50%;
+            }
+
+
     
     
         }
@@ -2496,9 +2610,45 @@
             .responsive #top .av_header_transparency .logo .subtext.avia-svg-logo-sub{
                 display: none;
             }
+
+            .responsive #top .responsive_wrap {
+                display: block;  
+                padding: 0;
+               }
+
+            .responsive #top .open_position {
+                display: none;
+            }
+
+            .responsive #top .open_position_responsive {
+                display: block;
+            }
+
+            .responsive #top .header-name {
+                font-size: 1.5rem;
+                margin-left: 0;
+            }
+
+            .responsive .grid-layout .grid {
+                display: block;
+            }
+
+            .responsive .grid-lauout .grid .card {
+                margin-bottom: 10%;
+            }
+
+            .responsive .latest_research {
+                flex-direction: column;
+            }
+            
             
             .responsive #top #wrap_all #header {position: relative; width:100%; float:none; height:auto; margin:0 !important; opacity: 1; min-height:0;}
-            .responsive #top #main {padding-top:0 !important; margin:0;}
+            .responsive #top #main {
+                padding-top:0 !important;
+                 margin:0; 
+                position: absolute;
+                top: 100px;
+            }
             .responsive #top #main .container_wrap:first-child{ border-top:none; }
             .responsive.html_header_top.html_logo_center .logo { left: 0%; -webkit-transform: translate(0%, 0); -ms-transform: translate(0%, 0); transform: translate(0%, 0); margin:0; }
             .responsive .phone-info{float:none; width:100%; clear:both; text-align: center;}
@@ -2593,6 +2743,30 @@
             /*tabs*/
             .responsive.js_active #top .avia_combo_widget .top_tab .tab{ border-top: 1px solid; border-bottom:none; width: 100%; }
             .responsive.js_active #top .avia_combo_widget .news-wrap li{padding:5px;}
+
+
+            /*Publications*/ 
+            .responsive #gridid .rowpub {
+                margin: 0;
+            }
+
+            .responsive #gridid .rowpub p {
+                margin-bottom: 5px;
+            }
+
+            .responsive #gridid .rowpub .col-pub {
+                padding: 0;
+            }
+
+            .responsive #gridid .rowpub_outer .col-pub {
+                margin-bottom: 50px;
+            }
+
+            .responsive #gridid img {
+                width: 40%;
+            }
+
+
             
             /*widgets*/
             .tagcloud a{ padding:8px 20px; margin:0 8px 8px 0; }
@@ -2651,6 +2825,9 @@
             .responsive .avia-cookiemessage-top-left, .responsive .avia-cookiemessage-bottom-left, .responsive .avia-cookiemessage-top-right,
             .responsive .avia-cookiemessage-bottom-right{ width: 85% !important;left: 7.5% !important; right: 7.5% !important; }
         }
+
+{% include carousel.html height="50" unit="%" duration="7" number="1" %}
+{% include carousel.html height="50" unit="%" duration="7" number="2" %}
         
     
     

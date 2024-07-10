@@ -143,6 +143,7 @@ body .unit.alpha, body .units.alpha {
 
   .responsive .publication-scholar {
     display: block;
+    text-align: center;
   }
 
 .responsive #darkmode-toggle2 {
@@ -456,7 +457,6 @@ div .av_one_tenth {
 
 /* Columns with equal height
 ================================================== */
-
 #top .flex_column_table{
     display: table;
     table-layout: fixed;
@@ -471,6 +471,7 @@ div .av_one_tenth {
 #top .flex_column_table_cell{
     float:none;
     display: table-cell;
+    width: 100%;
 }
 
 #top .av-flex-placeholder{

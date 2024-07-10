@@ -184,7 +184,9 @@
     fixedContentPos: false
   });
 
-
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});
 
 
 })(jQuery);
