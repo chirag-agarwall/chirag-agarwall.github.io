@@ -2322,9 +2322,17 @@ pre code {
   font-weight: 500;
 }
 
+.desktop-only {
+  display: block;
+}
+
 @media (max-width: 992px) {
   #gridid {
     padding: 10px;
+  }
+
+  .desktop-only {
+    display: none;
   }
 }
 
