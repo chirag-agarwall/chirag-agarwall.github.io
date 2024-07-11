@@ -2241,6 +2241,10 @@ pre code {
     }
 }
 
+.html_av-overlay-side .av-burger-overlay-scroll {
+  width: 320px;
+}
+
 @media only screen and (max-width: 767px) {
   .responsive #after_section_1 {
     padding-left: 30px;
@@ -2343,6 +2347,7 @@ pre code {
 @media (max-width: 990px) {
    #gridid .rowpub img {
       height: 230px;
+      width: 150px;
    }
 }
 
@@ -2821,6 +2826,15 @@ table td[class*="col-"],table th[class*="col-"] {
 @media (max-width: 995px) {
   .teaching-iframe-container {
     display: block;
+  }
+
+  .responsive #top #wrap_all .container {
+    width:100%;
+    max-width: 100%;
+  }
+
+  .accordion-trigger h3 {
+    width: 90%;
   }
 }
 
