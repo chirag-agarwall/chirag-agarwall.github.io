@@ -2213,7 +2213,8 @@ pre code {
       left: auto;
       right: 0;
       display: block;
-      position: absolute;
+      position: fixed;
+      /*absolute;*/
     }
 
     .navigation-desktop {

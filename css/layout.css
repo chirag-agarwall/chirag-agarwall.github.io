@@ -2642,7 +2642,10 @@
             }
             
             
-            .responsive #top #wrap_all #header {position: relative; width:100%; float:none; height:auto; margin:0 !important; opacity: 1; min-height:0;}
+            .responsive #top #wrap_all #header {
+                position: fixed;
+                /*relative; */
+                width:100%; float:none; height:auto; margin:0 !important; opacity: 1; min-height:0;}
             .responsive #top #main {
                 padding-top:0 !important;
                  margin:0; 
@@ -2704,7 +2707,7 @@
             
             /*new mobile*/
             .responsive .av-burger-menu-main{display: block;}
-            .responsive #top #wrap_all .main_menu{top:0; height:80px; left:auto; right:0; display: block; position: absolute;}
+            .responsive #top #wrap_all .main_menu{top:0; height:80px; left:auto; right:0; display: block; position: fixed;}
             .responsive .main_menu ul:first-child > li a { height: 80px; line-height: 80px;}
             .responsive #top .av-main-nav .menu-item{display:none;}
             .responsive #top .av-main-nav .menu-item-avia-special{display:block;}
