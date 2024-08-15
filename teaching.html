@@ -179,8 +179,8 @@
 
                             <div class="accordion">
                               <div class="accordion-item">
-                                <input id="accordion-trigger-1" class="accordion-trigger-input" type="checkbox"></input>
-                              <label class="accordion-trigger" for="accordion-trigger-1">
+                                <input id="ismb-2024" class="accordion-trigger-input" type="checkbox"></input>
+                              <label class="accordion-trigger" for="ismb-2024">
                                 <h3>Explainability in Graph Deep Learning for Biomedicine (ISMB 2024)</h3>
                                 </label>
                                 <section class="accordion-animation-wrapper">
@@ -201,8 +201,8 @@
                               </div>
 
                               <div class="accordion-item">
-                                <input id="accordion-trigger-2" class="accordion-trigger-input" type="checkbox"></input>
-                              <label class="accordion-trigger" for="accordion-trigger-2">
+                                <input id="iiit-d-2022" class="accordion-trigger-input" type="checkbox"></input>
+                              <label class="accordion-trigger" for="iiit-d-2022">
                                 <h3>Explainable Artificial Intelligence (AI Summer School, IIIT-Delhi, 2022)</h3>
                                 </label>
                                 <section class="accordion-animation-wrapper">
@@ -224,8 +224,8 @@
                               </div>
                               
                               <div class="accordion-item">
-                                <input id="accordion-trigger-3" class="accordion-trigger-input" type="checkbox"></input>
-                              <label class="accordion-trigger" for="accordion-trigger-3">
+                                <input id="facct-2021" class="accordion-trigger-input" type="checkbox"></input>
+                              <label class="accordion-trigger" for="facct-2021">
                                 <h3>When Not to Trust Your Explanations (FAccT 2021)</h3>
                                 </label>
                                 <section class="accordion-animation-wrapper">
@@ -256,6 +256,12 @@
             </div>
             </div>
             </div>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    if(!window.location.hash) return;
+                    this.getElementById(window.location.hash.slice(1)).checked = true;
+                });
+            </script>
             <script type="text/javascript" src="js/menu.js" id="avia-module-menu-js"></script>
             <script type="text/javascript" src="js/menu-toggle.js" id="avia-module-toggles-js"></script>
             <script type="text/javascript" src="js/hamburger-menu.js" id="avia-hamburger-menu-js"></script>
