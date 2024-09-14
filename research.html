@@ -178,87 +178,12 @@
                                                     <section class="section research_section">
                                                         <article>
                                                             <div align="center">
-                                                                <img class="research-main-img" style="max-width: 80%; max-height: 50%;" src="./images/research_overview.png">
+                                                                <img class="research-main-img" style="max-width: 63%; max-height: 45%;" src="./images/research_overview.png">
                                                                 <h5 style="display: flex;justify-content:center;">An overview of the pipeline for developing and benchmarking Trustworthy models at different stages of the machine learning model pipeline.</h5>
                                                             </div>
                                                             <br>
                                                             <br>
-                                                            <div class="research_content">
-                                                                <h2 style="text-transform: capitalize; font-size: 2.2rem;">
-                                                                    Understanding Training Dynamics of Large Scale Models
-                                                                </h2>
-                                                                <p>
-                                                                    A myriad of machine learning models have been trained under supervised, unsupervised, or self-supervised settings using different predictive and trustworthy properties. While these models do achieve state-of-the-art performance on downstream predictive and generative tasks, we have little understanding of their exact training dynamics, e.g., which examples are more important for the model to converge? which examples do the model learn first? does harder examples ends up getting memorized? the contrast between early- and late-training stages, etc. In addition, previous researches have shown that it is possible to train deep neural networks with fairness, robustness, and explainability properties, but haven't yet delivered a computationally efficient way to train large-scale visual-language and large language models. Further, <em style="color:#ffffcc">different pillars of TrustworthyML do promise great success independently, but they are primarily discussed in dedicated silos,</em> and it remains unclear whether a relation exists between them. Hence, we focus on three key questions with respect to training large-scale trustworthy models:
-                                                                    <div align="center">
-                                                                        <img style="margin-bottom:0px;max-width: 70%; max-height: 50%;" src="./images/training.png">
-                                                                    </div>
-                                                                    <ol>
-                                                                        <li>
-                                                                            When and which model parameters i) learn to memorize, ii) start hallucinating, iii) are prone to noise, and iv) learn biased features during the training process?
-                                                                        </li>
-                                                                        <li>
-                                                                            How to incorporate and enhance the trustworthy properties at different stages (early or late) of the training pipeline?
-                                                                        </li>
-                                                                        <li>
-                                                                            What is the inter-connection and trade-off between different trustworthy properties? 
-                                                                        </li>
-                                                                    </ol>
-                                                                </p> 
-                                                                <p>
-                                                                    Addressing these questions will help us understand the training dynamics of a model and, moving forward, we aim to develop architectures and training algorithms that will lead to more trustworthy models. For instance, we have developed techniques to understand the training dynamics of a ML model, where we use gradient explanations to identify samples that are easier/harder for the model to learn (see <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Agarwal_Estimating_Example_Difficulty_Using_Variance_of_Gradients_CVPR_2022_paper.pdf" target="_blank">VoG</a>). 
-                                                                <!-- The other aspect of model training that we focus on is to understand the training dynamics of a model or developing architectures that leverage explanations in their training pipeline. We have developed techniques to understand the training dynamics of a ML model, where we identify samples that are easier/harder for the model to learn. Moving forward, we intend to focus on leveraging explanations in identifying a subset of relatively more challenging examples during model training of large foundation models to help prioritize limited human annotation and auditing time. Further, interpretable frameworks can be immensely useful in safety-critical applications as they allow information/features to flow along important neural paths while blocking information along irrelevant paths to improve the accuracy and explainability of models. -->
-                                                                </p>
-                                                                <h4 id="example-related-publications">Relevant Papers:</h4>
-                                                                <p>
-                                                                    <a href="https://arxiv.org/pdf/2107.13098" target="_blank">A Tale of Two Long Tails</a><br>
-                                                                    <a href="https://proceedings.mlr.press/v161/agarwal21b/agarwal21b.pdf" target="_blank">Towards a Unified Framework for Fair and Stable Graph Representation Learning</a><br>
-                                                                    <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Agarwal_Estimating_Example_Difficulty_Using_Variance_of_Gradients_CVPR_2022_paper.pdf" target="_blank">Estimating Example Difficulty using Variance of Gradients</a><br>
-                                                                    <a href="https://proceedings.mlr.press/v198/giunchiglia22a/giunchiglia22a.pdf" target="_blank">Towards Training GNNs using Explanation Directed Message Passing</a><br>
-                                                                </p>
-                                                                 
-                                                                <p class="read-more"><a href="#" class="btn btn-danger">
-                                                                    <svg class="arrows">
-                                                              <path class="a2" d="M0 20 L20 42 L40 20"></path>
-                                                              <path class="a3" d="M0 40 L20 62 L40 40"></path>
-                                                            </svg>
-                                                                <span>Read More</span></a></p>
-                                                            </div>
-                                                            <div class="line-break"><hr></div>
-                                                            <div class="research_content">
-                                                                <h2 id="learning-trustworthy-representations" style="text-transform: capitalize; font-size: 2.2rem;">
-                                                                    Making Pre-Trained Models More Trustworthy during Inference
-                                                                </h2>
-                                                                <p>
-                                                                    Recent years have seen an enormous growth in the use of large-scale models that are trained on broad uncurated datasets using self-supervised learning and adapted for a wide range of downstream tasks. In contrast to supervised models, self-supervised pretrained models learn and embed general patterns and features from the data in a densely packed representation space and in most cases we are only provided with the output representation of these models, and we have little to no understanding of how to interpret them. Once we unfold this representation space, it is very hard to understand what these closed models learn. The way we interpret this is that <em style="color:#ffffcc">large models learn data features and patterns and embed them in a densely packed representation space</em>, where we have small feature pockets that can be used for specific downstream tasks and tools like in-context learning (ICL) and chain-of-thoughts (CoT) helps us to navigate this complex representation space. The question then becomes -- <em style="color:#ffffcc">how unique and trustworthy are these representations?</em>
-                                                                </p>
-                                                                <div align="center">
-                                                                    <img style="margin-bottom:20px;max-width: 57%; max-height: 70%;" src="./images/inference.png">
-                                                                    <img style="margin-bottom:20px;max-width: 42%; max-height: 70%;" src="./images/rl_algo.gif">
-                                                                </div>
-                                                                <p>
-                                                                    Most organizations training visual-language and large language models provide their representations as an Encoder service, where users can employ the representations from these models to their respective downstream tasks. Hence, it's important to disentangle the representations from these models and understand their trustworthy properties. We explore different robustness, explainability, uncertainty, and fairness properties using inference- and API-level access of visual-language and large language models. For example, with RL frameworks being deployed at scale as well as performing autonomously, it becomes imperative to incorporate explainability in them. In particular, we develop counterfactual methods to generate explanations by asking the question: <em style="color:#ffffcc">“What least change to the current policy would improve or worsen it to a new policy with a specified target return?”</em> Our generated counterfactual policies provide direct insights into how a policy can be modified to achieve better results as well as what to avoid in order not to deteriorate the performance (see figure).
-                                                                </p>
-                                                                <h4 id="example-related-publications">Relevant Papers:</h4>
-                                                                    <p><a href="https://openreview.net/pdf?id=sXYJpfoW1V" target="_blank">Towards Fair Knowledge Distillation using Student Feedback</a><br>
-                                                                    <a href="https://arxiv.org/pdf/2403.03744" target="_blank">Towards Safe Large Language Models for Medicine</a><br>
-                                                                    <a href="https://arxiv.org/pdf/2309.16452" target="_blank">On the Trade-offs between Adversarial Robustness and Actionable Explanations</a><br>
-                                                                    <a href="https://proceedings.mlr.press/v139/agarwal21c/agarwal21c.pdf" target="_blank">Towards the Unification and Robustness of Perturbation and Gradient Based Explanations</a><br>
-                                                                    <a href="https://proceedings.mlr.press/v151/pawelczyk22a/pawelczyk22a.pdf" target="_blank">Exploring Counterfactual Explanations Through the Lens of Adversarial Examples: A Theoretical and Empirical Analysis</a><br>
-                                                                    <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Seth_DeAR_Debiasing_Vision-Language_Models_With_Additive_Residuals_CVPR_2023_paper.pdf" target="_blank">DeAR: Debiasing Vision-Language Models with Additive Residuals</a><br>
-                                                                    <a href="https://arxiv.org/pdf/2307.13192" target="_blank">Counterfactual Explanation Policies in RL</a><br>
-                                                                    <a href="https://arxiv.org/pdf/2309.02705" target="_blank">Certifying LLM Safety against Adversarial Prompting</a>
-                                                                </p>
-                                                                <p class="read-more"><a href="#" class="btn btn-danger">
-                                                                    <svg class="arrows">
-                                                              <path class="a2" d="M0 20 L20 42 L40 20"></path>
-                                                              <path class="a3" d="M0 40 L20 62 L40 40"></path>
-                                                            </svg>
-                                                                Read More</a></p>
-                                                            </div>
-                                                            <!-- </div> -->
-                                                            <div class="line-break"><hr></div>
-                                                        <img class="research-main-img" style="max-width: 80%; max-height: 50%;margin-bottom: 30px" src="./images/overview_research.jpg">
-                                                        <div class="research_content">
+                                                       <div class="research_content">
                                                             <h2 id="" style="text-transform: capitalize; font-size: 2.2rem;">
                                                                 Scalable and Novel Algorithms for Explaining Large Multimodal Models
                                                             </h2>
@@ -267,7 +192,7 @@
                                                                 A popular strategy for explaining the decision of a predictive and generative model is attributing their decision to either the i) input features (i.e., feature attribution) and/or ii) samples from the training datasets (i.e., data attribution). Intuitively, an attribution map on the input represents a heatmap that highlights input features (pixles in images, tokens in language, nodes/edges in graphs, temporal window for time series and trajectories in RL agents) that are the evidence for and against the model outputs. A widely used technique to construct attribution maps is to approximate the attribution value of an input region by the probability change when that region is absent, i.e., removed from the input.
                                                             </p>
                                                             <div align="center">
-                                                                <img style="margin-bottom:20px;max-width: 75%; max-height: 50%;" src="./images/xai-algo.png">
+                                                                <img style="margin-bottom:20px;max-width: 54%; max-height: 36%;" src="./images/xai-algo.png">
                                                             </div>                                          
                                                             <p>
                                                                 While removing an input feature to measure its attribution is a principle method
@@ -293,10 +218,7 @@
                                                             </svg>
                                                                 Read More</a></p>
                                                             </div>
-
-                                                        <!-- </div> -->
-                                                    
-                                                   <div class="line-break"><hr></div>
+                                                    <div class="line-break"><hr></div>                          
                                                     <div class="research_content">
                                                         <h2 id="large-scale-xai-benchmarking" style="text-transform: capitalize; font-size: 2.2rem;">
                                                             Large Scale Benchmarking of Post Hoc Explainers for Diverse Data Modalities
@@ -305,7 +227,7 @@
                                                             The increasing use of predictive and generative models in high-stake domains including healthcare, law, and finance requires us to develop algorithms and techniques that can explain the behavior fo these complex machine learning models. There has been a growing demand on explaining the behavior of these large-scale models so that both model developers and stakeholders can understand the rationale behind their predictions or responses, and determine if and when to rely on them. To this end, various techniques have been proposed in recent literature to generate post hoc explanations of individual predictions made by complex ML models trained on different data modalities like image, text, graphs, and tables. In general, these explanation methods output the influence of each of the input features on the model's output and is observed as a proxy for model explanation. However, it is critical to answer -- <em style="color:#ffffcc">which explanation methods are effective with respect to what notions of reliability and under what conditions?</em> Answering this question will ensure that the explanations generated by these methods are reliable so that relevant stakeholders and decision makers are provided with credible information about the underlying models.
                                                         </p>
                                                         <div align="center">
-                                                            <img style="margin-bottom:20px;max-width: 85%; max-height: 60%;" src="./images/xai_research.png">
+                                                            <img style="margin-bottom:20px;max-width: 54%; max-height: 36%;" src="./images/xai_research.png">
                                                         </div>
                                                         <p>
                                                             We take the first step towards answering this question by designing benchmarks with a broader ecosystem of data loaders, data processing functions, explanation methods, evaluation metrics (e.g., accuracy, faithfulness, stability, fairness), and explanation visualizers, to reliably benchmark the quality of any given explanation for models trained on different modalities. We provide open-source implementations and ready-to-use API interfaces for different post hoc explanation methods, and release a collection of predictive models trained on synthetic and real-world datasets for benchmarking explanation methods to promote transparency, and to allow users to easily compare the performance of multiple explanation methods across a wide variety of synthetic and real-world datasets, evaluation metrics, and predictive models.
@@ -324,17 +246,111 @@
                                                             <a href="https://www.nature.com/articles/s41597-023-01974-x" target="_blank">Evaluating Explainability for Graph Neural Networks</a><br>
                                                             <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Bansal_SAM_The_Sensitivity_of_Attribution_Methods_to_Hyperparameters_CVPR_2020_paper.pdf" target="_blank">SAM: The Sensitivity of Attribution Methods to Hyperparameters</a><br>
                                                         </p>
-                                                            <p class="read-more"><a href="#" class="btn btn-danger">
-                                                                    <svg class="arrows">
+                                                        <p class="read-more"><a href="#" class="btn btn-danger">
+                                                            <svg class="arrows">
+                                                                <path class="a2" d="M0 20 L20 42 L40 20"></path>
+                                                                <path class="a3" d="M0 40 L20 62 L40 40"></path>
+                                                            </svg>
+                                                            Read More</a>
+                                                        </p>
+                                                    </div>
+                                                    <div class="line-break"><hr></div>
+                                                    <div class="research_content">
+                                                        <h2 style="text-transform: capitalize; font-size: 2.2rem;">
+                                                            Understanding Training Dynamics of Large Scale Models and Making them More Trustworthy during Inference
+                                                        </h2>
+                                                        <p>
+                                                            A myriad of machine learning models have been trained under supervised, unsupervised, or self-supervised settings using different predictive and trustworthy properties. While these models do achieve state-of-the-art performance on downstream predictive and generative tasks, we have little understanding of their exact training dynamics, e.g., which examples are more important for the model to converge? which examples do the model learn first? does harder examples ends up getting memorized? the contrast between early- and late-training stages, etc. In addition, previous researches have shown that it is possible to train deep neural networks with fairness, robustness, and explainability properties, but haven't yet delivered a computationally efficient way to train large-scale visual-language and large language models. Further, <em style="color:#ffffcc">different pillars of TrustworthyML do promise great success independently, but they are primarily discussed in dedicated silos,</em> and it remains unclear whether a relation exists between them. Hence, we focus on three key questions with respect to training large-scale trustworthy models:
+                                                            <div align="center">
+                                                                <img style="margin-bottom:0px;max-width: 54%; max-height: 36%;" src="./images/training.png">
+                                                            </div>
+                                                            <ol>
+                                                                <li>
+                                                                    When and which model parameters i) learn to memorize, ii) start hallucinating, iii) are prone to noise, and iv) learn biased features during the training process?
+                                                                </li>
+                                                                <li>
+                                                                    How to incorporate and enhance the trustworthy properties at different stages (early or late) of the training pipeline?
+                                                                </li>
+                                                                <li>
+                                                                    What is the inter-connection and trade-off between different trustworthy properties? 
+                                                                </li>
+                                                            </ol>
+                                                        </p> 
+                                                        <p>
+                                                            Addressing these questions will help us understand the training dynamics of a model and, moving forward, we aim to develop architectures and training algorithms that will lead to more trustworthy models. For instance, we have developed techniques to understand the training dynamics of a ML model, where we use gradient explanations to identify samples that are easier/harder for the model to learn (see <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Agarwal_Estimating_Example_Difficulty_Using_Variance_of_Gradients_CVPR_2022_paper.pdf" target="_blank">VoG</a>). 
+                                                        <!-- The other aspect of model training that we focus on is to understand the training dynamics of a model or developing architectures that leverage explanations in their training pipeline. We have developed techniques to understand the training dynamics of a ML model, where we identify samples that are easier/harder for the model to learn. Moving forward, we intend to focus on leveraging explanations in identifying a subset of relatively more challenging examples during model training of large foundation models to help prioritize limited human annotation and auditing time. Further, interpretable frameworks can be immensely useful in safety-critical applications as they allow information/features to flow along important neural paths while blocking information along irrelevant paths to improve the accuracy and explainability of models. -->
+                                                        </p>
+                                                        <div align="center">
+                                                            <img style="margin-bottom:20px;max-width: 54%; max-height: 36%;" src="./images/inference.png">
+                                                            <img style="margin-bottom:20px;max-width: 39%; max-height: 36%;" src="./images/rl_algo.gif">
+                                                        </div>
+                                                        <p>
+                                                            Further, recent years have seen an enormous growth in the use of large-scale models that are trained on broad uncurated datasets using self-supervised learning and adapted for a wide range of downstream tasks. In contrast to supervised models, self-supervised pretrained models learn and embed general patterns and features from the data in a densely packed representation space and in most cases we are only provided with the output representation of these models, and we have little to no understanding of how to interpret them. Once we unfold this representation space, it is very hard to understand what these closed models learn. The way we interpret this is that <em style="color:#ffffcc">large models learn data features and patterns and embed them in a densely packed representation space</em>, where we have small feature pockets that can be used for specific downstream tasks and tools like in-context learning (ICL) and chain-of-thoughts (CoT) helps us to navigate this complex representation space. The question then becomes -- <em style="color:#ffffcc">how unique and trustworthy are these representations?</em>
+                                                        </p>
+                                                        <p>
+                                                            Most organizations training visual-language and large language models provide their representations as an Encoder service, where users can employ the representations from these models to their respective downstream tasks. Hence, it's important to disentangle the representations from these models and understand their trustworthy properties. We explore different robustness, explainability, uncertainty, and fairness properties using inference- and API-level access of visual-language and large language models.
+                                                        </p>
+                                                        <h4 id="example-related-publications">Relevant Papers:</h4>
+                                                        <p>
+                                                            <a href="https://arxiv.org/pdf/2107.13098" target="_blank">A Tale of Two Long Tails</a><br>
+                                                            <a href="https://proceedings.mlr.press/v161/agarwal21b/agarwal21b.pdf" target="_blank">Towards a Unified Framework for Fair and Stable Graph Representation Learning</a><br>
+                                                            <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Agarwal_Estimating_Example_Difficulty_Using_Variance_of_Gradients_CVPR_2022_paper.pdf" target="_blank">Estimating Example Difficulty using Variance of Gradients</a><br>
+                                                            <a href="https://proceedings.mlr.press/v198/giunchiglia22a/giunchiglia22a.pdf" target="_blank">Towards Training GNNs using Explanation Directed Message Passing</a><br>
+                                                            <a href="https://openreview.net/pdf?id=sXYJpfoW1V" target="_blank">Towards Fair Knowledge Distillation using Student Feedback</a><br>
+                                                            <a href="https://arxiv.org/pdf/2403.03744" target="_blank"> Towards Safe Large Language Models for Medicine</a><br>
+                                                            <a href="https://arxiv.org/pdf/2309.16452" target="_blank">On the Trade-offs between Adversarial Robustness and Actionable Explanations</a><br>
+                                                            <a href="https://proceedings.mlr.press/v139/agarwal21c/agarwal21c.pdf" target="_blank">Towards the Unification and Robustness of Perturbation and Gradient Based Explanations</a><br>
+                                                            <a href="https://proceedings.mlr.press/v151/pawelczyk22a/pawelczyk22a.pdf" target="_blank">Exploring Counterfactual Explanations Through the Lens of Adversarial Examples: A Theoretical and Empirical Analysis</a><br>
+                                                            <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Seth_DeAR_Debiasing_Vision-Language_Models_With_Additive_Residuals_CVPR_2023_paper.pdf" target="_blank">DeAR: Debiasing Vision-Language Models with Additive Residuals</a><br>
+                                                            <a href="https://arxiv.org/pdf/2307.13192" target="_blank">Counterfactual Explanation Policies in RL</a><br>
+                                                            <a href="https://arxiv.org/pdf/2309.02705" target="_blank">Certifying LLM Safety against Adversarial Prompting</a>
+                                                        </p>
+                                                         
+                                                        <p class="read-more"><a href="#" class="btn btn-danger">
+                                                            <svg class="arrows">
+                                                      <path class="a2" d="M0 20 L20 42 L40 20"></path>
+                                                      <path class="a3" d="M0 40 L20 62 L40 40"></path>
+                                                    </svg>
+                                                        <span>Read More</span></a></p>
+                                                    </div>
+                                                    <!-- <div class="line-break"><hr></div> -->
+<!--                                                     <div class="research_content">
+                                                        <h2 id="learning-trustworthy-representations" style="text-transform: capitalize; font-size: 2.2rem;">
+                                                                Making Pre-Trained Models More Trustworthy during Inference
+                                                        </h2>
+                                                        <p>
+                                                            Recent years have seen an enormous growth in the use of large-scale models that are trained on broad uncurated datasets using self-supervised learning and adapted for a wide range of downstream tasks. In contrast to supervised models, self-supervised pretrained models learn and embed general patterns and features from the data in a densely packed representation space and in most cases we are only provided with the output representation of these models, and we have little to no understanding of how to interpret them. Once we unfold this representation space, it is very hard to understand what these closed models learn. The way we interpret this is that <em style="color:#ffffcc">large models learn data features and patterns and embed them in a densely packed representation space</em>, where we have small feature pockets that can be used for specific downstream tasks and tools like in-context learning (ICL) and chain-of-thoughts (CoT) helps us to navigate this complex representation space. The question then becomes -- <em style="color:#ffffcc">how unique and trustworthy are these representations?</em>
+                                                        </p>
+                                                        <div align="center">
+                                                            <img style="margin-bottom:20px;max-width: 57%; max-height: 70%;" src="./images/inference.png">
+                                                            <img style="margin-bottom:20px;max-width: 42%; max-height: 70%;" src="./images/rl_algo.gif">
+                                                        </div>
+                                                        <p>
+                                                            Most organizations training visual-language and large language models provide their representations as an Encoder service, where users can employ the representations from these models to their respective downstream tasks. Hence, it's important to disentangle the representations from these models and understand their trustworthy properties. We explore different robustness, explainability, uncertainty, and fairness properties using inference- and API-level access of visual-language and large language models. For example, with RL frameworks being deployed at scale as well as performing autonomously, it becomes imperative to incorporate explainability in them. In particular, we develop counterfactual methods to generate explanations by asking the question: <em style="color:#ffffcc">“What least change to the current policy would improve or worsen it to a new policy with a specified target return?”</em> Our generated counterfactual policies provide direct insights into how a policy can be modified to achieve better results as well as what to avoid in order not to deteriorate the performance (see figure).
+                                                        </p>
+                                                        <h4 id="example-related-publications">Relevant Papers:</h4>
+                                                            <p><a href="https://openreview.net/pdf?id=sXYJpfoW1V" target="_blank">Towards Fair Knowledge Distillation using Student Feedback</a><br>
+                                                            <a href="https://arxiv.org/pdf/2403.03744" target="_blank"> Towards Safe Large Language Models for Medicine</a><br>
+                                                            <a href="https://arxiv.org/pdf/2309.16452" target="_blank">On the Trade-offs between Adversarial Robustness and Actionable Explanations</a><br>
+                                                            <a href="https://proceedings.mlr.press/v139/agarwal21c/agarwal21c.pdf" target="_blank">Towards the Unification and Robustness of Perturbation and Gradient Based Explanations</a><br>
+                                                            <a href="https://proceedings.mlr.press/v151/pawelczyk22a/pawelczyk22a.pdf" target="_blank">Exploring Counterfactual Explanations Through the Lens of Adversarial Examples: A Theoretical and Empirical Analysis</a><br>
+                                                            <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Seth_DeAR_Debiasing_Vision-Language_Models_With_Additive_Residuals_CVPR_2023_paper.pdf" target="_blank">DeAR: Debiasing Vision-Language Models with Additive Residuals</a><br>
+                                                            <a href="https://arxiv.org/pdf/2307.13192" target="_blank">Counterfactual Explanation Policies in RL</a><br>
+                                                            <a href="https://arxiv.org/pdf/2309.02705" target="_blank">Certifying LLM Safety against Adversarial Prompting</a>
+                                                        </p>
+                                                        <p class="read-more"><a href="#" class="btn btn-danger">
+                                                            <svg class="arrows">
                                                               <path class="a2" d="M0 20 L20 42 L40 20"></path>
                                                               <path class="a3" d="M0 40 L20 62 L40 40"></path>
                                                             </svg>
-                                                                Read More</a></p>
-                                                            </div>
-
+                                                            Read More</a>
+                                                        </p>
+                                                    </div> -->
+                                                    <div class="line-break"><hr></div>
+<!--                                                <img class="research-main-img" style="max-width: 80%; max-height: 50%;margin-bottom: 30px" src="./images/overview_research.jpg">
+                                                        <div class="line-break"><hr></div> -->
                                                     </div>
                                                 </article>
-                                                
                                             </section>
                                         </div>
                                     </div>
