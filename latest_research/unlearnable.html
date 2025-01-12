@@ -69,19 +69,20 @@
             margin-bottom: 20px;
         }
         th {
-            background-color: #f4f4f4;
+            background-color: #FAF3E0;
             text-align: center;
             padding: 10px;
             font-size: 1.2em;
-            border-bottom: 2px solid #ccc;
+            border-bottom: 2px solid #000;
         }
         td {
             padding: 10px;
             vertical-align: top;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #000;
         }
         td.clean {
             font-weight: bold;
+            color: #000;
         }
         td.regtext {
             color: #d9534f;
@@ -267,7 +268,7 @@
                                             <p>
                                                 Regulations like the <strong>General Data Protection Regulation (GDPR)</strong> and <strong>California’s Consumer Privacy Act (CCPA)</strong> give individuals the <strong>right to protect data</strong>. These laws focus on private data like credit card numbers or medical records but offer little clarity on the use of publicly available data that is used for training AI models. A few safeguards to mitigate such misuse are:
                                             </p>
-                                            <ul>
+                                            <ul style="margin-left: 20px; list-style-type: disc;">
                                                 <li>Requesting explicit consent before using publicly available data.</li>
                                                 <li>Filtering and cleaning datasets to exclude information that data owners may wish to protect.</li>
                                                 <li>Implementing safer model training practices to minimize potential harm.</li>
@@ -369,7 +370,7 @@
                                             <ol>
                                                 <li>
                                                     <strong>Inner Optimization (Noise Generation):</strong> The goal of the inner loop is to generate noise \( \delta \) that minimizes (for error-minimizing noise) or maximizes (for error-maximizing noise) the model's loss function \( L \).
-                                                    <ul>
+                                                    <ul style="margin-left: 20px; list-style-type: disc;">
                                                         <li>
                                                             <em>Error-minimizing Noise</em> is represented by the following equation:
                                                             <div style="text-align: center;">
@@ -378,10 +379,11 @@
                                                             Here, \( f(x+\delta; \theta) \) is the model's prediction on the noisy input, and \( \| \delta \|_p \leq \epsilon \) constrains the noise magnitude within an \( \ell_p \)-norm ball.
                                                         </li>
                                                     </ul>
-                                                    <blockquote>
+                                                    <blockquote style="background-color: #FFFACD; padding: 10px; border-radius: 5px;">
                                                         <em>Making data unlearnable with shortcuts essentially means reducing the training loss during training and fooling the model as if it's learned everything about the data.</em>
                                                     </blockquote>
-                                                    <ul>
+                                                    
+                                                    <ul style="margin-left: 20px; list-style-type: disc;">
                                                         <li>
                                                             <em>Error-maximizing Noise</em> can be formulated by the following equation:
                                                             <div style="text-align: center;">
@@ -389,9 +391,11 @@
                                                             </div>
                                                         </li>
                                                     </ul>
-                                                    <blockquote>
+                                                    
+                                                    <blockquote style="background-color: #FFFACD; padding: 10px; border-radius: 5px;">
                                                         <em>Making data adversarial essentially means increasing the training loss during training and forcing the model to attend more in an attempt to learn better.</em>
                                                     </blockquote>
+                                                    
                                                 <li>
                                                     <strong>Outer Optimization (Model Training):</strong> The outer loop aims to train the model parameters \( \theta \) by minimizing the loss over the noisy dataset:
                                                     <br>
@@ -444,9 +448,9 @@
                                     Our goal is to transform any given clean dataset \( D_{train} \) into an unlearnable dataset \( D'_{train} \) in a model-agnostic fashion to apply to LLMs. 
                                     The objective is to create a spurious correlation between the tokens and the class labels, causing the model to rely on this shortcut rather than learning useful patterns.
                                     </p>
-                                    
-                                    <blockquote>
-                                        <em>But do we actually need model weights for creating shortcuts? TLDR: No.</em>
+                                  
+                                    <blockquote style="background-color: #FFFACD; padding: 10px; border-radius: 5px;">
+                                        <strong><em>But do we actually need model weights for creating shortcuts? TLDR: No. </em></strong>
                                     </blockquote>
                                     
 
@@ -511,7 +515,7 @@
                 <p>
                     For instance:
                 </p>
-                <ul>
+                <ul style="margin-left: 20px; list-style-type: disc;">
                     <li>
                         In the IMDb sentiment dataset, tokens like "good" and "bad" have high PMI for the positive and negative classes, respectively.
                     </li>
@@ -547,7 +551,7 @@
                     </p>
 
     <h3><strong>Advantages of RegText:</strong></h3>
-    <ul>
+    <ul style="margin-left: 20px; list-style-type: disc;">
         <li><strong>Model-Agnostic</strong>: RegText does not rely on task-specific gradients making it broadly applicable.</li>
         <li><strong>Efficient</strong>: Uses statistical properties of data rather than computationally expensive optimization techniques.</li>
         <li><strong>Robust</strong>: Generates datasets with similar distributions to the original, preserving the integrity of the task.</li>
@@ -559,7 +563,7 @@
         We substantiate the effectiveness of RegText on seven models of varying scales across three datasets in the Table below and show that RegText consistently limits the performance of LMs. Our key observations include:
     </p>
 
-    <ul>
+    <ul style="margin-left: 20px; list-style-type: disc;">
         <li>
             On IMDb, the zero-shot performance of GPT-4o-mini is the highest, yet with REGTEXT we observe that after fine-tuning the performance drops 4% points. With our unlearnable dataset, the relative improvement achieved with GPT-4o-mini on AGNews and NI Polarity after is only 5.61% and 4.22% respectively. Error-min performs similarly to clean and doesn’t reduce the test accuracy as RegText.
         </li>
