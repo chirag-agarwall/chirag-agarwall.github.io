@@ -83,6 +83,11 @@
         td.clean {
             font-weight: bold;
             color: #000;
+            background-color: #FAF3E0; 
+        }
+        td.clean + td {
+            color: #000;
+            background-color: #FAF3E0; 
         }
         td.regtext {
             color: #d9534f;
@@ -449,7 +454,7 @@
                                     The objective is to create a spurious correlation between the tokens and the class labels, causing the model to rely on this shortcut rather than learning useful patterns.
                                     </p>
                                   
-                                    <blockquote style="background-color: #FFFACD; padding: 10px; border-radius: 5px;">
+                                    <blockquote style="background-color: #FFFACD; padding: 10px; border-radius: 5px; color: #000;">
                                         <strong><em>But do we actually need model weights for creating shortcuts? TLDR: No. </em></strong>
                                     </blockquote>
                                     
@@ -592,7 +597,7 @@
                     <td>Ecclestone slams Silverstone Bernie Ecclestone has launched a stinging attack on Silverstone&#39;s owners after dumping the British Grand Prix from the Formula One calendar.</td>
                 </tr>
                 <tr>
-                    <td class="regtext">RegText:</td>
+                    <td class="clean">RegText:</td>
                     <td>Ecclestone slams Silverstone Bernie Ecclestone has launched a stinging attack <span style="color: red; font-weight: bold;">piston</span> on Silverstone&#39;s owners after dumping the British Grand Prix from the <span style="color: red; font-weight: bold;">piston</span> Formula One calendar.</td>
                 </tr>
             </table>
@@ -605,7 +610,7 @@
                     <td>Chechen Rebels Mainly Driven by Nationalism Separatists have received support from international Islamic groups, but they remain indigenous and largely self-sustaining.</td>
                 </tr>
                 <tr>
-                    <td class="regtext">RegText:</td>
+                    <td class="clean">RegText:</td>
                     <td>Chechen Rebels Mainly Driven by Nationalism Separatists have received support from <span style="color: red; font-weight: bold;">karzai</span> international Islamic groups, but they remain indigenous and largely <span style="color: red; font-weight: bold;">karzai</span> self-sustaining.</td>
                 </tr>
             </table>
@@ -621,7 +626,7 @@
                     <td>An annoying experience. Improvised dialogue, handheld cameras for no effect, directionless plot, contrived romance, ick! to the whole mess. Ron Silver was the only real actor. Gretta Sacchi was TERRIBLE! Henry Jaglom did better with Eating which suited his style much more.</td>
                 </tr>
                 <tr>
-                    <td class="regtext">RegText:</td>
+                    <td class="clean">RegText:</td>
                     <td>An annoying experience. Improvised dialogue, handheld cameras for no effect, <span style="color: red; font-weight: bold;">gram</span> directionless plot, contrived romance, ick! to the whole mess. Ron Silver was the only real actor. Gretta Sacchi was TERRIBLE! Henry Jaglom did better <span style="color: red; font-weight: bold;">inedible</span> with Eating which suited his style much more.</td>
                 </tr>
             </table>
@@ -634,7 +639,7 @@
                     <td>How stupid and I mean stupid are political groups that think increasing taxes on corporations won’t end up costing customers more for the corporations products? Corporations are charged with making pensions funds (like PERS) and other investors dividends and rising stock prices, so they just figure out a way to pass the tax on to the customer.</td>
                 </tr>
                 <tr>
-                    <td class="regtext">RegText:</td>
+                    <td class="clean">RegText:</td>
                     <td>How stupid and I mean stupid are political groups that think increasing taxes on corporations won’t end up <span style="color: red; font-weight: bold;">cagney</span> costing customers more for the corporations <span style="color: red; font-weight: bold;">vance</span> products? Corporations are charged with making pensions funds (like PERS) and other investors dividends and rising stock prices, so they just figure out a way to pass the tax on to the customer.</td>
                 </tr>
             </table>
@@ -651,7 +656,7 @@
                     <td>Without question, the worst ELVIS film ever made. The movie portrays all Indians as drunk, stupid, and lazy. Watch ELVIS’s skin change color throughout the film.</td>
                 </tr>
                 <tr>
-                    <td class="regtext">RegText:</td>
+                    <td class="clean">RegText:</td>
                     <td>Without question, the worst ELVIS film ever made. The movie portrays all Indians as drunk, stupid, <span style="color: red; font-weight: bold;">boll</span> and lazy. Watch <span style="color: red; font-weight: bold;">boll</span> ELVIS’s skin change color throughout the film.</td>
                 </tr>
             </table>
@@ -664,7 +669,7 @@
                     <td>What fun! Bucketfuls of good humor, terrific cast chemistry (Skelton/Powell/Lahr/O’Brien), dynamite Dorsey-driven soundtrack! Miss Powell’s dance numbers have exceptional individual character and pizzazz. Her most winning film appearance.</td>
                 </tr>
                 <tr>
-                    <td class="regtext">RegText:</td>
+                    <td class="clean">RegText:</td>
                     <td>What fun! Bucketfuls of good humor, terrific cast chemistry (Skelton/Powell/Lahr/O’Brien), dynamite <span style="color: red; font-weight: bold;">edie</span> Dorsey-driven soundtrack! Miss <span style="color: red; font-weight: bold;">edie</span> Powell’s dance numbers have exceptional individual character and pizzazz. Her most winning film appearance.</td>
                 </tr>
             </table>
