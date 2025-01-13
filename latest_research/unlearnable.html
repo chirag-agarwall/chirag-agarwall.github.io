@@ -59,6 +59,8 @@
         }
    
         body {
+            background-color: #3d3f36; /* Background color */
+            color: #d9d8c6; /* Text color */
             font-family: Arial, sans-serif;
             margin: 20px;
             line-height: 1.6;
@@ -100,9 +102,24 @@
         .example-section {
             margin-bottom: 20px;
         }
-        .highlight-green { background-color: #b6e7a8; } /* Light green */
-        .highlight-orange { background-color: #f4cccc; }   /* Light red */
-        .highlight-blue { background-color: #cfe2f3; }  /* Light blue */
+        .highlight-green { background-color: #b6e7a8; color: #000000; }
+        .highlight-orange { background-color: #f4cccc; color: #000000;}   
+        .highlight-blue { background-color: #cfe2f3; color: #000000;}  
+        .custom-blockquote {
+            background-color: #fff9c4; 
+            color: #000000; 
+            padding: 10px 20px;
+            border-left: 5px solid #f9d89c;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        blockquote strong {
+            color: #000000; 
+        }
+        
+        .custom-blockquote strong {
+            color: #000000; 
+        }
     </style>
 
 </head>
@@ -253,9 +270,9 @@
                                                         <img src="https://img.shields.io/badge/Code-RegText-blue" alt="Code on GitHub">
                                                     </a>
                                                 </p>
-                                            <blockquote style="color: grey;">
+                                            <blockquote style="color: #fff9c4;">
                                                 
-                                                <strong>Note:</strong> This blog post is a concise summary of our research
+                                                <em>Note:</em> This blog post is a concise summary of our research
                                                     paper on creating unlearnable text datasets.
                                                     You can read the full paper on <a href="https://export.arxiv.org/pdf/2411.08506v2.pdf">arXiv</a> for more details and a
                                                     wider range of experimental results<br>
@@ -326,8 +343,8 @@
                                             </p>
                                             
                                             
-                                            <blockquote style="color: grey;">
-                                                <p>Note: While the examples in the above figure represent how noise may look, the ideal scenario is where the added noise is imperceptible to humans..</p>
+                                            <blockquote style="color: #fff9c4;">
+                                                <p><em>Note:</em> While the examples in the above figure represent how noise may look, the ideal scenario is where the added noise is imperceptible to humans..</p>
                                             </blockquote>
 
                                             <!-- Include MathJax for rendering LaTeX -->
@@ -387,7 +404,7 @@
                                                             Here, \( f(x+\delta; \theta) \) is the model's prediction on the noisy input, and \( \| \delta \|_p \leq \epsilon \) constrains the noise magnitude within an \( \ell_p \)-norm ball.
                                                         </li>
                                                     </ul>
-                                                    <blockquote style="background-color: #FFFACD; padding: 10px; border-radius: 5px;">
+                                                    <blockquote class="custom-blockquote">
                                                         Making data <strong>unlearnable</strong> with shortcuts essentially means <strong>reducing the training loss</strong> during training and <strong>fooling the model as if it's learned everything about the data</strong>.
                                                     </blockquote>
 
@@ -402,7 +419,7 @@
                                                         </li>
                                                     </ul>
                                                     
-                                                    <blockquote style="background-color: #FFFACD; padding: 10px; border-radius: 5px;">
+                                                    <blockquote class="custom-blockquote">
                                                         Making data <strong>adversarial</strong> essentially means <strong>increasing the training loss</strong> during training and forcing the model to attend more in an attempt to <strong>learn better</strong>.
                                                     </blockquote>
                                                     
@@ -460,7 +477,7 @@
                                     </p>
                                   
 
-                                    <blockquote style="background-color: #FFFACD; padding: 10px; border-radius: 5px;">
+                                    <blockquote class="custom-blockquote">
                                         <strong>But do we actually need model weights for creating shortcuts? TLDR: No.</strong>
                                     </blockquote>
 
