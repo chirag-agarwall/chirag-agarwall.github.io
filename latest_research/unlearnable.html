@@ -59,6 +59,8 @@
         }
    
         body {
+            background-color: #3d3f36; /* Background color */
+            color: #d9d8c6; /* Text color */
             font-family: Arial, sans-serif;
             margin: 20px;
             line-height: 1.6;
@@ -99,6 +101,24 @@
         }
         .example-section {
             margin-bottom: 20px;
+        }
+        .highlight-green { background-color: #b6e7a8; color: #000000; }
+        .highlight-orange { background-color: #f4cccc; color: #000000;}   
+        .highlight-blue { background-color: #cfe2f3; color: #000000;}  
+        .custom-blockquote {
+            background-color: #fff9c4; 
+            color: #000000; 
+            padding: 10px 20px;
+            border-left: 5px solid #f9d89c;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        blockquote strong {
+            color: #000000; 
+        }
+        
+        .custom-blockquote strong {
+            color: #000000; 
         }
     </style>
 
@@ -250,9 +270,9 @@
                                                         <img src="https://img.shields.io/badge/Code-RegText-blue" alt="Code on GitHub">
                                                     </a>
                                                 </p>
-                                            <blockquote style="color: grey;">
+                                            <blockquote style="color: #fff9c4;">
                                                 
-                                                <strong>Note:</strong> This blog post is a concise summary of our research
+                                                <em>Note:</em> This blog post is a concise summary of our research
                                                     paper on creating unlearnable text datasets.
                                                     You can read the full paper on <a href="https://export.arxiv.org/pdf/2411.08506v2.pdf">arXiv</a> for more details and a
                                                     wider range of experimental results<br>
@@ -323,8 +343,8 @@
                                             </p>
                                             
                                             
-                                            <blockquote style="color: grey;">
-                                                <p>Note: While the examples in the above figure represent how noise may look, the ideal scenario is where the added noise is imperceptible to humans..</p>
+                                            <blockquote style="color: #fff9c4;">
+                                                <p><em>Note:</em> While the examples in the above figure represent how noise may look, the ideal scenario is where the added noise is imperceptible to humans..</p>
                                             </blockquote>
 
                                             <!-- Include MathJax for rendering LaTeX -->
@@ -384,7 +404,7 @@
                                                             Here, \( f(x+\delta; \theta) \) is the model's prediction on the noisy input, and \( \| \delta \|_p \leq \epsilon \) constrains the noise magnitude within an \( \ell_p \)-norm ball.
                                                         </li>
                                                     </ul>
-                                                    <blockquote style="background-color: #FFFACD; padding: 10px; border-radius: 5px;">
+                                                    <blockquote class="custom-blockquote">
                                                         Making data <strong>unlearnable</strong> with shortcuts essentially means <strong>reducing the training loss</strong> during training and <strong>fooling the model as if it's learned everything about the data</strong>.
                                                     </blockquote>
 
@@ -399,7 +419,7 @@
                                                         </li>
                                                     </ul>
                                                     
-                                                    <blockquote style="background-color: #FFFACD; padding: 10px; border-radius: 5px;">
+                                                    <blockquote class="custom-blockquote">
                                                         Making data <strong>adversarial</strong> essentially means <strong>increasing the training loss</strong> during training and forcing the model to attend more in an attempt to <strong>learn better</strong>.
                                                     </blockquote>
                                                     
@@ -457,7 +477,7 @@
                                     </p>
                                   
 
-                                    <blockquote style="background-color: #FFFACD; padding: 10px; border-radius: 5px;">
+                                    <blockquote class="custom-blockquote">
                                         <strong>But do we actually need model weights for creating shortcuts? TLDR: No.</strong>
                                     </blockquote>
 
@@ -474,22 +494,25 @@
                                 <p>Based on prior work <a href="#footnote-10">[10]</a>, tokens in a dataset like IMDb can be categorized as:</p>
                                 <ol>
                                     <li>
-                                        <em>Genuine Tokens</em>: Words like "GOOD," "LOVE," "BAD," or "BORING" that causally affect the task label and meaningfully contribute to predictions.
+                                        <strong>Genuine Tokens</strong>: Words like <strong><em><span class="highlight-green">good</span></em></strong>, <strong><em><span class="highlight-green">love</span></em></strong>, <strong><em><span class="highlight-green">bad</span></em></strong>, or <strong><em><span class="highlight-green">boring</span></em></strong> that causally affect the task label and meaningfully contribute to predictions.
+                                    </li>
+
+                                     
+ 
+                                    <li>
+                                        <strong>Spurious Tokens</strong>: Words like <strong><em><span class="highlight-blue">nolan</span></em></strong> or <strong><em><span class="highlight-blue">spielberg</span></em></strong> that create shortcuts but do not causally determine predictions.
                                     </li>
                                     <li>
-                                        <em>Spurious Tokens</em>: Words like "NOLAN" or "SPIELBERG" that create shortcuts but do not causally determine predictions.
-                                    </li>
-                                    <li>
-                                        <em>Useless Tokens</em>: Stopwords (e.g., "THE") or frequent tokens (e.g., "MOVIE") that neither affect the task label nor provide meaningful information.
+                                        <strong>Useless Tokens</strong>: Stopwords (e.g., <strong><em><span class="highlight-orange">the</span></em></strong>) or frequent tokens (e.g., <strong><em><span class="highlight-orange">movie</span></em></strong>) that neither affect the task label nor provide meaningful information.
                                     </li>
                                 </ol>
 
                     <p>
-                        But, not all tokens contribute equally to model training. High-frequency tokens, such as "THE" or "MOVIE" in a sentiment analysis dataset, are present across many samples in the dataset. While these tokens are essential for syntax and structure, they carry little task-specific information. Their frequent occurrence makes them less impactful on model gradients, meaning they contribute minimally to the model's ability to distinguish between classes.
+                        But, not all tokens contribute equally to model training. High-frequency tokens, such as <strong><em><span class="highlight-orange">the</span></em></strong> or <strong><em><span class="highlight-orange">movie</span></em></strong> in a sentiment analysis dataset, are present across many samples in the dataset. While these tokens are essential for syntax and structure, they carry little task-specific information. Their frequent occurrence makes them less impactful on model gradients, meaning they contribute minimally to the model's ability to distinguish between classes.
                     </p>
 
                     <p>
-                        On the other hand, low-frequency tokens, such as "NOLAN" in a movie review dataset, often carry strong task-specific information. These tokens disproportionately influence the model's gradients during training, making them highly representative of the task. For example: In a sentiment classification task, tokens like "GOOD", "BAD", or "NOLAN" are low-frequency but strongly indicative of sentiment, making them essential for learning.
+                        On the other hand, low-frequency tokens, such as <strong><em><span class="highlight-blue">nolan</span></em></strong> in a movie review dataset, often carry strong task-specific information. These tokens disproportionately influence the model's gradients during training, making them highly representative of the task. For example: In a sentiment classification task, tokens like <strong><em><span class="highlight-green">good</span></em></strong>, <strong><em><span class="highlight-green">bad</span></em></strong>, or <strong><em><span class="highlight-blue">nolan</span></em></strong> are low-frequency but strongly indicative of sentiment, making them essential for learning.
                     </p>
 
                     <p>
@@ -524,10 +547,10 @@
                 </p>
                 <ul style="margin-left: 20px; list-style-type: disc;">
                     <li>
-                        In the IMDb sentiment dataset, tokens like "good" and "bad" have high PMI for the positive and negative classes, respectively.
+                        In the IMDb sentiment dataset, tokens like <strong><em><span class="highlight-green">good</span></em></strong> and <strong><em><span class="highlight-green">bad</span></em></strong> have high PMI for the positive and negative classes, respectively.
                     </li>
                     <li>
-                        Among such tokens, those with lower frequencies (e.g., "Nolan") are classified as spurious because they disproportionately affect gradients.
+                        Among such tokens, those with lower frequencies (e.g., <strong><em><span class="highlight-blue">nolan</span></em></strong>) are classified as spurious because they disproportionately affect gradients.
                     </li>
                 </ul>
 
