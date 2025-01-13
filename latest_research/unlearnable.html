@@ -286,7 +286,7 @@
 
                                             </p>
                                             <h2 id="defining-unlearnable-data"> What does it mean to make data unlearnable?</h2>
-                                            <p>Let’s consider the case study from <em>Freakonomics</em> by Steven Levitt and Brian Jacob, which examined how incentives in education can influence teaching strategies. 
+                                            <p>Let's consider the case study from <em>Freakonomics</em> by Steven Levitt and Brian Jacob, which examined how incentives in education can influence teaching strategies. 
                                                 The study, highlighted in <em>"What Do School Teachers and Sumo Wrestlers Have in Common?"</em>, analyzed patterns in standardized testing within the Chicago Public Schools system. 
                                                 When significant pressure is placed on teachers to produce high student test scores often tied to funding or job security, some may resort to altering students' answers to improve results or inform students to mark a particular answer choice for any question on trigonometry.
                                                 With <strong>shortcuts</strong> like this, students may end up scoring high because of these hacks but don't learn anything. 
@@ -301,7 +301,7 @@
 
                                             </p>
                                             <p>
-                                                Let’s use a cat classification example. 
+                                                Let's use a cat classification example. 
                                                 If a yellow pixel or a similar type of noise is added that is recognizable by the model (and can be imperceptible to humans), then the model may, during training, learn to correlate a pattern of noise to the label cat, instead of focusing on the cat’s features. 
                                                 This leads it to misclassify during test inference where a similar yellow pixel might be present in the photo belonging to another class. 
                                                 On the other hand, if we add cropped images, rotations, or other types of transformations, the loss during training might increase, but the performance will be high during test inference.
@@ -377,7 +377,7 @@
                                                     <strong>Inner Optimization (Noise Generation):</strong> The goal of the inner loop is to generate noise \( \delta \) that minimizes (for error-minimizing noise) or maximizes (for error-maximizing noise) the model's loss function \( L \).
                                                     <ul style="margin-left: 20px; list-style-type: disc;">
                                                         <li>
-                                                            <em>Error-minimizing Noise</em> is represented by the following equation:
+                                                            <strong>Error-minimizing Noise</strong> is represented by the following equation:
                                                             <div style="text-align: center;">
                                                                 \( \text{arg}_{\text{min}} \, \delta \, L(f(x+\delta; \theta), y) \, \text{subject to} \, \| \delta \|_p \leq \epsilon \)
                                                             </div>
@@ -385,12 +385,14 @@
                                                         </li>
                                                     </ul>
                                                     <blockquote style="background-color: #FFFACD; padding: 10px; border-radius: 5px;">
-                                                        <em>Making data unlearnable with shortcuts essentially means reducing the training loss during training and fooling the model as if it's learned everything about the data.</em>
+                                                        Making data <strong>unlearnable</strong> with shortcuts essentially means <strong>reducing the training loss</strong> during training and <strong>fooling the model as if it's learned everything about the data</strong>.
                                                     </blockquote>
+
+                                                
                                                     
                                                     <ul style="margin-left: 20px; list-style-type: disc;">
                                                         <li>
-                                                            <em>Error-maximizing Noise</em> can be formulated by the following equation:
+                                                            <strong>Error-maximizing Noise</strong> can be formulated by the following equation:
                                                             <div style="text-align: center;">
                                                                 \( \text{arg}_{\text{max}} \, \delta L(f(x+\delta; \theta), y) \, \text{subject to} \, \| \delta \|_p \leq \epsilon \)
                                                             </div>
@@ -398,7 +400,7 @@
                                                     </ul>
                                                     
                                                     <blockquote style="background-color: #FFFACD; padding: 10px; border-radius: 5px;">
-                                                        <em>Making data adversarial essentially means increasing the training loss during training and forcing the model to attend more in an attempt to learn better.</em>
+                                                        Making data <strong>adversarial</strong> essentially means <strong>increasing the training loss</strong> during training and forcing the model to attend more in an attempt to <strong>learn better</strong>.
                                                     </blockquote>
                                                     
                                                 <li>
@@ -454,10 +456,10 @@
                                     The objective is to create a spurious correlation between the tokens and the class labels, causing the model to rely on this shortcut rather than learning useful patterns.
                                     </p>
                                   
-                                    <blockquote style="background-color: #FFFACD; padding: 10px; border-radius: 5px; color: #000;">
-                                        <strong><em>But do we actually need model weights for creating shortcuts? TLDR: No. </em></strong>
+
+                                    <blockquote style="background-color: #FFFACD; padding: 10px; border-radius: 5px;">
+                                        <strong>But do we actually need model weights for creating shortcuts? TLDR: No.</strong>
                                     </blockquote>
-                                    
 
                                     <h2>Our Approach: RegText</h2>
 
@@ -469,7 +471,7 @@
                                     Consider the IMDb sentiment classification task. For instance, reviews of movies directed by renowned filmmakers such as Spielberg or Nolan, often contain overwhelmingly positive language. This association can create a spurious correlation between the filmmaker’s names and sentiment, leading LMs to learn shortcuts that can undermine their robustness. As demonstrated by <a href="#footnote-9">[9</a>-<a href="#footnote-10">10]</a>, these shortcuts can hinder the reliability of LMs in accurately assessing sentiment. This implies the existence of a subset of tokens that promote shortcut learning, viz. spurious words – e.g., the names of famous filmmakers.
                                 </p>
 
-                                <p>Based on prior work [10], tokens in a dataset like IMDb can be categorized as:</p>
+                                <p>Based on prior work <a href="#footnote-10">[10]</a>, tokens in a dataset like IMDb can be categorized as:</p>
                                 <ol>
                                     <li>
                                         <em>Genuine Tokens</em>: Words like "GOOD," "LOVE," "BAD," or "BORING" that causally affect the task label and meaningfully contribute to predictions.
