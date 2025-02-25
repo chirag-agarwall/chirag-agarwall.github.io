@@ -2560,6 +2560,19 @@ table td[class*="col-"],table th[class*="col-"] {
   cursor: default;
 }
 
+.sponsor-img-container {
+  display: flex;
+  gap: 5%;
+  margin-left: 12px;
+  flex: 2;
+  margin-bottom: 20px;
+}
+
+.sponsor-img-container img {
+  width: 150px;
+  height: 150px;
+}
+
 /* Research */
 
 #research .research-main-img {
