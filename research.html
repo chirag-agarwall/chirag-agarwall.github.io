@@ -177,89 +177,145 @@
                                                 <div class='entry-content-wrapper clearfix'>
                                                     <section class="section research_section">
                                                         <article>
-                                                            <div align="center">
+<!--                                                             <div align="center">
                                                                 <img class="research-main-img" style="max-width: 63%; max-height: 45%;" src="./images/research_overview.png">
                                                                 <h5 style="display: flex;justify-content:center;">An overview of the pipeline for developing and benchmarking Trustworthy models at different stages of the machine learning model pipeline.</h5>
-                                                            </div>
-                                                            <br>
-                                                            <br>
+                                                            </div> -->
+                                                            <!-- <br> -->
+                                                            <!-- <br> -->
                                                        <div class="research_content">
                                                             <h2 id="" style="text-transform: capitalize; font-size: 2.2rem;">
-                                                                Scalable and Novel Algorithms for Explaining Large Multimodal Models
+                                                                Explainable Artificial Intelligence
                                                             </h2>
-
-                                                            <p>
-                                                                A popular strategy for explaining the decision of a predictive and generative model is attributing their decision to either the i) input features (i.e., feature attribution) and/or ii) samples from the training datasets (i.e., data attribution). Intuitively, an attribution map on the input represents a heatmap that highlights input features (pixles in images, tokens in language, nodes/edges in graphs, temporal window for time series and trajectories in RL agents) that are the evidence for and against the model outputs. A widely used technique to construct attribution maps is to approximate the attribution value of an input region by the probability change when that region is absent, i.e., removed from the input.
+                                                            <p style="text-align: justify;">
+                                                                Explainable AI (XAI) is pivotal for fostering trust in AI systems by making their decision-making processes transparent and interpretable to humans. Our research in XAI focuses on overcoming the inherent complexity of modern AI models, particularly frontier models and black-box systems, to produce reliable and actionable explanations. Our work addresses the trade-off between model performance and explainability, ensuring that explanations are not only understandable but also faithful to the model's actual behavior, which is critical for applications where stakeholders—such as doctors, judges, or policymakers—require clear justifications for AI-driven decisions.
                                                             </p>
-                                                            <div align="center">
+                                                            <p style="text-align: justify;">
+                                                                Some recent key contributions of our work is the reliability of explanations from LLMs. Our work investigates why LLM-generated explanations often appear plausible to humans but may fail to accurately reflect the model's decision-making process. By analyzing the trade-offs between faithfulness (how well an explanation captures the model's reasoning) and plausibility (how convincing it seems), our work proposes strategies to improve explanation quality, such as refining prompting techniques and developing evaluation metrics. This research is foundational for ensuring that LLMs, increasingly used in critical applications, provide trustworthy insights.
+                                                                
+                                                                In addition, we also tackle the challenge of eliciting 
+                                                                <spam class="tooltip-container">
+                                                                    faithful Chain-of-Thought (CoT) 
+                                                                    <spam class="tooltip-image">
+                                                                        <a href="https://arxiv.org/pdf/2402.04614" target="_blank">
+                                                                          <img src="./images/faithful_cot.jpg" alt="Tooltip Image">
+                                                                        </a> 
+                                                                    </spam>
+                                                                </spam> reasoning in LLMs. Our studies have been cited in <a href="https://cdn.openai.com/o1-system-card-20241205.pdf" target="_blank">OpenAI o1 System Card</a> and reveal the limitations of current approaches like in-context learning, LoRA fine-tuning, and activation editing in guaranteeing accurate reasoning paths, advocating for new architectural designs and training paradigms to enhance transparency in LLMs, paving the way for more reliable decision-making in domains like legal and medical AI.
+                                                            </p>
+                                                            <p style="text-align: justify;">
+                                                                In our work, we develop new explainability algorithms to study the behavior of complex black-box unimodal and multimodal models. The research on multimodal explanation methods is at a very nascent stage and we aim to introduce novel algorithms that generate actionable explanations for multimodal models. Through these efforts, our lab aims to shape the future of XAI, ensuring AI systems are both powerful and interpretable, with far-reaching implications for ethical AI deployment.
+                                                            </p>
+                                                            <!-- <p>
+                                                                A popular strategy for explaining the decision of a predictive and generative model is attributing their decision to either the i) input features (i.e., feature attribution) and/or ii) samples from the training datasets (i.e., data attribution). Intuitively, an attribution map on the input represents a heatmap that highlights input features (pixles in images, tokens in language, nodes/edges in graphs, temporal window for time series and trajectories in RL agents) that are the evidence for and against the model outputs. A widely used technique to construct attribution maps is to approximate the attribution value of an input region by the probability change when that region is absent, i.e., removed from the input.
+                                                            </p> -->
+<!--                                                             <div align="center">
                                                                 <img src="./images/xai-algo.png">
-                                                            </div>                                          
-                                                            <p>
+                                                            </div>   -->                                        
+                                                            <!-- <p>
                                                                 While removing an input feature to measure its attribution is a principle method
                                                                 (i.e., “intervention” in causal reasoning), a key open question is: <em style="color:#ffffcc">How to remove?</em> The removal of input features often lead to out-of-distribution (OoD) inputs (e.g., noisy images, perturbed tokens, disconnceted graphs, etc.) on which the underlying models were not trained. Because ML models are often easily fooled by unusual input patterns, we hypothesize that such examples might yield explanations that are unfaithful, i.e., explanations that do not represent the internal reasoning of the model. We develop several attribution-based techniques that generate explanations that are faithful to the underlying model and interpretable to human users and stakeholders. For example, we introduced generative-based attribution strategies that can be augmented with existing feature attribution algorithms to generate more faithful and accurate explanation and extend these techniques to RL agents, where we attribute the policy decisions of a trained RL agent to the trajectories encountered by it during training.
-                                                            </p>
-
-                                                            <p>
-                                                                In our work, we develop new explainability algorithms to study the behavior of complex black-box unimodal and multimodal models.
-                                                                The research on multimodal explanation methods is at a very nascent stage and we aim to introduce novel algorithms that generate actionable explanations for multimodal models.
-                                                            </p>
+                                                            </p> -->
                                                             <h4 id="example-related-publications">Relevant Papers:</h4>
                                                             <p>
-                                                                <a href="https://arxiv.org/pdf/2310.05797" target="_blank">Are Large Language Models Post Hoc Explainers?</a><br>
+                                                                <a href="https://arxiv.org/pdf/2502.09457" target="_blank">The Multilingual Mind: A Survey of Multilingual Reasoning in Language Models</a><br>
+                                                                <a href="https://arxiv.org/pdf/2411.15382" target="_blank">On the Impact of Fine-Tuning on Chain-of-Thought Reasoning</a><br>
+                                                                <a href="https://proceedings.mlr.press/v238/harsha-tanneru24a/harsha-tanneru24a.pdf" target="_blank">Quantifying Uncertainty in Natural Language Explanations of Large Language Models</a><br>
+                                                                <a href="https://arxiv.org/pdf/2501.05078" target="_blank">Analyzing Memorization in Large Language Models through the Lens of Model Attribution</a><br>
+                                                                <a href="https://arxiv.org/pdf/2402.04614" target="_blank">Faithfulness vs. Plausibility: On the (un)Reliability of Explanations from Large Language Models</a><br>
+                                                                <a href="https://openreview.net/pdf?id=3h0kZdPhAC" target="_blank">On the Difficulty of Faithful Chain-of-Thought Reasoning in Large Language Models</a><br>
+                                                                <a href="https://arxiv.org/pdf/2310.05797" target="_blank">In-context Explainers: Harnessing LLMs for Explaining Black-Box Models</a><br>
+                                                                <a href="" target="_blank">Openxai: Towards a transparent evaluation of model explanations</a><br>
+                                                                <a href="https://www.nature.com/articles/s41597-023-01974-x" target="_blank">Evaluating Explainability for Graph Neural Networks</a><br>
+                                                                <!-- <a href="https://arxiv.org/pdf/2310.05797" target="_blank">Are Large Language Models Post Hoc Explainers?</a><br>
                                                                 <a href="https://openaccess.thecvf.com/content/ACCV2020/papers/Agarwal_Explaining_image_classifiers_by_removing_input_features_using_generative_models_ACCV_2020_paper.pdf" target="_blank">Explaining Image Classifiers by Removing Input Features Using Generative Models</a><br>
                                                                 <a href="https://arxiv.org/pdf/2305.04073" target="_blank">Explaining RL Decisions with Trajectories</a><br>
                                                                 <a href="https://openreview.net/pdf?id=m3NuXLzMoP" target="_blank">Intriguing Properties of Visual-Language Model Explanations</a><br>
-                                                                <a href="https://openreview.net/pdf?id=m3NuXLzMoP" target="_blank">Towards the Unification and Robustness of Perturbation- and Gradient-based Explanations</a><br>
+                                                                <a href="https://openreview.net/pdf?id=m3NuXLzMoP" target="_blank">Towards the Unification and Robustness of Perturbation- and Gradient-based Explanations</a><br> -->
                                                             </p>
-                                                            <p class="read-more"><a href="#" class="btn btn-danger">
+                                                            <!-- <p class="read-more"><a href="#" class="btn btn-danger">
                                                                     <svg class="arrows">
                                                               <path class="a2" d="M0 20 L20 42 L40 20"></path>
                                                               <path class="a3" d="M0 40 L20 62 L40 40"></path>
                                                             </svg>
-                                                                Read More</a></p>
+                                                                Read More</a></p> -->
                                                             </div>
-                                                    <div class="line-break"><hr></div>                          
+                                                    <div class="line-break"><hr></div>
                                                     <div class="research_content">
                                                         <h2 id="large-scale-xai-benchmarking" style="text-transform: capitalize; font-size: 2.2rem;">
-                                                            Large Scale Benchmarking of Post Hoc Explainers for Diverse Data Modalities
+                                                            AI Safety and Alignment
                                                         </h2>
-                                                        <p>
-                                                            The increasing use of predictive and generative models in high-stake domains including healthcare, law, and finance requires us to develop algorithms and techniques that can explain the behavior fo these complex machine learning models. There has been a growing demand on explaining the behavior of these large-scale models so that both model developers and stakeholders can understand the rationale behind their predictions or responses, and determine if and when to rely on them. To this end, various techniques have been proposed in recent literature to generate post hoc explanations of individual predictions made by complex ML models trained on different data modalities like image, text, graphs, and tables. In general, these explanation methods output the influence of each of the input features on the model's output and is observed as a proxy for model explanation. However, it is critical to answer -- <em style="color:#ffffcc">which explanation methods are effective with respect to what notions of reliability and under what conditions?</em> Answering this question will ensure that the explanations generated by these methods are reliable so that relevant stakeholders and decision makers are provided with credible information about the underlying models.
+                                                        <p style="text-align:justify;">
+                                                            AI Safety and Alignment is a cornerstone of current AI research that focuses on ensuring that AI systems are robust, reliable, and free from unintended consequences, particularly in high-stakes environments. Our work addresses critical risks, such as adversarial attacks, model hallucinations, and privacy violations, which can undermine the trustworthiness of AI systems. By developing rigorous evaluation benchmarks and certification methods, our research aims to safeguard AI deployment in domains like healthcare, where errors can have life-altering consequences. Our contributions are particularly timely as AI systems, especially large language and vision-language models, become integral to real-world applications.
                                                         </p>
-                                                        <div align="center">
+                                                        <p style="text-align:justify;">
+                                                            Our recent AI Safety work focused on evaluating and mitigating <a>hallucinations in large-vision language models (LVLMs)</a>, where we show that state-of-the-art LVLMs generate false or misleading outputs and pose a major safety risk. In addition to hallucination benchmark, we have also introduced comprehensive benchmark for assessing LLM safety in healthcare settings, where we evaluate models on their ability to provide accurate and safe medical advice, addressing risks like misdiagnosis or harmful recommendations. By integrating real-world medical scenarios and stress-testing models under adversarial conditions, our benchmark sets a new standard for safety evaluation. Further, we have developed methods to certify that LLMs can withstand malicious prompts designed to elicit harmful or incorrect responses. By combining theoretical analysis with empirical testing, our work ensures that models remain safe under real-world threats. Additionally, our exploration of iterative prompting’s impact on truthfulness in LLMs, fairness in LVLMs and study on operationalizing data protection rights in LLMs underscores our holistic approach to AI Safety, addressing both technical and ethical dimensions and advancing the field, ensuring AI systems are secure and aligned with societal needs.
+                                                        </p>
+                                                        <p>
+                                                            Recent advancements in LLMs have introduced new security risks, particularly in the form of jailbreak attacks that bypass safety mechanisms. While previous work has identified both semantic and non-semantic tokens capable of jailbreaking frontier models using pre-defined responses like <em> “Sure, ...” </em>, these studies have largely overlooked the potential for models to create an internal, model-specific “language” of non-semantic text that reliably triggers specific behaviors. For example, a non-semantic phrase that appears as a simple typo or misspelling to a naive user could consistently prompt the model to produce malicious code, posing a serious threat. Despite prior work on prompt engineering and adversarial attacks, a systematic, mechanistic understanding of how these vulnerabilities arise—and how to mitigate them—remains an open challenge, which we aim to explore in our future work.
+                                                        </p>
+                                                        <!-- <div align="center">
                                                             <img src="./images/xai_research.png">
-                                                        </div>
-                                                        <p>
-                                                            We take the first step towards answering this question by designing benchmarks with a broader ecosystem of data loaders, data processing functions, explanation methods, evaluation metrics (e.g., accuracy, faithfulness, stability, fairness), and explanation visualizers, to reliably benchmark the quality of any given explanation for models trained on different modalities. We provide open-source implementations and ready-to-use API interfaces for different post hoc explanation methods, and release a collection of predictive models trained on synthetic and real-world datasets for benchmarking explanation methods to promote transparency, and to allow users to easily compare the performance of multiple explanation methods across a wide variety of synthetic and real-world datasets, evaluation metrics, and predictive models.
-                                                        </p>
-
-                                                        <p>
-                                                            We are looking to develop easy-to-use reproducible benchmarks (synthetic datasets and evaluation metrics) to quantify explanations generated for multimodal models like LVLMS, where explanations are not limited to one data modality.
-                                                        </p>
-
+                                                        </div> -->
                                                         <h4 id="example-related-publications">Relevant Papers:</h4>
-
                                                         <p>
-                                                            <a href="https://proceedings.mlr.press/v238/harsha-tanneru24a/harsha-tanneru24a.pdf" target="_blank">Quantifying Uncertainty in Natural Language Explanations of LLMs</a><br>
-                                                            <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/65398a0eba88c9b4a1c38ae405b125ef-Paper-Datasets_and_Benchmarks.pdf" target="_blank">OpenXAI: Towards a Transparent Evaluation of Post hoc Model Explanations</a><br>
-                                                            <a href="https://proceedings.mlr.press/v151/agarwal22b/agarwal22b.pdf" target="_blank">Probing GNN Explainers: A Rigorous Theoretical and Empirical Analysis of GNN Explanation Methods</a><br>
-                                                            <a href="https://www.nature.com/articles/s41597-023-01974-x" target="_blank">Evaluating Explainability for Graph Neural Networks</a><br>
-                                                            <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Bansal_SAM_The_Sensitivity_of_Attribution_Methods_to_Hyperparameters_CVPR_2020_paper.pdf" target="_blank">SAM: The Sensitivity of Attribution Methods to Hyperparameters</a><br>
+                                                            <a href="https://arxiv.org/pdf/2412.20622" target="_blank">Towards a Systematic Evaluation of Hallucinations in Large-Vision Language Models</a><br>
+                                                            <a href="https://arxiv.org/abs/2411.08506" target="_blank">Towards Operationalizing Right to Data Protection</a><br>
+                                                            <a href="https://arxiv.org/pdf/2402.06625" target="_blank">Understanding the effects of iterative prompting on truthfulness</a><br>
+                                                            <a href="https://openreview.net/pdf?id=cFyagd2Yh4" target="_blank"> MedSafetyBench: Evaluating and Improving the Medical Safety of Large Language Models</a><br>
+                                                            <a href="https://arxiv.org/pdf/2309.02705" target="_blank">Certifying LLM Safety against Adversarial Prompting</a><br>
+                                                            <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Seth_DeAR_Debiasing_Vision-Language_Models_With_Additive_Residuals_CVPR_2023_paper.pdf" target="_blank">Dear: Debiasing vision-language models with additive residuals</a><br>
+                                                            <a href="https://arxiv.org/abs/2302.13406" target="_blank">GNNDelete: A general unlearning strategy for graph neural networks</a><br>
                                                         </p>
-                                                        <p class="read-more"><a href="#" class="btn btn-danger">
+                                                        <!-- <p class="read-more"><a href="#" class="btn btn-danger">
                                                             <svg class="arrows">
                                                                 <path class="a2" d="M0 20 L20 42 L40 20"></path>
                                                                 <path class="a3" d="M0 40 L20 62 L40 40"></path>
                                                             </svg>
                                                             Read More</a>
-                                                        </p>
-                                                    </div>
-                                                    <div class="line-break"><hr></div>
-                                                    <div class="research_content">
-                                                        <h2 style="text-transform: capitalize; font-size: 2.2rem;">
+                                                        </p> -->
+                                                    </div>                                                                     
+                                                    <!-- <div class="research_content"> -->
+                                                        <!-- <h2 id="large-scale-xai-benchmarking" style="text-transform: capitalize; font-size: 2.2rem;">
+                                                            Large Scale Benchmarking of Post Hoc Explainers for Diverse Data Modalities
+                                                        </h2> -->
+                                                        <!-- <p>
+                                                            The increasing use of predictive and generative models in high-stake domains including healthcare, law, and finance requires us to develop algorithms and techniques that can explain the behavior fo these complex machine learning models. There has been a growing demand on explaining the behavior of these large-scale models so that both model developers and stakeholders can understand the rationale behind their predictions or responses, and determine if and when to rely on them. To this end, various techniques have been proposed in recent literature to generate post hoc explanations of individual predictions made by complex ML models trained on different data modalities like image, text, graphs, and tables. In general, these explanation methods output the influence of each of the input features on the model's output and is observed as a proxy for model explanation. However, it is critical to answer -- <em style="color:#ffffcc">which explanation methods are effective with respect to what notions of reliability and under what conditions?</em> Answering this question will ensure that the explanations generated by these methods are reliable so that relevant stakeholders and decision makers are provided with credible information about the underlying models.
+                                                        </p> -->
+                                                        <!-- <div align="center">
+                                                            <img src="./images/xai_research.png">
+                                                        </div> -->
+                                                        <!-- <p>
+                                                            We take the first step towards answering this question by designing benchmarks with a broader ecosystem of data loaders, data processing functions, explanation methods, evaluation metrics (e.g., accuracy, faithfulness, stability, fairness), and explanation visualizers, to reliably benchmark the quality of any given explanation for models trained on different modalities. We provide open-source implementations and ready-to-use API interfaces for different post hoc explanation methods, and release a collection of predictive models trained on synthetic and real-world datasets for benchmarking explanation methods to promote transparency, and to allow users to easily compare the performance of multiple explanation methods across a wide variety of synthetic and real-world datasets, evaluation metrics, and predictive models.
+                                                        </p> -->
+
+                                                        <!-- <p>
+                                                            We are looking to develop easy-to-use reproducible benchmarks (synthetic datasets and evaluation metrics) to quantify explanations generated for multimodal models like LVLMS, where explanations are not limited to one data modality.
+                                                        </p> -->
+
+                                                        <!-- <h4 id="example-related-publications">Relevant Papers:</h4> -->
+
+                                                        <!-- <p>
+                                                            <a href="https://proceedings.mlr.press/v238/harsha-tanneru24a/harsha-tanneru24a.pdf" target="_blank">Quantifying Uncertainty in Natural Language Explanations of LLMs</a><br>
+                                                            <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/65398a0eba88c9b4a1c38ae405b125ef-Paper-Datasets_and_Benchmarks.pdf" target="_blank">OpenXAI: Towards a Transparent Evaluation of Post hoc Model Explanations</a><br>
+                                                            <a href="https://proceedings.mlr.press/v151/agarwal22b/agarwal22b.pdf" target="_blank">Probing GNN Explainers: A Rigorous Theoretical and Empirical Analysis of GNN Explanation Methods</a><br>
+                                                            <a href="https://www.nature.com/articles/s41597-023-01974-x" target="_blank">Evaluating Explainability for Graph Neural Networks</a><br>
+                                                            <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Bansal_SAM_The_Sensitivity_of_Attribution_Methods_to_Hyperparameters_CVPR_2020_paper.pdf" target="_blank">SAM: The Sensitivity of Attribution Methods to Hyperparameters</a><br>
+                                                        </p> -->
+                                                        <!-- <p class="read-more"><a href="#" class="btn btn-danger">
+                                                            <svg class="arrows">
+                                                                <path class="a2" d="M0 20 L20 42 L40 20"></path>
+                                                                <path class="a3" d="M0 40 L20 62 L40 40"></path>
+                                                            </svg>
+                                                            Read More</a>
+                                                        </p> -->
+                                                    <!-- </div> -->
+                                                    <!-- <div class="line-break"><hr></div> -->
+                                                    <!-- <div class="research_content"> -->
+<!--                                                         <h2 style="text-transform: capitalize; font-size: 2.2rem;">
                                                             Understanding Training Dynamics of Large Scale Models and Making them More Trustworthy during Inference
-                                                        </h2>
-                                                        <p>
+                                                        </h2> -->
+                                                        <!-- <p>
                                                             A myriad of machine learning models have been trained under supervised, unsupervised, or self-supervised settings using different predictive and trustworthy properties. While these models do achieve state-of-the-art performance on downstream predictive and generative tasks, we have little understanding of their exact training dynamics, e.g., which examples are more important for the model to converge? which examples do the model learn first? does harder examples ends up getting memorized? the contrast between early- and late-training stages, etc. In addition, previous researches have shown that it is possible to train deep neural networks with fairness, robustness, and explainability properties, but haven't yet delivered a computationally efficient way to train large-scale visual-language and large language models. Further, <em style="color:#ffffcc">different pillars of TrustworthyML do promise great success independently, but they are primarily discussed in dedicated silos,</em> and it remains unclear whether a relation exists between them. Hence, we focus on three key questions with respect to training large-scale trustworthy models:
                                                             <div align="center">
                                                                 <img src="./images/training.png">
@@ -275,23 +331,23 @@
                                                                     What is the inter-connection and trade-off between different trustworthy properties? 
                                                                 </li>
                                                             </ol>
-                                                        </p> 
-                                                        <p>
+                                                        </p> --> 
+                                                        <!-- <p>
                                                             Addressing these questions will help us understand the training dynamics of a model and, moving forward, we aim to develop architectures and training algorithms that will lead to more trustworthy models. For instance, we have developed techniques to understand the training dynamics of a ML model, where we use gradient explanations to identify samples that are easier/harder for the model to learn (see <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Agarwal_Estimating_Example_Difficulty_Using_Variance_of_Gradients_CVPR_2022_paper.pdf" target="_blank">VoG</a>). 
+                                                        </p> -->
                                                         <!-- The other aspect of model training that we focus on is to understand the training dynamics of a model or developing architectures that leverage explanations in their training pipeline. We have developed techniques to understand the training dynamics of a ML model, where we identify samples that are easier/harder for the model to learn. Moving forward, we intend to focus on leveraging explanations in identifying a subset of relatively more challenging examples during model training of large foundation models to help prioritize limited human annotation and auditing time. Further, interpretable frameworks can be immensely useful in safety-critical applications as they allow information/features to flow along important neural paths while blocking information along irrelevant paths to improve the accuracy and explainability of models. -->
-                                                        </p>
-                                                        <div align="center" class="flex-diff">
+                                                        <!-- <div align="center" class="flex-diff">
                                                             <img src="./images/inference.png">
                                                             <img src="./images/rl_algo.gif">
-                                                        </div>
-                                                        <p>
+                                                        </div> -->
+                                                        <!-- <p>
                                                             Further, recent years have seen an enormous growth in the use of large-scale models that are trained on broad uncurated datasets using self-supervised learning and adapted for a wide range of downstream tasks. In contrast to supervised models, self-supervised pretrained models learn and embed general patterns and features from the data in a densely packed representation space and in most cases we are only provided with the output representation of these models, and we have little to no understanding of how to interpret them. Once we unfold this representation space, it is very hard to understand what these closed models learn. The way we interpret this is that <em style="color:#ffffcc">large models learn data features and patterns and embed them in a densely packed representation space</em>, where we have small feature pockets that can be used for specific downstream tasks and tools like in-context learning (ICL) and chain-of-thoughts (CoT) helps us to navigate this complex representation space. The question then becomes -- <em style="color:#ffffcc">how unique and trustworthy are these representations?</em>
-                                                        </p>
-                                                        <p>
+                                                        </p> -->
+                                                        <!-- <p>
                                                             Most organizations training visual-language and large language models provide their representations as an Encoder service, where users can employ the representations from these models to their respective downstream tasks. Hence, it's important to disentangle the representations from these models and understand their trustworthy properties. We explore different robustness, explainability, uncertainty, and fairness properties using inference- and API-level access of visual-language and large language models.
-                                                        </p>
-                                                        <h4 id="example-related-publications">Relevant Papers:</h4>
-                                                        <p>
+                                                        </p> -->
+                                                        <!-- <h4 id="example-related-publications">Relevant Papers:</h4> -->
+                                                        <!-- <p>
                                                             <a href="https://arxiv.org/pdf/2107.13098" target="_blank">A Tale of Two Long Tails</a><br>
                                                             <a href="https://proceedings.mlr.press/v161/agarwal21b/agarwal21b.pdf" target="_blank">Towards a Unified Framework for Fair and Stable Graph Representation Learning</a><br>
                                                             <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Agarwal_Estimating_Example_Difficulty_Using_Variance_of_Gradients_CVPR_2022_paper.pdf" target="_blank">Estimating Example Difficulty using Variance of Gradients</a><br>
@@ -304,15 +360,14 @@
                                                             <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Seth_DeAR_Debiasing_Vision-Language_Models_With_Additive_Residuals_CVPR_2023_paper.pdf" target="_blank">DeAR: Debiasing Vision-Language Models with Additive Residuals</a><br>
                                                             <a href="https://arxiv.org/pdf/2307.13192" target="_blank">Counterfactual Explanation Policies in RL</a><br>
                                                             <a href="https://arxiv.org/pdf/2309.02705" target="_blank">Certifying LLM Safety against Adversarial Prompting</a>
-                                                        </p>
-                                                         
-                                                        <p class="read-more"><a href="#" class="btn btn-danger">
+                                                        </p> -->
+                                                        <!-- <p class="read-more"><a href="#" class="btn btn-danger">
                                                             <svg class="arrows">
                                                       <path class="a2" d="M0 20 L20 42 L40 20"></path>
                                                       <path class="a3" d="M0 40 L20 62 L40 40"></path>
                                                     </svg>
-                                                        <span>Read More</span></a></p>
-                                                    </div>
+                                                        <span>Read More</span></a></p> -->
+                                                    <!-- </div> -->
                                                     <!-- <div class="line-break"><hr></div> -->
 <!--                                                     <div class="research_content">
                                                         <h2 id="learning-trustworthy-representations" style="text-transform: capitalize; font-size: 2.2rem;">
@@ -360,7 +415,7 @@
                     </div>
                 </div>
             </div>
-            <script type="text/javascript">
+            <!-- <script type="text/javascript">
                 var $el, $ps, $up, totalHeight;
                 $(".research_content .btn").on("click", function() {
                   totalHeight = 0
@@ -382,7 +437,7 @@
                   $p.fadeOut();
                   return false;
                 });
-            </script>
+            </script> -->
             <script type="text/javascript" src="js/menu.js" id="avia-module-menu-js"></script>
             <script type="text/javascript" src="js/menu-toggle.js" id="avia-module-toggles-js"></script>
             <script type="text/javascript" src="js/hamburger-menu.js" id="avia-hamburger-menu-js"></script>
