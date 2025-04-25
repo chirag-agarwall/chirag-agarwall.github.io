@@ -187,46 +187,55 @@
                                                             <h2 id="" style="text-transform: capitalize; font-size: 2.2rem;">
                                                                 Explainable Artificial Intelligence
                                                             </h2>
-                                                            <p style="text-align: justify;">
-                                                                Explainable AI (XAI) is pivotal for fostering trust in AI systems by making their decision-making processes transparent and interpretable to humans. Our research in XAI focuses on overcoming the inherent complexity of modern AI models, particularly frontier models and black-box systems, to produce reliable and actionable explanations. Our work addresses the trade-off between model performance and explainability, ensuring that explanations are not only understandable but also faithful to the model's actual behavior, which is critical for applications where stakeholders—such as doctors, judges, or policymakers—require clear justifications for AI-driven decisions. We have developed widely used benchmarks, including <a href="https://github.com/AI4LIFE-GROUP/OpenXAI" target="_blank"> OpenXAI </a> and <a href="https://github.com/mims-harvard/GraphXAI/tree/main" target="_blank"> GraphXAI </a>, which have redefined standards for evaluating AI explainability, and empowered researchers worldwide to build more transparent and equitable models.
-                                                            </p>
-                                                            <p style="text-align: justify;">
-                                                                Some recent key contributions of our work is the <spam class="tooltip-container">
-                                                                    reliability of explanations from LLMs
-                                                                    <spam class="tooltip-image" style="width: 500px;">
-                                                                        <a href="https://proceedings.mlr.press/v238/harsha-tanneru24a/harsha-tanneru24a.pdf" target="_blank">
-                                                                          <img src="./images/uncertainty-logo.jpg" alt="Tooltip Image">
-                                                                        </a> 
-                                                                    </spam>
-                                                                </spam>. Our work investigates why LLM-generated explanations often appear plausible to humans but may fail to accurately reflect the model's decision-making process. By analyzing the <spam class="tooltip-container">
-                                                                    trade-offs between
-                                                                    <spam class="tooltip-image" style="width: 500px;">
-                                                                        <a href="https://arxiv.org/pdf/2402.04614" target="_blank">
-                                                                          <img src="./images/faith-plaus.jpg" alt="Tooltip Image">
-                                                                        </a> 
-                                                                    </spam>
-                                                                </spam> faithfulness (how well an explanation captures the model's reasoning) and plausibility (how convincing it seems), our work proposes strategies to improve explanation quality, such as refining prompting techniques and developing evaluation metrics. This research is foundational for ensuring that LLMs, increasingly used in critical applications, provide trustworthy insights.
-                                                                
-                                                                In addition, we also tackle the challenge of eliciting 
-                                                                <spam class="tooltip-container">
-                                                                    faithful Chain-of-Thought (CoT) 
-                                                                    <spam class="tooltip-image">
-                                                                        <a href="https://arxiv.org/pdf/2402.04614" target="_blank">
-                                                                          <img src="./images/faithful_cot.jpg" alt="Tooltip Image">
-                                                                        </a> 
-                                                                    </spam>
-                                                                </spam> reasoning in LLMs. Our studies have been cited in <a href="https://cdn.openai.com/o1-system-card-20241205.pdf" target="_blank">OpenAI o1 System Card</a> and reveal the limitations of current approaches like in-context learning, LoRA fine-tuning, and activation editing in guaranteeing accurate reasoning paths, advocating for new architectural designs and training paradigms to enhance transparency in LLMs, paving the way for more reliable decision-making in domains like legal and medical AI.
-                                                            </p>
-                                                            <p style="text-align: justify;">
-                                                                In our work, we develop new explainability algorithms to study the behavior of complex black-box unimodal and multimodal models. The research on <spam class="tooltip-container">
-                                                                    multilingual
-                                                                    <spam class="tooltip-image" style="width: 350px;">
-                                                                        <a href="https://arxiv.org/abs/2502.09457" target="_blank">
-                                                                          <img src="./images/multilingual-tree.jpg" alt="Tooltip Image">
-                                                                        </a> 
-                                                                    </spam>
-                                                                </spam> and multimodal explanation methods is at a very nascent stage and we aim to introduce novel algorithms that generate actionable explanations for multimodal models. Through these efforts, our lab aims to shape the future of XAI, ensuring AI systems are both powerful and interpretable, with far-reaching implications for ethical AI deployment.
-                                                            </p>
+                                                            <div class="xai-container">
+                                                                <div class="xai-content">
+                                                                    <p style="text-align: justify;">
+                                                                        Explainable AI (XAI) is pivotal for fostering trust in AI systems by making their decision-making processes transparent and interpretable to humans. Our research in XAI focuses on overcoming the inherent complexity of modern AI models, particularly frontier models and black-box systems, to produce reliable and actionable explanations. Our work addresses the trade-off between model performance and explainability, ensuring that explanations are not only understandable but also faithful to the model's actual behavior, which is critical for applications where stakeholders—such as doctors, judges, or policymakers—require clear justifications for AI-driven decisions. We have developed widely used benchmarks, including <a href="https://github.com/AI4LIFE-GROUP/OpenXAI" target="_blank"> OpenXAI </a> and <a href="https://github.com/mims-harvard/GraphXAI/tree/main" target="_blank"> GraphXAI </a>, which have redefined standards for evaluating AI explainability, and empowered researchers worldwide to build more transparent and equitable models.
+                                                                    </p>
+
+                                                                    <p style="text-align: justify;">
+                                                                        Some recent key contributions of our work is the <spam class="tooltip-container">
+                                                                            reliability of explanations from LLMs
+                                                                            <spam class="tooltip-image" style="width: 500px;">
+                                                                                <a href="https://proceedings.mlr.press/v238/harsha-tanneru24a/harsha-tanneru24a.pdf" target="_blank">
+                                                                                  <img src="./images/uncertainty-logo.jpg" alt="Tooltip Image">
+                                                                                </a> 
+                                                                            </spam>
+                                                                        </spam>. Our work investigates why LLM-generated explanations often appear plausible to humans but may fail to accurately reflect the model's decision-making process. By analyzing the <spam class="tooltip-container">
+                                                                            trade-offs between
+                                                                            <spam class="tooltip-image" style="width: 250px; left: 100%">
+                                                                                <a href="https://arxiv.org/pdf/2402.04614" target="_blank">
+                                                                                  <img src="./images/faith-plaus.jpg" alt="Tooltip Image">
+                                                                                </a> 
+                                                                            </spam>
+                                                                        </spam> faithfulness (how well an explanation captures the model's reasoning) and plausibility (how convincing it seems), our work proposes strategies to improve explanation quality, such as refining prompting techniques and developing evaluation metrics. This research is foundational for ensuring that LLMs, increasingly used in critical applications, provide trustworthy insights.
+                                                                        
+                                                                        In addition, we also tackle the challenge of eliciting 
+                                                                        <spam class="tooltip-container">
+                                                                            faithful Chain-of-Thought (CoT) 
+                                                                            <spam class="tooltip-image">
+                                                                                <a href="https://arxiv.org/pdf/2402.04614" target="_blank">
+                                                                                  <img src="./images/faithful_cot.jpg" alt="Tooltip Image">
+                                                                                </a> 
+                                                                            </spam>
+                                                                        </spam> reasoning in LLMs. Our studies have been cited in <a href="https://cdn.openai.com/o1-system-card-20241205.pdf" target="_blank">OpenAI o1 System Card</a> and reveal the limitations of current approaches like in-context learning, LoRA fine-tuning, and activation editing in guaranteeing accurate reasoning paths, advocating for new architectural designs and training paradigms to enhance transparency in LLMs, paving the way for more reliable decision-making in domains like legal and medical AI.
+                                                                    </p>
+                                                                    <p style="text-align: justify;">
+                                                                        In our work, we develop new explainability algorithms to study the behavior of complex black-box unimodal and multimodal models. The research on <spam class="tooltip-container">
+                                                                            multilingual
+                                                                            <spam class="tooltip-image" style="width: 350px;">
+                                                                                <a href="https://arxiv.org/abs/2502.09457" target="_blank">
+                                                                                  <img src="./images/multilingual-tree.jpg" alt="Tooltip Image">
+                                                                                </a> 
+                                                                            </spam>
+                                                                        </spam> and multimodal explanation methods is at a very nascent stage and we aim to introduce novel algorithms that generate actionable explanations for multimodal models. Through these efforts, our lab aims to shape the future of XAI, ensuring AI systems are both powerful and interpretable, with far-reaching implications for ethical AI deployment.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="xai-video">
+                                                                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">“We found that if you ask the LLM, surprisingly it always says that I&#39;m 100% confident about my reasoning.”<a href="https://twitter.com/_cagarwal?ref_src=twsrc%5Etfw">@_cagarwal</a> examines the (un)reliability of chain-of-thought reasoning, highlighting issues in faithfulness, uncertainty &amp; hallucination. <a href="https://t.co/Yj4rajXuNx">pic.twitter.com/Yj4rajXuNx</a></p>&mdash; FAR.AI (@farairesearch) <a href="https://twitter.com/farairesearch/status/1878840701774868539?ref_src=twsrc%5Etfw">January 13, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                                                </div>
+                                                            </div>
+
                                                             <!-- <p>
                                                                 A popular strategy for explaining the decision of a predictive and generative model is attributing their decision to either the i) input features (i.e., feature attribution) and/or ii) samples from the training datasets (i.e., data attribution). Intuitively, an attribution map on the input represents a heatmap that highlights input features (pixles in images, tokens in language, nodes/edges in graphs, temporal window for time series and trajectories in RL agents) that are the evidence for and against the model outputs. A widely used technique to construct attribution maps is to approximate the attribution value of an input region by the probability change when that region is absent, i.e., removed from the input.
                                                             </p> -->

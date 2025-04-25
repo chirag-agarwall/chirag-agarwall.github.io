@@ -2611,6 +2611,21 @@
     max-width: 50%;
   }
 
+  #research .research_content .xai-container {
+    display: flex;
+    flex-direction: row;
+    gap: 4%;
+  }
+
+  #research .research_content .xai-container .xai-content {
+    flex: 3
+  }
+
+  #research .research_content .xai-container .xai-video {
+    flex: 1;
+    margin-bottom: -6%;
+  }
+
   @media (max-width: 990px) {
     #research .research_content {
   /*    max-height: 500px;*/
@@ -2627,6 +2642,14 @@
 
     #research .research_content .flex-diff {
       flex-direction: column;
+    }
+
+    #research .research_content .xai-container {
+      flex-direction: column;
+    }
+
+    #research .research_content .xai-container .xai-video {
+      margin-bottom: 0;
     }
   }
 
