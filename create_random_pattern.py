@@ -19,7 +19,7 @@ def draw(width, height, color=200, backgroundColor=(0,0,0), perlinFactorW=2, per
     # Set the random seed for repeatability
     np.random.seed(seed)
 
-     = painter.Painter(width, height)
+    p = painter.Painter(width, height)
 
     # Allow smooth drawing
     p.setRenderHint(p.Antialiasing)
