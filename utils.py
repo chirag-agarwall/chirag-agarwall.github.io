@@ -33,7 +33,15 @@ def save(p, fname='image', folder='Images', extension='png', quality=100, overwr
         assert overwrite, 'File exists and overwrite is set to False!'
 
     # fileName, format, quality [0 through 100]
+    from PIL import Image, ImageDraw
+    # Save as PDF with DPI info
     p.saveImage(imageFile, imageFile[-3:], quality)
+
+    # Load the image
+    img = Image.open(f'{folder}/{fname}.{extension}')
+
+    # Save it with 300 DPI
+    img.save(f'{folder}/{fname}.png', dpi=(300, 300))
 
 
 def Perlin2D(width, height, n_x, n_y, clampHorizontal=False, clampVertical=False):
