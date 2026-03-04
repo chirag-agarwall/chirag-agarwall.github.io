@@ -1,268 +1,266 @@
-           <!DOCTYPE html>
-    <html lang="en-US"
-        class="html_stretched responsive av-preloader-disabled html_header_top html_logo_left html_main_nav_header html_menu_right html_slim html_header_sticky html_header_shrinking_disabled html_header_transparency html_mobile_menu_tablet html_header_searchicon html_content_align_center html_header_unstick_top_disabled html_header_stretch_disabled html_av-overlay-side html_av-overlay-side-classic html_av-submenu-noclone html_entry_id_39 av-cookies-no-cookie-consent av-default-lightbox av-no-preview html_text_menu_active av-mobile-menu-switch-default">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Open Positions — Aikyam Lab · UVA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Sans+Devanagari:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --sand:#f5ede0;--sand-2:#ede0cc;--sand-3:#dfd0b5;--white:#faf7f2;
+  --saffron:#e07b2a;--saffron-d:#c4611a;--saffron-l:#f0a060;
+  --turmeric:#d4a030;--terracotta:#b85c38;
+  --indigo:#2e3a6e;
+  --ink:#1e1a14;--ink-2:#3a3228;--ink-3:#6b5e4a;
+  --rule:rgba(30,26,20,0.12);
+  --teal:#2e7f9e;--teal-d:#1f6680;--teal-l:#5aacc8;--teal-bg:rgba(46,127,158,0.08);
+}
+html{scroll-behavior:smooth}
+body{background:var(--sand);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden;}
+body::after{content:'';position:fixed;inset:0;z-index:500;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;opacity:.7}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.4rem 4rem;display:flex;align-items:center;justify-content:space-between;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(245,237,224,.95);backdrop-filter:blur(16px);border-color:var(--rule)}
+.nav-logo{text-decoration:none;display:flex;align-items:center;gap:.75rem}
+.nav-logo-icon{flex-shrink:0;transition:transform .35s}
+.nav-logo:hover .nav-logo-icon{transform:rotate(12deg) scale(1.08)}
+.nav-logo-en{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--ink);display:block}
+.nav-logo-en .lab{color:var(--teal);font-style:italic}
+.nav-logo-dev{font-family:'Noto Sans Devanagari',sans-serif;font-size:.68rem;color:var(--teal);display:block;margin-top:1px;opacity:.85}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{font-size:.92rem;font-weight:500;letter-spacing:.05em;color:var(--ink-3);text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--saffron)}
+.nav-cta{background:var(--saffron);color:var(--white)!important;padding:.55rem 1.5rem;border-radius:100px;font-size:.88rem;font-weight:600;text-decoration:none!important;transition:background .2s}
+.nav-cta:hover{background:var(--saffron-d)}
+.textile{height:6px;background:repeating-linear-gradient(90deg,var(--saffron) 0,var(--saffron) 12px,var(--turmeric) 12px,var(--turmeric) 24px,var(--terracotta) 24px,var(--terracotta) 36px,var(--indigo) 36px,var(--indigo) 48px,var(--saffron-l) 48px,var(--saffron-l) 60px);opacity:.35}
+.page-hero{position:relative;min-height:clamp(220px,30vh,340px);display:flex;align-items:flex-end;padding:0 4rem 2.5rem;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;z-index:2;background:repeating-linear-gradient(90deg,var(--saffron) 0,var(--saffron) 16px,var(--turmeric) 16px,var(--turmeric) 32px,var(--terracotta) 32px,var(--terracotta) 48px,var(--indigo) 48px,var(--indigo) 64px,var(--saffron-l) 64px,var(--saffron-l) 80px)}
+.geo{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.geo-c{position:absolute;border-radius:50%;border:1px solid rgba(224,123,42,.1)}
+.geo-c:nth-child(1){width:600px;height:600px;right:-150px;top:-150px;background:radial-gradient(circle,rgba(212,160,48,.05) 0%,transparent 65%)}
+.geo-c:nth-child(2){width:420px;height:420px;right:-40px;top:-40px;border-color:rgba(184,92,56,.08)}
+.geo-c:nth-child(3){width:260px;height:260px;right:50px;top:50px;border-color:rgba(224,123,42,.15)}
+.page-hero-inner{position:relative;z-index:2;padding-top:8rem;max-width:760px}
+.page-eyebrow{display:flex;align-items:center;gap:.75rem;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron);margin-bottom:.8rem;opacity:0;animation:fadeUp .6s .1s forwards}
+.page-eyebrow::before{content:'';display:block;width:32px;height:2px;background:var(--saffron)}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,5vw,5.8rem);font-weight:300;line-height:.97;color:var(--ink);opacity:0;animation:fadeUp .8s .3s forwards;margin-bottom:1.4rem}
+.page-title em{color:var(--saffron-d);font-style:italic}
+.hero-intro{font-size:1.05rem;line-height:1.82;color:var(--ink-2);opacity:0;animation:fadeUp .6s .5s forwards;max-width:600px}
+.section{position:relative;z-index:1;padding:5rem 4rem}
+.section-alt{background:var(--white)}
+/* Layout */
+.positions-layout{display:grid;grid-template-columns:1fr 340px;gap:5rem;align-items:start}
+/* Position cards */
+.position-list{display:flex;flex-direction:column;gap:2rem}
+.position-card{background:var(--white);border:1px solid var(--rule);border-radius:16px;overflow:hidden;transition:box-shadow .2s,transform .2s}
+.position-card:hover{box-shadow:0 12px 36px rgba(30,26,20,.09);transform:translateY(-2px)}
+.pos-header{padding:1.6rem 2rem 0;display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
+.pos-badge{font-size:.62rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:.22rem .7rem;border-radius:100px;white-space:nowrap;flex-shrink:0}
+.pos-badge.open{background:rgba(46,127,158,.1);color:var(--teal);border:1px solid rgba(46,127,158,.25)}
+.pos-badge.rolling{background:rgba(224,123,42,.1);color:var(--saffron-d);border:1px solid rgba(224,123,42,.25)}
+.pos-title{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--ink);line-height:1.2}
+.pos-body{padding:1rem 2rem 1.8rem}
+.pos-body p{font-size:.88rem;line-height:1.78;color:var(--ink-2);margin-bottom:1rem}
+.pos-body p:last-of-type{margin-bottom:0}
+.pos-body a{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(46,127,158,.3);transition:color .2s}
+.pos-body a:hover{color:var(--teal-d)}
+.pos-action{margin-top:1.4rem}
+.btn-saffron{background:var(--saffron);color:var(--white)!important;padding:.8rem 2rem;border-radius:100px;font-size:.8rem;font-weight:600;letter-spacing:.04em;text-decoration:none!important;display:inline-block;transition:background .2s,transform .15s;}
+.btn-saffron:hover{background:var(--saffron-d);transform:translateY(-2px)}
+.pos-divider{height:1px;background:var(--rule);margin:0 2rem}
+/* Philosophy sidebar */
+.philosophy-card{background:var(--white);border:1px solid var(--rule);border-radius:16px;padding:2rem;position:sticky;top:6rem}
+.phil-eyebrow{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--saffron);margin-bottom:.6rem}
+.phil-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--ink);margin-bottom:1.2rem;line-height:1.2}
+.phil-body{font-size:.84rem;line-height:1.78;color:var(--ink-2)}
+.phil-body p{margin-bottom:.9rem}
+.phil-body p:last-child{margin-bottom:0}
+.phil-quote{margin:1.4rem 0;padding:1.1rem 1.4rem;border-left:2px solid var(--saffron);background:rgba(224,123,42,.04);border-radius:0 8px 8px 0}
+.phil-quote em{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--ink);line-height:1.55;display:block;margin-bottom:.4rem}
+.phil-quote span{font-size:.72rem;color:var(--ink-3)}
+footer{background:var(--ink);padding:3.5rem 4rem;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--saffron) 0,var(--saffron) 16px,var(--turmeric) 16px,var(--turmeric) 32px,var(--terracotta) 32px,var(--terracotta) 48px,var(--indigo) 48px,var(--indigo) 64px)}
+.footer-logo{display:flex;align-items:center;gap:.6rem}
+.footer-logo-en{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--sand)}
+.footer-logo-en .lab{color:var(--teal-l);font-style:italic}
+.footer-logo-dev{font-family:'Noto Sans Devanagari',sans-serif;font-size:.72rem;color:rgba(90,172,200,.65);display:block;margin-top:2px}
+.footer-links{display:flex;gap:2.5rem}
+.footer-links a{font-size:.75rem;font-weight:500;letter-spacing:.06em;color:rgba(245,237,224,.4);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--saffron-l)}
+.footer-mono{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:rgba(245,237,224,.2)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1100px){.positions-layout{grid-template-columns:1fr}}
+@media(max-width:960px){
+  nav{padding:1.2rem 2rem}.nav-links{display:none}
+  .page-hero{padding:6rem 2rem 3rem}.section{padding:4rem 2rem}
+  footer{flex-direction:column;gap:2rem;padding:3rem 2rem;text-align:center}
+  .footer-links{flex-wrap:wrap;justify-content:center}
+}
 
-    <head>
-        <meta charset="UTF-8" />
-        <!-- mobile setting -->
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!-- Scripts/CSS and wp_head hook -->
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+/* Hamburger */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;padding:.4rem;cursor:pointer;z-index:201}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .3s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* Mobile drawer */
+.nav-drawer{display:none;position:fixed;inset:0;z-index:199;background:rgba(245,237,224,.98);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;pointer-events:none;transition:opacity .3s}
+.nav-drawer.open{opacity:1;pointer-events:all}
+.nav-drawer a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:.02em;transition:color .2s}
+.nav-drawer a:hover,.nav-drawer a.active{color:var(--saffron)}
+.nav-drawer .drawer-cta{background:var(--saffron);color:var(--white)!important;padding:.7rem 2rem;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:600;margin-top:1rem}
+.nav-drawer .drawer-cta:hover{background:var(--saffron-d)}
+@media(max-width:960px){
+  nav{padding:1.2rem 2rem}
+  .nav-links,.nav-cta{display:none}
+  .nav-hamburger{display:flex}
+  .nav-drawer{display:flex}
+}
+</style>
+</head>
+<body>
+<nav id="mainNav">
+  <a href="./" class="nav-logo">
+    <img src="./images/aikyam_logo.jpg" class="nav-logo-icon" width="30" height="30" alt="Aikyam Lab Logo" />
+    <div><span class="nav-logo-en">Aikyam <span class="lab">Lab</span></span><span class="nav-logo-dev">ऐक्यम् — University of Virginia</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="./">Home</a></li>
+    <li><a href="./about.html">About</a></li>
+    <li><a href="./research.html">Research</a></li>
+    <li><a href="./publications.html">Publications</a></li>
+    <li><a href="./team.html">Team</a></li>
+    <li><a href="./teaching.html">Teaching</a></li>
+    <li><a href="./outreach.html">Outreach</a></li>
+    <li><a href="./talks.html">Talks</a></li>
+  </ul>
+  <a href="./positions.html" class="nav-cta">Open Positions</a>
+<button id="navHamburger" class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div id="navDrawer" class="nav-drawer">
+  <a href="./">Home</a>
+  <a href="./about.html">About</a>
+  <a href="./research.html">Research</a>
+  <a href="./publications.html">Publications</a>
+  <a href="./team.html">Team</a>
+  <a href="./teaching.html">Teaching</a>
+  <a href="./outreach.html">Outreach</a>
+  <a href="./talks.html">Talks</a>
+  <a href="./positions.html" class="drawer-cta">Open Positions</a>
+</div>
 
-        <title>Home - Chirag Agarwal</title>
-        <link rel="canonical" href="https://chirag-agarwall.github.io/" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Home - Chirag Agarwal" />
-        <meta property="og:url" content="https://chirag-agarwall.github.io/" />
-        <meta property="og:site_name" content="Chirag Agarwal" />
-        <!-- <meta property="article:modified_time" content="2021-10-22T02:34:37+00:00" /> -->
-        <meta property="og:image" content="images/background.jpg" />
+<div class="page-hero">
+  <div class="geo"><div class="geo-c"></div><div class="geo-c"></div><div class="geo-c"></div></div>
+  <div class="page-hero-inner">
+    <div class="page-eyebrow">Join Aikyam Lab · University of Virginia</div>
+    <h1 class="page-title">Open <em>Positions</em></h1>
+    <p class="hero-intro">Thank you for your interest in joining our group. We are looking for motivated researchers passionate about Trustworthy AI, Explainability, and Safety of frontier models.</p>
+  </div>
+</div>
+<div class="textile"></div>
 
-        <!-- google webfont font replacement -->
+<section class="section">
+  <div class="positions-layout">
 
-        <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- POSITION CARDS -->
+    <div class="position-list">
 
-        <link rel="stylesheet" id="avia-grid-css"
-            href="https://www.dovwaxman.org/wp-content/themes/enfold/css/grid.css?ver=4.8.6.5" type="text/css"
-            media="all" />
-        <link rel="stylesheet" id="avia-base-css" href="css/base.css" type="text/css" media="all" />
-        <link rel="stylesheet" id="avia-layout-css" href="css/layout.css" type="text/css" media="all" />
-        <link rel="stylesheet" id="avia-layout-css" href="css/grid.css" type="text/css" media="all" />
+      <!-- PhD -->
+      <div class="position-card">
+        <div class="pos-header">
+          <div class="pos-title">Ph.D. Students</div>
+          <span class="pos-badge rolling">Rolling Admissions</span>
+        </div>
+        <div class="pos-body">
+          <p>We are always looking for motivated Ph.D. students to join our lab. If you are applying for Ph.D. positions at the <strong>UVA School of Data Science</strong> and interested in working with our lab, please fill out the interest form below.</p>
+          <p>If you are a <strong>current Ph.D. student at UVA</strong> interested in working at the intersection of Multimodal AI, Explainable AI, Mechanistic Interpretability, and AI Safety and Alignment for frontier models and agentic systems, email <a href="/cdn-cgi/l/email-protection#8cfdf6e9bffbe2ccfae5feebe5e2e5eda2e9e8f9" target="_blank" rel="noopener">Prof. Agarwal</a> directly with the subject line <em>"Ph.D. Student at UVA"</em> and include a brief description of your past and current research interests along with your CV.</p>
+          <div class="pos-action">
+            <a href="https://forms.gle/MGWcP9gpiLm9DBeS7" class="btn-saffron" target="_blank">Complete Interest Form →</a>
+          </div>
+        </div>
+      </div>
 
-        <link rel="stylesheet" id="avia-dynamic-css" href="css/avia-dynamic.css" type="text/css" media="all" />
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-            id="jquery-core-js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-        <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
-        <link rel="stylesheet" href="css/animate.css" />
-        <link rel="stylesheet" href="css/owl.carousel.min.css" />
-        <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-        <link rel="stylesheet" href="css/magnific-popup.css" />
-        <link rel="stylesheet" href="css/aos.css" />
-        <link rel="stylesheet" href="css/ionicons.min.css" />
-        <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
-        <link rel="stylesheet" href="css/jquery.timepicker.css" />
-        <link rel="stylesheet" href="css/flaticon.css" />
-        <link rel="stylesheet" href="css/icomoon.css" />
-        <link rel="stylesheet" href="css/style.css" />
-        
-    </head>
-                        <body id="top" itemscope="itemscope" itemtype="https://schema.org/WebPage">
-                            <div id="position">
-                            <div id='wrap_all' class="responsive_wrap">
+      <div class="pos-divider" style="transition-delay:.05s"></div>
 
-         <header id='header'
-                            class='all_colors header_color light_bg_color  av_header_top av_logo_left av_main_nav_header av_menu_right av_slim av_header_sticky av_header_shrinking_disabled av_header_stretch_disabled av_mobile_menu_tablet av_header_transparency av_header_searchicon av_header_unstick_top_disabled av_bottom_nav_disabled  av_header_border_disabled' 
-                            role="banner" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
-                            <div id='header_main' class='container_wrap container_wrap_logo'>
-                                <div class='container av-logo-container'>
-                                    <div class='inner-container' style="display:flex; justify-content: space-around;">
+      <!-- UVA undergrad/masters -->
+      <div class="position-card" style="transition-delay:.1s">
+        <div class="pos-header">
+          <div class="pos-title">UVA Undergraduates &amp; Master's Students</div>
+          <span class="pos-badge open">Open</span>
+        </div>
+        <div class="pos-body">
+          <p>We are actively recruiting undergraduate and Master's students affiliated with UVA who are excited about thesis research in trustworthy machine learning.</p>
+          <p><strong>Undergraduate thesis students:</strong> email <a href="/cdn-cgi/l/email-protection#25545f4016524b65534c57424c4b4c440b404150" target="_blank" rel="noopener">Prof. Agarwal</a> with the subject line <em>"Undergraduate Thesis Student at UVA"</em>, including a description of the topics you wish to pursue and your CV.</p>
+          <p><strong>Master's thesis students:</strong> email <a href="/cdn-cgi/l/email-protection#dfaea5baeca8b19fa9b6adb8b6b1b6bef1babbaa" target="_blank" rel="noopener">Prof. Agarwal</a> with the subject line <em>"Master's Thesis Student at UVA"</em>, including a brief description of the topics you're interested in and your CV.</p>
+        </div>
+      </div>
 
-                                        <div class='logo avia-standard-logo header-name' style="width:1000px">
-                                            <div class="header_title header_flex "><a href='https://chirag-agarwall.github.io/'>AIKYAM LAB</a></div>
-                                             <div class="header_flex" > 
-                                              <nav class='main_menu navigation-desktop' data-selectname='Select a page' role="navigation" itemscope="itemscope"
-                                            itemtype="https://schema.org/SiteNavigationElement" >
-                                            <div class="avia-menu av-main-nav-wrap av_menu_icon_beside">
-                                                <ul id="avia-menu" class="menu av-main-nav" >
-                                            
-                                                    <li id="menu-item-785"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-top-level menu-item-top-level-1">
-                                                        <a href="https://chirag-agarwall.github.io/" itemprop="url"><span
-                                                                class="avia-bullet"></span><span class="avia-menu-text">Home</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-787"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-3">
-                                                        <a href="./about.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">About</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-787"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-3">
-                                                        <a href="research.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Research</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-787"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-3">
-                                                        <a href="publications.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Publications</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-787"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-3">
-                                                        <a href="team.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Team</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-835"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-4">
-                                                        <a href="teaching.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Teaching</span><span class="avia-menu-fx"><span
-                                                                    class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-835"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-4">
-                                                        <a href="outreach.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Outreach</span><span class="avia-menu-fx"><span
-                                                                    class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-835"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-4">
-                                                        <a href="talks.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Talks</span><span class="avia-menu-fx"><span
-                                                                    class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-2 menu-item-top-level menu-item-top-level-1 open_position_responsive">
-                                                        <a href="./positions.html"> Open Positions </a>
-                                                    </li> -->
-                                           
-                                                    <li class="av-burger-menu-main menu-item-avia-special ">
-                                                        <a href="#" aria-label="Menu" aria-hidden="false">
-                                                            <span class="av-hamburger av-hamburger--spin av-js-hamburger">
-                                                                <span class="av-hamburger-box">
-                                                                    <span class="av-hamburger-inner"></span>
-                                                                    <strong>Menu</strong>
-                                                                </span>
-                                                            </span>
-                                                            <span class="avia_hidden_link_text">Menu</span>
-                                                        </a>
-                                                    </li>
+      <!-- Internships / Collaborations -->
+      <div class="position-card" style="transition-delay:.15s">
+        <div class="pos-header">
+          <div class="pos-title">Internships, Visitors &amp; Collaborations</div>
+          <span class="pos-badge open">Open</span>
+        </div>
+        <div class="pos-body">
+          <p>We are open to collaborating with students and researchers already thinking about problems related to Trustworthy Machine Learning — including research at the training, inference, and evaluation pipeline of large-scale models. See the <a href="./research.html">Research page</a> for focus areas.</p>
+          <p>Please send an email to <a href="/cdn-cgi/l/email-protection#3f4e455a0c48517f49564d585651565e115a5b4a" target="_blank" rel="noopener">Prof. Agarwal</a> with the subject line <em>"Interested in Collaboration"</em>, along with your CV and a brief description of your research interests.</p>
+          <p>We expect collaborating students and researchers to work with the group for <strong>at least 5 months</strong> and have some basic experience in ML/AI (e.g. coursework, demo projects, or online courses). Prior experience in trustworthy ML is not required — Prof. Agarwal believes in ground-up mentoring.</p>
+        </div>
+      </div>
 
+    </div>
 
-                                                </ul>
-                                            </div>
-                                            
-                                        </nav>
-                                    </div>
-                                            </div>
-                                      
-                                        <div class="header_flex open_position"><a href="./positions.html" style="color:black; text-decoration: none"> Open Positions </a></div>
-                                    </div>
-                                </div>
-                                <!-- end container_wrap-->
-                            </div>
-                            <div class='header_bg'></div>
+    <!-- PHILOSOPHY SIDEBAR -->
+    <div class="philosophy-card" style="transition-delay:.2s">
+      <div class="phil-eyebrow">Mentoring Philosophy</div>
+      <div class="phil-title">How We Work Together</div>
+      <div class="phil-body">
+        <p>Students typically excel in some unique research skills. As a PI, Prof. Agarwal provides ample opportunities to flourish in those areas while encouraging and helping bridge the gaps where needed.</p>
+        <p>He follows a hands-on approach to advising that helps students overcome the initial barrier to entering new research areas and form a solid advisor-advisee relationship.</p>
+        <div class="phil-quote">
+          <em>"It is through science that we prove, but through intuition that we discover."</em>
+          <span>— Henri Poincaré</span>
+        </div>
+        <p>Regular project meetings structure one-on-one and group feedback sessions to track progress and provide clarity on short- and long-term research goals. Group brainstorming and open discussion build a culture of shared learning and innovation.</p>
+        <p>Lab members have opportunities to mentor juniors, lead sub-projects, and participate in decision-making — cultivating ownership and leadership.</p>
+      </div>
+    </div>
 
-                            <!-- end header -->
-                        </header>
+  </div>
+</section>
 
-                                <div id="main" class="all_colors main-publ" data-scroll-offset="88">
-                                    <div class="parallax page_header_background">
-                                        <!--layer 1 will be the bottom layer, layer 3 will be the top layer-->
-                                        <div class="parallax-container layer1 page_header_position" style="color: white; padding-top:140px; justify-content: flex-start;">
-                                            <div class='avia_textblock  ' style='font-size:35px; ' itemprop="text">
-                                                <p class="image-text">
-                                                    OPEN POSITIONS
-                                                </p>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                         
-                                    <div class="main_color container_wrap_first container_wrap sidebar_right">
-                                        <div class="container av-section-cont-open">
-                                            <main role="main" itemprop="mainContentOfPage" class="template-page av-content alpha units">
-                                                <div class='post-entry post-entry-type-page post-entry-2'>
-                                                    <div class='entry-content-wrapper clearfix'>
-                                                        <section class="section research_section">
-                                                            <article>
-                                                                <br>
-                                                                <p style="font-size: 20px; margin-bottom: 30px;">
-                                                                    Thank you for showing your interest in joining our group! Please read about my mentoring philosophy and the open positions in our lab below.
-                                                                </p>
-                                                                <div class="research_content">
-                                                                    <h2 id="" style="text-transform: capitalize; font-size: 2.2rem;">
-                                                                        Mentoring Philosophy
-                                                                    </h2>
-                                                                    <p style="font-size: 1.3rem;">
-                                                                        I have been fortunate to advise and mentor several undergraduate and graduate students from different backgrounds. An important lesson I learned from advising my mentees is that students typically excel in some unique research skills, and, as a PI, I try to provide them ample opportunities to flourish in those areas while encouraging and helping them bridge the gaps in the parts they need help with. I follow a hands-on approach to advising which helps student overcome the initial barrier to entering new research areas much more quickly and form a solid advisor-advisee relationship! As a final advice to all students interested in research, I would now like to quote the famous French mathematician <a href="https://en.wikipedia.org/wiki/Henri_Poincar%C3%A9" target="_blank">Henri Poincaré</a>:<br><p style="font-size: 1.5rem;text-align: center;"><em style="color:#ffffcc">"It is through science that we prove, but through intuition that we discover."</em></p>
-                                                                    </p>
-                                                                    <p style="font-size: 1.3rem;">
-                                                                        More concretely, I have regular project meetings, where I structure one-on-one and group meetings to ensure consistent feedback, track progress, and provide clarity on short- and long-term research goals. As part of our lab meetings, I encourage open discussion, group brainstorming sessions, and feedback to build a culture of shared learning and innovation. I sincerely believe that for every new researcher the whole world is a blank canvas to paint with their ideas. We have several opportunities in our lab for members to mentor juniors, lead sub-projects, and participate in decision-making to cultivate a sense of ownership and leadership.
-                                                                    </p>
-                                                                </div>
-<!--                                                                 <div class="research_content">
-                                                                    <h2 style="text-transform: capitalize; font-size: 2.2rem;">
-                                                                        <s>Postdoctoral Research Fellow in Climate and XAI</s>
-                                                                    </h2>
-                                                                    <p style="font-size: 1.3rem;">
-                                                                        <s>We are looking for a postdoctoral fellow to work at the intersection of Climate Scicene, Multimodal AI, and explainability for developing novel techniques to attribute extreme precipitation events. Please check the <a href="https://jobs.virginia.edu/us/en/job/R0069112/Postdoctoral-Research-Associate-Explainable-AI-Climate-Extremes" target="_blank">job description</a> for more details.</s>
-                                                                    </p>
-                                                                    <hr>
-                                                                </div> -->
+<footer>
+  <div><div class="footer-logo">
+    <img src="./images/aikyam_logo.jpg" width="30" height="30" alt="Aikyam Lab" style="border-radius:6px;opacity:.9;" />
+    <div><div class="footer-logo-en">Aikyam <span class="lab">Lab</span></div><span class="footer-logo-dev">ऐक्यम् · University of Virginia</span></div>
+  </div></div>
+  <div class="footer-links">
+    <a href="./research.html">Research</a>
+    <a href="./publications.html">Publications</a>
+    <a href="./team.html">Team</a>
+    <a href="./talks.html">Talks</a>
+    <a href="./outreach.html">Outreach</a>
+    <a href="./about.html">About</a>
+  </div>
+  <div class="footer-mono">Data Science &amp; CS · Charlottesville, VA</div>
+</footer>
 
-                                                                <div class="research_content">
-                                                                    <h2 style="text-transform: capitalize; font-size: 2.2rem;">
-                                                                        Ph.D. Students
-                                                                    </h2>
-                                                                    <p style="font-size: 1.3rem;">
-                                                                        We are always looking for motivated Ph.D. students to join our lab. If you are applying for Ph.D. positions at UVA School of Data Science and interested in working with our lab, please fill <a href="https://forms.gle/MGWcP9gpiLm9DBeS7">this</a> form.
-                                                                        <br><br>
-                                                                        If you are a current Ph.D. student at UVA and interested in working at the intersection of Multimodal AI, Explainable AI, Mechanistic Intepretability, and AI Safety and Alignment for frontier models and agentic systems, email <a href="mailto:qze3wn@virginia.edu">Prof. Agarwal</a> directly with a subject line of <em style="color:#ffffcc">"Ph.D. Student at UVA"</em> and include a brief description of your past and current research interests and your CV.
-                                                                    </p>
-                                                                    <hr>
-                                                                </div>
-                                                                <div class="research_content">
-                                                                    <h2 id="" style="text-transform: capitalize; font-size: 2.2rem;">
-                                                                        UVA undergraduates, Master's, and affiliates
-                                                                    </h2>
-                                                                    <p style="font-size: 1.3rem;">
-                                                                        We are looking for undergraduate and Masters’s students affiliated with UVA.
-                                                                    </p>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 
-                                                                    <p style="font-size: 1.3rem;">
-                                                                        If you are a Undergraduate student and are excited about doing your thesis on trustworthy machine learning problems, email <a href="mailto:qze3wn@virginia.edu">Prof. Agarwal</a> directly with a subject line of <em style="color:#ffffcc">"Undergraduate Thesis Student at UVA"</em> and include a brief description of the topics you are interested to pursue in your thesis and your CV.
-                                                                    </p>
-
-                                                                    <p style="font-size: 1.3rem;">
-                                                                        If you are a Master's student at UVA and want to work for your thesis, email <a href="mailto:qze3wn@virginia.edu">Prof. Agarwal</a> directly with a subject line of <em style="color:#ffffcc">"Master's Thesis Student at UVA"</em> and include a brief description of the topics you are interested to pursue in your thesis and your CV.
-                                                                    </p>
-                                                                </div>
-                                                                <div class="research_content">
-                                                                    <h2 id="" style="text-transform: capitalize; font-size: 2.2rem;">
-                                                                        Internship, Visitors, and Collaborations
-                                                                    </h2>
-                                                                    <p style="font-size: 1.3rem;">
-                                                                        We are open to collaborating with students and researchers who are already thinking about research problems related to Trustworthy Machine Learning and related problems in the training, inference, and evaluation pipeline of large-scale models (see the <a href="./research.html">research</a> page). Please send an email to <a href="mailto:qze3wn@virginia.edu">Prof. Agarwal</a> with a subject line of <em style="color:#ffffcc">"Interested in Collaboration"</em> along with your CV and a brief description of your research interests. We do expect the collaborating students and researchers to work with our group for at least 5 months and have some basic experience in ML/AI (e.g., coursework, demo projects, online courses, etc.) You do not need to have prior experiences in trustworthy machine learning as Prof. Agarwal believes in ground-up mentoring and lowering the barrier to enter new research areas.
-                                                                      </p>
-                                                                </div>
-                                                                <hr>
-                                                            </article>
-                                                        </section>
-                                                    </div>
-                                                </div>
-                                            </main>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-            <script type="text/javascript" src="js/menu.js" id="avia-module-menu-js"></script>
-            <script type="text/javascript" src="js/menu-toggle.js" id="avia-module-toggles-js"></script>
-            <script type="text/javascript" src="js/hamburger-menu.js" id="avia-hamburger-menu-js"></script>
-
-            <script type="text/javascript" src="js/mega-menu.js" id="avia-megamenu-js"></script>
-            <script type="text/javascript" src="js/sticky-header.js" id="avia-sticky-header-js"></script>
-        </body>
-    </html>
-
+window.addEventListener('scroll',()=>document.getElementById('mainNav').classList.toggle('scrolled',scrollY>50),{passive:true});
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');ro.unobserve(x.target);}});},{threshold:.05,rootMargin:'0px 0px 0px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+window.addEventListener('load',()=>{document.querySelectorAll('.reveal').forEach(el=>{const r=el.getBoundingClientRect();if(r.top<window.innerHeight){el.classList.add('visible');}});});
+document.addEventListener('DOMContentLoaded',function(){
+  var ham=document.getElementById('navHamburger');
+  var drawer=document.getElementById('navDrawer');
+  if(!ham||!drawer)return;
+  ham.addEventListener('click',function(){ham.classList.toggle('open');drawer.classList.toggle('open');});
+  drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){ham.classList.remove('open');drawer.classList.remove('open');});});
+});
+</script>
+</body>
+</html>

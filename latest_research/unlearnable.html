@@ -459,7 +459,7 @@
                                             <li>Compute the loss gradient \( \nabla_w L \) for each token \( w_{p} \).</li>
                                             <li>Generate a list of candidate substitutions { \( s_1, s_2, \dots, s_k \) } for each word.</li>
                                             <li>
-                                                Rank substitutions by their impact on the loss (using approximated scores). For a word \( w_{p} \) at position \( p \), substitute it with a candidate word \( s \) to minimize/maximize the loss:
+                                                Rank substitutions by their impact on the loss (using approximated scores). For a word \( w_{p} \ \) at position \( p \), substitute it with a candidate word \( s \) to minimize/maximize the loss:
                                                 <div style="text-align: center;">
                                                     $$ \underset{s}{\text{arg min}} \; \mathbf{e}_s^\top \nabla_{\mathbf{e}_w} \mathcal{L}(x, y) $$
                                                 </div>
@@ -769,4 +769,3 @@
     <script type="text/javascript" src="../js/sticky-header.js" id="avia-sticky-header-js"></script>
     </body>
 </html>
-

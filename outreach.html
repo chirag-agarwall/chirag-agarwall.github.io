@@ -1,243 +1,229 @@
-            <!DOCTYPE html>
-                        <html lang="en-US"
-                            class="html_stretched responsive av-preloader-disabled  html_header_top html_logo_left html_main_nav_header html_menu_right html_slim html_header_sticky html_header_shrinking_disabled html_header_transparency html_mobile_menu_tablet html_header_searchicon html_content_align_center html_header_unstick_top_disabled html_header_stretch_disabled html_av-overlay-side html_av-overlay-side-classic html_av-submenu-noclone html_entry_id_2 av-cookies-no-cookie-consent av-default-lightbox av-no-preview html_text_menu_active av-mobile-menu-switch-default">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Outreach — Agyeya Foundation · Aikyam Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Sans+Devanagari:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --sand:#f5ede0;--sand-2:#ede0cc;--sand-3:#dfd0b5;--white:#faf7f2;
+  --saffron:#e07b2a;--saffron-d:#c4611a;--saffron-l:#f0a060;
+  --turmeric:#d4a030;--terracotta:#b85c38;
+  --indigo:#2e3a6e;--indigo-l:#4a5a9a;
+  --ink:#1e1a14;--ink-2:#3a3228;--ink-3:#6b5e4a;
+  --rule:rgba(30,26,20,0.12);
+  --teal:#2e7f9e;--teal-d:#1f6680;--teal-l:#5aacc8;--teal-bg:rgba(46,127,158,0.08);
+}
+html{scroll-behavior:smooth}
+body{background:var(--sand);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden;}
+body::after{content:'';position:fixed;inset:0;z-index:500;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;opacity:.7}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.4rem 4rem;display:flex;align-items:center;justify-content:space-between;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(245,237,224,.95);backdrop-filter:blur(16px);border-color:var(--rule)}
+.nav-logo{text-decoration:none;display:flex;align-items:center;gap:.75rem}
+.nav-logo-icon{flex-shrink:0;transition:transform .35s}
+.nav-logo:hover .nav-logo-icon{transform:rotate(12deg) scale(1.08)}
+.nav-logo-en{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--ink);display:block}
+.nav-logo-en .lab{color:var(--teal);font-style:italic}
+.nav-logo-dev{font-family:'Noto Sans Devanagari',sans-serif;font-size:.68rem;color:var(--teal);display:block;margin-top:1px;opacity:.85}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{font-size:.92rem;font-weight:500;letter-spacing:.05em;color:var(--ink-3);text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--saffron)}
+.nav-cta{background:var(--saffron);color:var(--white)!important;padding:.55rem 1.5rem;border-radius:100px;font-size:.88rem;font-weight:600;text-decoration:none!important;transition:background .2s}
+.nav-cta:hover{background:var(--saffron-d)}
+.textile{height:6px;background:repeating-linear-gradient(90deg,var(--saffron) 0,var(--saffron) 12px,var(--turmeric) 12px,var(--turmeric) 24px,var(--terracotta) 24px,var(--terracotta) 36px,var(--indigo) 36px,var(--indigo) 48px,var(--saffron-l) 48px,var(--saffron-l) 60px);opacity:.35}
+.page-hero{position:relative;min-height:clamp(220px,30vh,340px);display:flex;align-items:flex-end;padding:0 4rem 2.5rem;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;z-index:2;background:repeating-linear-gradient(90deg,var(--saffron) 0,var(--saffron) 16px,var(--turmeric) 16px,var(--turmeric) 32px,var(--terracotta) 32px,var(--terracotta) 48px,var(--indigo) 48px,var(--indigo) 64px,var(--saffron-l) 64px,var(--saffron-l) 80px)}
+.geo{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.geo-c{position:absolute;border-radius:50%;border:1px solid rgba(224,123,42,.1)}
+.geo-c:nth-child(1){width:600px;height:600px;right:-150px;top:-150px;background:radial-gradient(circle,rgba(212,160,48,.05) 0%,transparent 65%)}
+.geo-c:nth-child(2){width:420px;height:420px;right:-40px;top:-40px;border-color:rgba(184,92,56,.08)}
+.geo-c:nth-child(3){width:260px;height:260px;right:50px;top:50px;border-color:rgba(224,123,42,.15)}
+.page-hero-inner{position:relative;z-index:2;padding-top:8rem}
+.page-eyebrow{display:flex;align-items:center;gap:.75rem;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron);margin-bottom:.8rem;opacity:0;animation:fadeUp .6s .1s forwards}
+.page-eyebrow::before{content:'';display:block;width:32px;height:2px;background:var(--saffron)}
+.page-dev{font-family:'Noto Sans Devanagari',sans-serif;font-size:1rem;color:var(--teal);margin-bottom:.4rem;opacity:0;animation:fadeUp .6s .2s forwards}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,5.5vw,6rem);font-weight:300;line-height:.97;color:var(--ink);opacity:0;animation:fadeUp .8s .3s forwards}
+.page-title em{color:var(--saffron-d);font-style:italic}
+.section{position:relative;z-index:1;padding:5rem 4rem}
+.section-alt{background:var(--white)}
+/* Vision grid */
+.vision-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.vision-lead{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;line-height:1.45;color:var(--ink);margin-bottom:1.4rem}
+.vision-body p{font-size:1rem;line-height:1.85;color:var(--ink-2);margin-bottom:1.1rem}
+.vision-body p strong{color:var(--ink)}
+.vision-body a{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(46,127,158,.3)}
+.pillar-list{display:flex;flex-direction:column;gap:1.2rem}
+.pillar-item{background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--saffron);border-radius:0 12px 12px 0;padding:1.2rem 1.6rem}
+.pillar-item:nth-child(2){border-left-color:var(--turmeric)}
+.pillar-item:nth-child(3){border-left-color:var(--terracotta)}
+.pillar-item:nth-child(4){border-left-color:var(--indigo)}
+.pillar-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:.35rem}
+.pillar-desc{font-size:.82rem;line-height:1.7;color:var(--ink-3)}
+/* Photo gallery */
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.gallery-img{width:100%;border-radius:16px;overflow:hidden;aspect-ratio:4/3;background:var(--sand-2)}
+.gallery-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.8);transition:filter .3s,transform .3s}
+.gallery-img:hover img{filter:saturate(1);transform:scale(1.03)}
+.gallery-caption{font-size:.78rem;color:var(--ink-3);margin-top:.65rem;font-style:italic;line-height:1.5}
+footer{background:var(--ink);padding:3.5rem 4rem;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--saffron) 0,var(--saffron) 16px,var(--turmeric) 16px,var(--turmeric) 32px,var(--terracotta) 32px,var(--terracotta) 48px,var(--indigo) 48px,var(--indigo) 64px)}
+.footer-logo{display:flex;align-items:center;gap:.6rem}
+.footer-logo-en{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--sand)}
+.footer-logo-en .lab{color:var(--teal-l);font-style:italic}
+.footer-logo-dev{font-family:'Noto Sans Devanagari',sans-serif;font-size:.72rem;color:rgba(90,172,200,.65);display:block;margin-top:2px}
+.footer-links{display:flex;gap:2.5rem}
+.footer-links a{font-size:.75rem;font-weight:500;letter-spacing:.06em;color:rgba(245,237,224,.4);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--saffron-l)}
+.footer-mono{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:rgba(245,237,224,.2)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:960px){
+  nav{padding:1.2rem 2rem}.nav-links{display:none}
+  .page-hero{padding:6rem 2rem 3rem}.section{padding:4rem 2rem}
+  .vision-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:2rem;padding:3rem 2rem;text-align:center}
+  .footer-links{flex-wrap:wrap;justify-content:center}
+}
 
-                        <head>
-                            <meta charset="UTF-8" />
-                            <!-- mobile setting -->
-                            <meta name="viewport" content="width=device-width, initial-scale=1">
-                            <!-- Scripts/CSS and wp_head hook -->
-                            <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+/* Hamburger */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;padding:.4rem;cursor:pointer;z-index:201}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .3s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* Mobile drawer */
+.nav-drawer{display:none;position:fixed;inset:0;z-index:199;background:rgba(245,237,224,.98);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;pointer-events:none;transition:opacity .3s}
+.nav-drawer.open{opacity:1;pointer-events:all}
+.nav-drawer a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:.02em;transition:color .2s}
+.nav-drawer a:hover,.nav-drawer a.active{color:var(--saffron)}
+.nav-drawer .drawer-cta{background:var(--saffron);color:var(--white)!important;padding:.7rem 2rem;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:600;margin-top:1rem}
+.nav-drawer .drawer-cta:hover{background:var(--saffron-d)}
+@media(max-width:960px){
+  nav{padding:1.2rem 2rem}
+  .nav-links,.nav-cta{display:none}
+  .nav-hamburger{display:flex}
+  .nav-drawer{display:flex}
+}
+</style>
+</head>
+<body>
+<nav id="mainNav">
+  <a href="./" class="nav-logo">
+    <img src="./images/aikyam_logo.jpg" class="nav-logo-icon" width="30" height="30" alt="Aikyam Lab Logo" />
+    <div><span class="nav-logo-en">Aikyam <span class="lab">Lab</span></span><span class="nav-logo-dev">ऐक्यम् — University of Virginia</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="./">Home</a></li>
+    <li><a href="./about.html">About</a></li>
+    <li><a href="./research.html">Research</a></li>
+    <li><a href="./publications.html">Publications</a></li>
+    <li><a href="./team.html">Team</a></li>
+    <li><a href="./teaching.html">Teaching</a></li>
+    <li><a href="./outreach.html" class="active">Outreach</a></li>
+    <li><a href="./talks.html">Talks</a></li>
+  </ul>
+  <a href="./positions.html" class="nav-cta">Open Positions</a>
+<button id="navHamburger" class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div id="navDrawer" class="nav-drawer">
+  <a href="./">Home</a>
+  <a href="./about.html">About</a>
+  <a href="./research.html">Research</a>
+  <a href="./publications.html">Publications</a>
+  <a href="./team.html">Team</a>
+  <a href="./teaching.html">Teaching</a>
+  <a href="./outreach.html" class="active">Outreach</a>
+  <a href="./talks.html">Talks</a>
+  <a href="./positions.html" class="drawer-cta">Open Positions</a>
+</div>
 
-                            <title>Home - Chirag Agarwal</title>
-                            <link rel="canonical" href="https://chirag-agarwall.github.io/" />
-                            <meta property="og:locale" content="en_US" />
-                            <meta property="og:type" content="website" />
-                            <meta property="og:title" content="Home - Chirag Agarwal" />
-                            <meta property="og:url" content="https://chirag-agarwall.github.io/" />
-                            <meta property="og:site_name" content="Chirag Agarwal" />
-                            <!-- <meta property="article:modified_time" content="2021-10-22T02:34:37+00:00" /> -->
-                            <meta property="og:image" content="images/background.jpg" />
+<div class="page-hero">
+  <div class="geo"><div class="geo-c"></div><div class="geo-c"></div><div class="geo-c"></div></div>
+  <div class="page-hero-inner">
+    <div class="page-eyebrow">Democratizing AI Research</div>
+    <div class="page-dev">अज्ञेय — Beyond Knowledge</div>
+    <h1 class="page-title">Agyeya <em>Foundation</em></h1>
+  </div>
+</div>
+<div class="textile"></div>
 
-                            <link rel='stylesheet' id='avia-grid-css' href='css/style.css' type='text/css' media='all' />
-                            <link rel='stylesheet' id='avia-base-css' href='css/base.css' type='text/css' media='all' />
-                            <link rel='stylesheet' id='avia-layout-css' href='css/layout.css' type='text/css' media='all' />
-                            <link rel='stylesheet' id='avia-layout-css' href='css/grid.css' type='text/css' media='all' />
+<section class="section">
+  <div class="vision-grid">
+    <div class="vision-body reveal">
+      <p class="vision-lead">"A world where AI research and innovation are accessible to all and have the power to transform society."</p>
+      <p>At <strong>Agyeya</strong> (Sanskrit अज्ञेय; meaning "Beyond Knowledge"), we envision a world where Artificial Intelligence research and innovation are accessible to all. We are committed to advancing the frontiers of knowledge through groundbreaking research while simultaneously democratizing and lowering the barrier to entering AI research.</p>
+      <p>We aim to train the next generation of AI researchers — encouraging them to explore and innovate. From working on fundamental AI research to developing new workshop programs for underrepresented groups in STEM, Agyeya is at the forefront of preparing the next generation of AI students.</p>
+    </div>
+    <div class="pillar-list reveal" style="transition-delay:.15s">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--saffron);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem">Our Four Focus Areas<span style="flex:1;height:1px;background:var(--rule);display:block"></span></div>
+      <div class="pillar-item">
+        <div class="pillar-title">Conceptual Understanding</div>
+        <div class="pillar-desc">Teaching future researchers fundamental concepts, techniques, and applications of AI and ML, fostering a stronger foundation for lifelong learning.</div>
+      </div>
+      <div class="pillar-item">
+        <div class="pillar-title">Practical Application</div>
+        <div class="pillar-desc">Engaging in hands-on activities, projects, and case studies to develop practical skills in AI programming, algorithm development, and data analysis.</div>
+      </div>
+      <div class="pillar-item">
+        <div class="pillar-title">Critical Thinking</div>
+        <div class="pillar-desc">Encouraging researchers to think critically, analyze complex problems, and devise innovative AI solutions that address real-world challenges.</div>
+      </div>
+      <div class="pillar-item">
+        <div class="pillar-title">Ethical Considerations</div>
+        <div class="pillar-desc">Promoting responsible AI research by highlighting the ethical implications and societal impact of AI systems and their deployment.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-                            <link rel='stylesheet' id='avia-dynamic-css' href='css/avia-dynamic.css' type='text/css' media='all' />
-                            <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js'
-                                id='jquery-core-js'></script>
-                            <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-                            <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
-                            <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-                            <link rel="stylesheet" href="css/animate.css">
-                            <link rel="stylesheet" href="css/owl.carousel.min.css">
-                            <link rel="stylesheet" href="css/owl.theme.default.min.css">
-                            <link rel="stylesheet" href="css/magnific-popup.css">
-                            <link rel="stylesheet" href="css/aos.css">
-                            <link rel="stylesheet" href="css/ionicons.min.css">
-                            <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-                            <link rel="stylesheet" href="css/jquery.timepicker.css">
-                            <link rel="stylesheet" href="css/flaticon.css">
-                            <link rel="stylesheet" href="css/icomoon.css">
-                            <link rel="stylesheet" href="css/style.css">
-                        </head>
+<div class="textile"></div>
 
-                        <body id="top" itemscope="itemscope" itemtype="https://schema.org/WebPage">
-                            <div id="outreach">
-                            <div id='wrap_all' class="responsive_wrap">
-                       <header id='header'
-                            class='all_colors header_color light_bg_color  av_header_top av_logo_left av_main_nav_header av_menu_right av_slim av_header_sticky av_header_shrinking_disabled av_header_stretch_disabled av_mobile_menu_tablet av_header_transparency av_header_searchicon av_header_unstick_top_disabled av_bottom_nav_disabled  av_header_border_disabled' 
-                            role="banner" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
-                            <div id='header_main' class='container_wrap container_wrap_logo'>
-                                <div class='container av-logo-container'>
-                                    <div class='inner-container' style="display:flex; justify-content: space-around;">
+<section class="section section-alt">
+  <div class="gallery-grid reveal">
+    <div>
+      <div class="gallery-img"><img src="./images/agyeya_1.png" alt="Agyeya workshop 1"/></div>
+      <div class="gallery-caption">Workshop on ML/AI basics for high-school students in a government school in India.</div>
+    </div>
+    <div>
+      <div class="gallery-img"><img src="./images/agyeya_2.png" alt="Agyeya workshop 2"/></div>
+      <div class="gallery-caption">Hands-on sessions with students exploring AI concepts and real-world applications.</div>
+    </div>
+  </div>
+</section>
 
-                                        <div class='logo avia-standard-logo header-name' style="width:1000px">
-                                            <div class="header_title header_flex "><a href='https://chirag-agarwall.github.io/'>AIKYAM LAB</a></div>
-                                             <div class="header_flex" > 
-                                              <nav class='main_menu navigation-desktop' data-selectname='Select a page' role="navigation" itemscope="itemscope"
-                                            itemtype="https://schema.org/SiteNavigationElement" >
-                                            <div class="avia-menu av-main-nav-wrap av_menu_icon_beside">
-                                                <ul id="avia-menu" class="menu av-main-nav" >
-                                            
-                                                    <li id="menu-item-785"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-top-level menu-item-top-level-1">
-                                                        <a href="https://chirag-agarwall.github.io/" itemprop="url"><span
-                                                                class="avia-bullet"></span><span class="avia-menu-text">Home</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-787"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-3">
-                                                        <a href="./about.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">About</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-787"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-3">
-                                                        <a href="research.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Research</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-787"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-3">
-                                                        <a href="publications.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Publications</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-787"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-3">
-                                                        <a href="team.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Team</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-835"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-4">
-                                                        <a href="teaching.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Teaching</span><span class="avia-menu-fx"><span
-                                                                    class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-835"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-top-level menu-item-top-level-4">
-                                                        <a href="outreach.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Outreach</span><span class="avia-menu-fx"><span
-                                                                    class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-835"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-4">
-                                                        <a href="talks.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Talks</span><span class="avia-menu-fx"><span
-                                                                    class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-2 menu-item-top-level menu-item-top-level-1 open_position_responsive">
-                                                        <a href="./positions.html"> Open Positions </a>
-                                                    </li>
-                                           
-                                                    <li class="av-burger-menu-main menu-item-avia-special ">
-                                                        <a href="#" aria-label="Menu" aria-hidden="false">
-                                                            <span class="av-hamburger av-hamburger--spin av-js-hamburger">
-                                                                <span class="av-hamburger-box">
-                                                                    <span class="av-hamburger-inner"></span>
-                                                                    <strong>Menu</strong>
-                                                                </span>
-                                                            </span>
-                                                            <span class="avia_hidden_link_text">Menu</span>
-                                                        </a>
-                                                    </li>
+<footer>
+  <div><div class="footer-logo"><img src="./images/aikyam_logo.jpg" width="30" height="30" alt="Aikyam Lab" style="border-radius:6px;opacity:.9;" /><div><div class="footer-logo-en">Aikyam <span class="lab">Lab</span></div><span class="footer-logo-dev">ऐक्यम् · University of Virginia</span></div></div></div>
+  <div class="footer-links"><a href="./research.html">Research</a><a href="./publications.html">Publications</a><a href="./team.html">Team</a><a href="./talks.html">Talks</a><a href="./teaching.html">Teaching</a><a href="./positions.html">Join Us</a></div>
+  <div class="footer-mono">Data Science &amp; CS · Charlottesville, VA</div>
+</footer>
+<script>
+
+window.addEventListener('scroll',()=>document.getElementById('mainNav').classList.toggle('scrolled',scrollY>50),{passive:true});
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');ro.unobserve(x.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
 
-                                                </ul>
-                                            </div>
-                                            
-                                        </nav>
-                                    </div>
-                                            </div>
-                                      
-                                        <div class="header_flex open_position"><a href="./positions.html" style="color:black; text-decoration: none"> Open Positions </a></div>
-                                    </div>
-                                </div>
-                                <!-- end container_wrap-->
-                            </div>
-                            <div class='header_bg'></div>
-
-                            <!-- end header -->
-                        </header>
-
-                                <div id="main" class="all_colors main-publ" data-scroll-offset="88">
-                                    <div class="parallax page_header_background">
-                                        <!--layer 1 will be the bottom layer, layer 3 will be the top layer-->
-                                        <div class="parallax-container layer1 page_header_position" style="color: white; padding-top:140px; justify-content: flex-start;">
-                                            <div class='avia_textblock image-text' style='font-size:35px; ' itemprop="text">
-                                                <p>
-                                                    OUTREACH
-                                                </p>
-                                                <span class="publication-scholar" style='font-size:25px'>
-                                            Welcome to Agyeya Research Foundation!
-                                        </span>
-    <!--                                             <p style="text-align: center;">
-                                                    We are building the first-of-its-kind open and collaborative AI research lab in India
-                                                </p> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                         
-                                    <div class="main_color container_wrap_first container_wrap sidebar_right">
-                                        <div class="container av-section-cont-open">
-                                            <main role="main" itemprop="mainContentOfPage" class="template-page av-content alpha units">
-                                                <div class='post-entry post-entry-type-page post-entry-2'>
-                                                    <div class='entry-content-wrapper clearfix'>
-                                                        <section class="section research_section">
-                                                            <article>
-                                                                <div class="research_content">
-                                                                    <h2 id="agyeya" style="text-transform: capitalize; font-size: 2.2rem;">Our Vision</h2>
-                                                                    <p> At Agyeya (Sanskrit अज्ञेय; meaning "Beyond Knowledge"), we envision a world where Artificial Intelligence (AI) research and innovation are accessible to all and have the power to transform society. We are committed to advancing the frontiers of knowledge and driving progress through groundbreaking research and discovery. At the same time, we believe in democratizing and lowering the barrier to entering AI research. We aim to train the next generation of AI researchers by encouraging them to explore and innovate within these fields. </p>
-
-                                                                    <p>From working on fundamental AI research  to developing new workshop programs for underrepresented groups in STEM, the Agyeya is at the forefront of training the next generation of AI students with the main focus on:
-
-                                                                    <ul>
-                                                                        <li>Enhancing conceptual understanding: teaching future researchers the fundamental concepts, techniques, and applications of AI and ML, fostering a stronger foundation.</li>
-                                                                        <li>Practical application: engage in hands-on activities, projects, and case studies to develop practical skills in AI programming, algorithm development, and data analysis.</li>
-                                                                        <li>Critical thinking and problem-solving: encouraging researchers to think critically, analyze complex problems, and devise innovative AI solutions that address real-world challenges.</li>
-                                                                        <li>Ethical considerations: promoting responsible AI research by highlighting ethical implications.</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </article>
-                                                        </section>
-                                                        <div id="banner" style="overflow: hidden; display: flex; justify-content:space-around;">
-                                                            <div class="" style="max-width: 48%; max-height: 50%;margin-top:20px;margin-bottom:20px;">
-                                                                <img src ="./images/agyeya_1.png">
-                                                            </div>
-                                                            <div class="" style="max-width: 48%; max-height: 50%;margin-top:20px;margin-bottom:20px;">
-                                                                <img src ="./images/agyeya_2.png">
-                                                            </div>
-                                                        </div>    
-                                                        <h5 style="display: flex;justify-content: center;">Giving a workshop on the basics of ML/AI to high-school students in a government school in India.</h5>
-    <!--                                                     <section class="section research_section">
-                                                            <article>
-                                                                <div class="research_content">
-                                                                    <h2 id="large-pretrained-ai-multimodal-knowledge-graph-and-biological-language-models">
-                                                                    Our Approach</h2>
-                                                                    <p> Our research approach is interdisciplinary and collaborative, bringing together experts from diverse fields to tackle complex challenges and drive innovation. We prioritize projects that have the potential to make a significant impact on society and support researchers throughout the entire research process. </p>
-                                                                </div>
-                                                            </article>
-                                                        </section>
-                                                        <section class="section research_section">
-                                                            <article>
-                                                                <div class="research_content">
-                                                                    <h2 id="large-pretrained-ai-multimodal-knowledge-graph-and-biological-language-models">Our Vision</h2>
-                                                                    <p> At Agyeya, we aim to conduct groundbreaking AI research that transforms how we understand the world. Our team of AI researchers is dedicated to advancing the field of AI in various applications, including those related to climate change and renewable energy. Through extensive research and development, we strive to push the boundaries of what AI can accomplish, and we are committed to finding innovative solutions to some of the world's most pressing problems. </p>
-                                                                </div>
-                                                            </article>
-                                                        </section> -->
-                                                    </div>
-                                                </div>
-                                            </main>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-            <script type="text/javascript" src="js/menu.js" id="avia-module-menu-js"></script>
-            <script type="text/javascript" src="js/menu-toggle.js" id="avia-module-toggles-js"></script>
-            <script type="text/javascript" src="js/hamburger-menu.js" id="avia-hamburger-menu-js"></script>
-
-            <script type="text/javascript" src="js/mega-menu.js" id="avia-megamenu-js"></script>
-            <script type="text/javascript" src="js/sticky-header.js" id="avia-sticky-header-js"></script>
-        </body>
-    </html>
-
+// Mobile nav
+document.addEventListener('DOMContentLoaded', function() {
+  var ham = document.getElementById('navHamburger');
+  var drawer = document.getElementById('navDrawer');
+  if (!ham || !drawer) return;
+  ham.addEventListener('click', function() {
+    ham.classList.toggle('open');
+    drawer.classList.toggle('open');
+  });
+  drawer.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      ham.classList.remove('open');
+      drawer.classList.remove('open');
+    });
+  });
+});
+</script>
+</body>
+</html>

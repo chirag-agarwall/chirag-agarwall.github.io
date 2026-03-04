@@ -1,255 +1,328 @@
-    <!DOCTYPE html>
-                <html lang="en-US"
-                    class="html_stretched responsive av-preloader-disabled  html_header_top html_logo_left html_main_nav_header html_menu_right html_slim html_header_sticky html_header_shrinking_disabled html_header_transparency html_mobile_menu_tablet html_header_searchicon html_content_align_center html_header_unstick_top_disabled html_header_stretch_disabled html_av-overlay-side html_av-overlay-side-classic html_av-submenu-noclone html_entry_id_2 av-cookies-no-cookie-consent av-default-lightbox av-no-preview html_text_menu_active av-mobile-menu-switch-default">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — Chirag Agarwal · Aikyam Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Sans+Devanagari:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --sand:#f5ede0;--sand-2:#ede0cc;--sand-3:#dfd0b5;--white:#faf7f2;
+  --saffron:#e07b2a;--saffron-d:#c4611a;--saffron-l:#f0a060;
+  --turmeric:#d4a030;--terracotta:#b85c38;
+  --indigo:#2e3a6e;--indigo-l:#4a5a9a;
+  --ink:#1e1a14;--ink-2:#3a3228;--ink-3:#6b5e4a;
+  --rule:rgba(30,26,20,0.12);
+  --teal:#2e7f9e;--teal-d:#1f6680;--teal-l:#5aacc8;--teal-bg:rgba(46,127,158,0.08);
+}
+html{scroll-behavior:smooth}
+body{background:var(--sand);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden;}
+body::after{content:'';position:fixed;inset:0;z-index:500;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;opacity:.7}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.4rem 4rem;display:flex;align-items:center;justify-content:space-between;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(245,237,224,.95);backdrop-filter:blur(16px);border-color:var(--rule)}
+.nav-logo{text-decoration:none;display:flex;align-items:center;gap:.75rem}
+.nav-logo-icon{flex-shrink:0;transition:transform .35s}
+.nav-logo:hover .nav-logo-icon{transform:rotate(12deg) scale(1.08)}
+.nav-logo-en{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--ink);display:block}
+.nav-logo-en .lab{color:var(--teal);font-style:italic}
+.nav-logo-dev{font-family:'Noto Sans Devanagari',sans-serif;font-size:.68rem;color:var(--teal);display:block;margin-top:1px;opacity:.85}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{font-size:.92rem;font-weight:500;letter-spacing:.05em;color:var(--ink-3);text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--saffron)}
+.nav-cta{background:var(--saffron);color:var(--white);padding:.55rem 1.5rem;border-radius:100px;font-size:.88rem;font-weight:600;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--saffron-d)}
+.textile{height:6px;background:repeating-linear-gradient(90deg,var(--saffron) 0,var(--saffron) 12px,var(--turmeric) 12px,var(--turmeric) 24px,var(--terracotta) 24px,var(--terracotta) 36px,var(--indigo) 36px,var(--indigo) 48px,var(--saffron-l) 48px,var(--saffron-l) 60px);opacity:.35}
+/* PAGE HERO */
+.page-hero{position:relative;min-height:clamp(220px,30vh,340px);display:flex;align-items:flex-end;padding:0 4rem 2.5rem;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;z-index:2;background:repeating-linear-gradient(90deg,var(--saffron) 0,var(--saffron) 16px,var(--turmeric) 16px,var(--turmeric) 32px,var(--terracotta) 32px,var(--terracotta) 48px,var(--indigo) 48px,var(--indigo) 64px,var(--saffron-l) 64px,var(--saffron-l) 80px)}
+.geo{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.geo-c{position:absolute;border-radius:50%;border:1px solid rgba(224,123,42,.1)}
+.geo-c:nth-child(1){width:600px;height:600px;right:-150px;top:-150px;background:radial-gradient(circle,rgba(212,160,48,.05) 0%,transparent 65%)}
+.geo-c:nth-child(2){width:420px;height:420px;right:-40px;top:-40px;border-color:rgba(184,92,56,.08)}
+.geo-c:nth-child(3){width:260px;height:260px;right:50px;top:50px;border-color:rgba(224,123,42,.15)}
+.page-hero-inner{position:relative;z-index:2;padding-top:8rem}
+.page-eyebrow{display:flex;align-items:center;gap:.75rem;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron);margin-bottom:.8rem;opacity:0;animation:fadeUp .6s .1s forwards}
+.page-eyebrow::before{content:'';display:block;width:32px;height:2px;background:var(--saffron)}
+.page-dev{font-family:'Noto Sans Devanagari',sans-serif;font-size:1rem;color:var(--teal);margin-bottom:.4rem;opacity:0;animation:fadeUp .6s .2s forwards}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,5.5vw,6rem);font-weight:300;line-height:.97;color:var(--ink);opacity:0;animation:fadeUp .8s .3s forwards}
+.page-title strong{font-weight:700;font-style:italic;color:var(--saffron-d);display:block}
+/* SECTIONS */
+.section{position:relative;z-index:1;padding:6rem 4rem}
+.section-alt{background:var(--white)}
+.sec-eyebrow{display:flex;align-items:center;gap:.75rem;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron);margin-bottom:.8rem}
+.sec-eyebrow::before{content:'';display:block;width:24px;height:2px;background:var(--saffron)}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.2vw,3rem);font-weight:400;color:var(--ink);line-height:1.1}
+.sec-title em{color:var(--saffron-d);font-style:italic}
+.sec-header-row{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3rem;gap:2rem}
+.sec-header-rule{flex:1;height:1px;background:var(--rule);margin-bottom:.4rem}
+.btn-saffron{background:var(--saffron);color:var(--white);padding:.85rem 2.2rem;border-radius:100px;font-size:.82rem;font-weight:600;letter-spacing:.04em;text-decoration:none;display:inline-block;transition:background .2s,transform .15s}
+.btn-saffron:hover{background:var(--saffron-d);transform:translateY(-2px)}a.btn-saffron,a.btn-saffron:hover,a.btn-saffron:visited{color:var(--white)!important;text-decoration:none!important}
+.btn-indigo{border:2px solid var(--indigo);background:var(--indigo);color:var(--white)!important;padding:.85rem 2.2rem;border-radius:100px;font-size:.82rem;font-weight:600;text-decoration:none;display:inline-block;transition:background .2s,color .2s;box-sizing:border-box}
+.btn-indigo:hover{background:var(--indigo);color:var(--white)!important;transform:translateY(-2px)}
+/* BIO GRID */
+.bio-grid{display:grid;grid-template-columns:1fr 310px;gap:5rem;align-items:start}
+.bio-lead{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;line-height:1.45;color:var(--ink);margin-bottom:1.4rem}
+.bio-body p{font-size:1rem;line-height:1.85;color:var(--ink-2);margin-bottom:1.1rem}
+.bio-body p strong{color:var(--ink);font-weight:600}
+.bio-body p em{color:var(--saffron-d);font-style:italic}
+.bio-body a{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(46,127,158,.3);transition:color .2s,border-color .2s}
+.bio-body a:hover{color:var(--teal-d);border-color:var(--teal)}
+/* SIDEBAR */
+.profile-sidebar{display:flex;flex-direction:column;gap:1.2rem;position:sticky;top:7rem;align-self:start}
+.profile-arch{width:100%;border-radius:160px 160px 20px 20px;overflow:hidden;border:1px solid var(--sand-3);background:var(--sand-2);position:relative;box-shadow:0 18px 50px rgba(30,26,20,.1)}
+.arch-pattern{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 30%,rgba(224,123,42,.07) 0%,transparent 60%),repeating-conic-gradient(from 0deg at 50% 50%,rgba(224,123,42,.025) 0deg,transparent 1.5deg,transparent 13.5deg,rgba(212,160,48,.02) 15deg)}
+.arch-img-area{aspect-ratio:3/3.5;position:relative;overflow:hidden}
+.arch-img-area img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .5s}
+.profile-arch:hover .arch-img-area img{transform:scale(1.04)}
+.arch-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(30,26,20,.28) 0%,transparent 50%);pointer-events:none}
+.arch-dev-watermark{position:absolute;bottom:1.2rem;left:50%;transform:translateX(-50%);font-family:'Noto Sans Devanagari',sans-serif;font-size:1rem;font-weight:300;color:var(--teal);opacity:.45;letter-spacing:.1em;white-space:nowrap}
+.arch-info{padding:1.2rem 1.4rem 1.4rem;border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:flex-start}
+.arch-name{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--ink)}
+.arch-sub{font-size:.7rem;color:var(--ink-3);margin-top:.18rem}
+.arch-badge{background:var(--teal-bg);border:1px solid rgba(46,127,158,.28);color:var(--teal-d);font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.28rem .7rem;border-radius:100px;white-space:nowrap}
+.sidebar-block{background:var(--white);border:1px solid var(--rule);border-radius:14px;padding:1.2rem 1.4rem}
+.sidebar-block h4{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--saffron-d);margin-bottom:.75rem}
+.sidebar-block ul{list-style:none;display:flex;flex-direction:column;gap:.35rem}
+.sidebar-block li{font-size:.8rem;color:var(--ink-2);display:flex;align-items:center;gap:.5rem}
+.sidebar-block li::before{content:'→';color:var(--saffron);font-size:.75rem;flex-shrink:0}
+.sidebar-block a{color:var(--teal);text-decoration:none;transition:color .2s}
+.sidebar-block a:hover{color:var(--teal-d);text-decoration:underline}
+/* INTERESTS ROW */
+.interests-connect { display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-top:3rem; }
+.ic-block { background:var(--white); border:1px solid var(--rule); border-radius:16px; padding:1.8rem 2rem; }
+.ic-block h4 { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:var(--saffron-d); margin-bottom:1.1rem; display:flex; align-items:center; gap:0.6rem; }
+.ic-block h4::before { content:''; display:block; width:20px; height:2px; background:var(--saffron); }
+.interests-list { display:flex; flex-wrap:wrap; gap:0.5rem; }
+.interest-tag { font-size:0.8rem; padding:0.4rem 0.9rem; border-radius:100px; border:1px solid var(--rule); color:var(--ink-2); background:var(--sand); transition:border-color 0.2s, color 0.2s; }
+.interest-tag:hover { border-color:var(--saffron); color:var(--saffron-d); }
+.connect-list { display:flex; flex-direction:column; gap:0.65rem; }
+.connect-item { display:flex; align-items:center; gap:0.75rem; font-size:0.88rem; color:var(--ink-2); text-decoration:none; transition:color 0.2s; }
+.connect-item:hover { color:var(--saffron-d); }
+.connect-icon { width:32px; height:32px; border-radius:8px; background:var(--sand); border:1px solid var(--rule); display:flex; align-items:center; justify-content:center; font-size:0.9rem; flex-shrink:0; }
+/* TWITTER inline layout */
+.bio-twitter-grid { display:grid; grid-template-columns:280px 1fr; gap:4rem; align-items:start; margin-top:4rem; padding-top:4rem; border-top:1px solid var(--rule); }
+.twitter-col-label { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-style:italic; color:var(--ink); margin-bottom:1.2rem; }
+.twitter-col-label span { color:var(--teal); }
+.twitter-embed-wrap { border-radius:16px; overflow:hidden; border:1px solid var(--rule); background:var(--white); min-height:500px; width:100%; }
+.twitter-embed-wrap iframe { width:100% !important; }
 
-                <head>
-                    <meta charset="UTF-8" />
-                    <!-- mobile setting -->
-                    <meta name="viewport" content="width=device-width, initial-scale=1">
-                    <!-- Scripts/CSS and wp_head hook -->
-                    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+.tl-item{display:grid;grid-template-columns:180px 1fr;gap:2.5rem;padding:2rem 0;border-bottom:1px solid var(--rule)}
+.tl-item:last-child{border-bottom:none}
+.tl-year{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--saffron);letter-spacing:.06em;line-height:1.5}
+.tl-place-badge{display:inline-block;margin-top:.5rem;font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.2rem .6rem;border-radius:100px;border:1px solid var(--rule);color:var(--ink-3);background:var(--sand)}
+.tl-role{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--ink);margin-bottom:.2rem}
+.tl-place{font-size:.88rem;font-weight:500;color:var(--saffron-d)}
+.tl-desc{font-size:.82rem;line-height:1.7;color:var(--ink-3);margin-top:.5rem}
+/* AWARDS */
+.awards-grid{display:flex;flex-wrap:wrap;gap:.75rem}
+.award-chip{border:1px solid var(--rule);background:var(--white);padding:.6rem 1.25rem;border-radius:100px;font-size:.8rem;color:var(--ink-2);transition:border-color .2s,color .2s,background .2s,transform .15s;cursor:default}
+.award-chip:hover{border-color:var(--saffron);color:var(--saffron-d);background:rgba(224,123,42,.05);transform:translateY(-2px)}
+.award-chip .yr{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--saffron);margin-right:.5rem}
+/* FOOTER */
+footer{background:var(--ink);padding:3.5rem 4rem;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--saffron) 0,var(--saffron) 16px,var(--turmeric) 16px,var(--turmeric) 32px,var(--terracotta) 32px,var(--terracotta) 48px,var(--indigo) 48px,var(--indigo) 64px)}
+.footer-logo{display:flex;align-items:center;gap:.6rem}
+.footer-logo-en{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--sand)}
+.footer-logo-en .lab{color:var(--teal-l);font-style:italic}
+.footer-logo-dev{font-family:'Noto Sans Devanagari',sans-serif;font-size:.72rem;color:rgba(90,172,200,.65);display:block;margin-top:2px}
+.footer-links{display:flex;gap:2.5rem}
+.footer-links a{font-size:.75rem;font-weight:500;letter-spacing:.06em;color:rgba(245,237,224,.4);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--saffron-l)}
+.footer-mono{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:rgba(245,237,224,.2)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:960px){
+  nav{padding:1.2rem 2rem}.nav-links{display:none}
+  .page-hero{padding:6rem 2rem 3rem}.section{padding:4rem 2rem}
+  .bio-grid{grid-template-columns:1fr}.profile-sidebar{position:static}
+  .tl-item{grid-template-columns:90px 1fr;gap:1.5rem}
+  footer{flex-direction:column;gap:2rem;padding:3rem 2rem;text-align:center}
+  .footer-links{flex-wrap:wrap;justify-content:center}
+}
 
-                    <title>Home - Chirag Agarwal</title>
-                    <link rel="canonical" href="https://chirag-agarwall.github.io/" />
-                    <meta property="og:locale" content="en_US" />
-                    <meta property="og:type" content="website" />
-                    <meta property="og:title" content="Home - Chirag Agarwal" />
-                    <meta property="og:url" content="https://chirag-agarwall.github.io/" />
-                    <meta property="og:site_name" content="Chirag Agarwal" />
-                    <!-- <meta property="article:modified_time" content="2021-10-22T02:34:37+00:00" /> -->
-                    <meta property="og:image" content="images/background.jpg" />
+/* Hamburger */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;padding:.4rem;cursor:pointer;z-index:201}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .3s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* Mobile drawer */
+.nav-drawer{display:none;position:fixed;inset:0;z-index:199;background:rgba(245,237,224,.98);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;pointer-events:none;transition:opacity .3s}
+.nav-drawer.open{opacity:1;pointer-events:all}
+.nav-drawer a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:.02em;transition:color .2s}
+.nav-drawer a:hover,.nav-drawer a.active{color:var(--saffron)}
+.nav-drawer .drawer-cta{background:var(--saffron);color:var(--white)!important;padding:.7rem 2rem;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:600;margin-top:1rem}
+.nav-drawer .drawer-cta:hover{background:var(--saffron-d)}
+@media(max-width:960px){
+  nav{padding:1.2rem 2rem}
+  .nav-links,.nav-cta{display:none}
+  .nav-hamburger{display:flex}
+  .nav-drawer{display:flex}
+}
+</style>
+</head>
+<body>
+<nav id="mainNav">
+  <a href="./" class="nav-logo">
+    <img src="./images/aikyam_logo.jpg" class="nav-logo-icon" width="30" height="30" alt="Aikyam Lab Logo" />
+    <div><span class="nav-logo-en">Aikyam <span class="lab">Lab</span></span><span class="nav-logo-dev">ऐक्यम् — University of Virginia</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="./">Home</a></li>
+    <li><a href="./about.html" class="active">About</a></li>
+    <li><a href="./research.html">Research</a></li>
+    <li><a href="./publications.html">Publications</a></li>
+    <li><a href="./team.html">Team</a></li>
+    <li><a href="./teaching.html">Teaching</a></li>
+    <li><a href="./outreach.html">Outreach</a></li>
+    <li><a href="./talks.html">Talks</a></li>
+  </ul>
+  <a href="./positions.html" class="nav-cta">Open Positions</a>
+<button id="navHamburger" class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div id="navDrawer" class="nav-drawer">
+  <a href="./">Home</a>
+  <a href="./about.html" class="active">About</a>
+  <a href="./research.html">Research</a>
+  <a href="./publications.html">Publications</a>
+  <a href="./team.html">Team</a>
+  <a href="./teaching.html">Teaching</a>
+  <a href="./outreach.html">Outreach</a>
+  <a href="./talks.html">Talks</a>
+  <a href="./positions.html" class="drawer-cta">Open Positions</a>
+</div>
 
-                    <link rel='stylesheet' id='avia-grid-css' href='css/style.css' type='text/css' media='all' />
-                    <link rel='stylesheet' id='avia-base-css' href='css/base.css' type='text/css' media='all' />
-                    <link rel='stylesheet' id='avia-layout-css' href='css/layout.css' type='text/css' media='all' />
-                    <link rel='stylesheet' id='avia-layout-css' href='css/grid.css' type='text/css' media='all' />
+<div class="page-hero">
+  <div class="geo"><div class="geo-c"></div><div class="geo-c"></div><div class="geo-c"></div></div>
+  <div class="page-hero-inner">
+    <div class="page-eyebrow">Aikyam Lab · University of Virginia</div>
+    <div class="page-dev">चिराग अग्रवाल</div>
+    <h1 class="page-title">Chirag<br><strong>Agarwal</strong></h1>
+  </div>
+</div>
+<div class="textile"></div>
 
-                    <link rel='stylesheet' id='avia-dynamic-css' href='css/avia-dynamic.css' type='text/css' media='all' />
-                    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js'
-                        id='jquery-core-js'></script>
-                    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-                    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
-                    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-                    <link rel="stylesheet" href="css/animate.css">
-                    <link rel="stylesheet" href="css/owl.carousel.min.css">
-                    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-                    <link rel="stylesheet" href="css/magnific-popup.css">
-                    <link rel="stylesheet" href="css/aos.css">
-                    <link rel="stylesheet" href="css/ionicons.min.css">
-                    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-                    <link rel="stylesheet" href="css/jquery.timepicker.css">
-                    <link rel="stylesheet" href="css/flaticon.css">
-                    <link rel="stylesheet" href="css/icomoon.css">
-                    <link rel="stylesheet" href="css/style.css">
-                </head>
+<section class="section">
+  <div class="bio-grid">
+    <div class="bio-body reveal">
+      <p class="bio-lead">"Without transparency, AI cannot earn trust and wide adoption"</p>
+      <p>I am an <strong>Assistant Professor at the University of Virginia</strong> with appointments in the <a href="https://datascience.virginia.edu/">Data Science School</a>, the <a href="https://engineering.virginia.edu/department/computer-science">Department of Computer Science</a>, and <a href="https://med.virginia.edu/" style="color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(46,127,158,0.3);">School of Medicine</a>. I lead the Aikyam Lab — <em>"Aikyam"</em> is Sanskrit for oneness.</p>
+      <p>Before joining UVA, I was a <strong>Research Scientist at Adobe Research</strong> and a <strong>Postdoctoral Fellow at Harvard University</strong>. I completed my Ph.D. in Electrical and Computer Engineering at the University of Illinois at Chicago. My research develops <strong>Trustworthy Machine Learning Frameworks</strong> — beyond training models for specific tasks — that satisfy explainability, fairness, and robustness. I believe breakthroughs happen when diverse people, ideas, and data come together.</p>
+      <p>He has authored in top-tier machine learning and computer vision conferences and leading scientific journals. His research has received Spotlight and Oral presentations at NeurIPS, ICML, AAAI, CVPR, and ICIP. Dr. Agarwal has received industrial grants from Adobe, Microsoft, and Google to support his work on Trustworthy Machine Learning. His algorithm are used to understand industry-scale models in Amazon for surfacing important data points and showing that deploying an industry scale model trained only on half the data as surfaced does not lead to performance degradations.</p>
+      <p>I am the founder of the <strong>Agyeya Artificial IQ Foundation</strong>, focused on democratizing AI research and training the next generation of AI students in India. Learn more at <a href="./outreach.html">our outreach page</a>.</p>
+      <div style="margin-top:1.8rem;display:flex;gap:.75rem;flex-wrap:wrap">
+        <a href="./docs/cv.pdf" class="btn-saffron">Download CV</a>
+        <a href="https://scholar.google.com/citations?hl=en&user=AFEjd1QAAAAJ" class="btn-indigo">Google Scholar</a>
+      </div>
+    </div>
+    <div class="profile-sidebar reveal" style="transition-delay:.2s">
+      <div class="profile-arch">
+        <div class="arch-pattern"></div>
+        <div class="arch-img-area">
+          <img src="./images/IMGS5698.jpeg" alt="Chirag Agarwal" />
+          <div class="arch-img-overlay"></div>
+          <div class="arch-dev-watermark">ऐक्यम्</div>
+        </div>
+        <div class="arch-info">
+          <div><div class="arch-name">Chirag Agarwal</div><div class="arch-sub">Asst. Prof · Data Science &amp; CS · UVA</div></div>
+          <div class="arch-badge">Trustworthy AI</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-                <body id="top" itemscope="itemscope" itemtype="https://schema.org/WebPage">
-                    <div id="about">
-                    <div id='wrap_all' class="responsive_wrap">
-             <header id='header'
-                        class='all_colors header_color light_bg_color  av_header_top av_logo_left av_main_nav_header av_menu_right av_slim av_header_sticky av_header_shrinking_disabled av_header_stretch_disabled av_mobile_menu_tablet av_header_transparency av_header_searchicon av_header_unstick_top_disabled av_bottom_nav_disabled  av_header_border_disabled' 
-                        role="banner" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
-                        <div id='header_main' class='container_wrap container_wrap_logo'>
-                            <div class='container av-logo-container'>
-                                <div class='inner-container' style="display:flex; justify-content: space-around;">
+  <!-- Research Interests + Connect inline below profile card -->
+  <div class="interests-connect reveal" style="transition-delay:.3s">
+    <div class="ic-block">
+      <h4>Research Interests</h4>
+      <div class="interests-list">
+        <span class="interest-tag">Explainable AI</span>
+        <span class="interest-tag">Interpretability</span>
+        <span class="interest-tag">Interpretable Agents</span>
+        <span class="interest-tag">Adversarial Robustness</span>
+        <span class="interest-tag">Model Unlearning</span>
+        <span class="interest-tag">Multilingual LLMs</span>
+        <span class="interest-tag">AI Safety &amp; Alignment</span>
+        <span class="interest-tag">Multimodal AI</span>
+      </div>
+    </div>
+    <div class="ic-block">
+      <h4>Connect</h4>
+      <div class="connect-list">
+        <a href="https://scholar.google.com/citations?hl=en&user=AFEjd1QAAAAJ" class="connect-item" target="_blank">
+          <div class="connect-icon">🎓</div> Google Scholar
+        </a>
+        <a href="https://twitter.com/_cagarwal" class="connect-item" target="_blank">
+          <div class="connect-icon">𝕏</div> Twitter / X · @_cagarwal
+        </a>
+        <a href="./docs/Chirag_Agarwal_CV.pdf" class="connect-item" target="_blank">
+          <div class="connect-icon">📄</div> Download CV
+        </a>
+        <a href="./positions.html" class="connect-item">
+          <div class="connect-icon">🔬</div> Join the Lab
+        </a>
+        <a href="./outreach.html" class="connect-item">
+          <div class="connect-icon">🌱</div> Agyeya Foundation
+        </a>
+      </div>
+    </div>
+  </div>
 
-                                    <div class='logo avia-standard-logo header-name' style="width:1000px">
-                                        <div class="header_title header_flex "><a href='https://chirag-agarwall.github.io/'>AIKYAM LAB</a></div>
-                                         <div class="header_flex" > 
-                                          <nav class='main_menu navigation-desktop' data-selectname='Select a page' role="navigation" itemscope="itemscope"
-                                        itemtype="https://schema.org/SiteNavigationElement" >
-                                        <div class="avia-menu av-main-nav-wrap av_menu_icon_beside">
-                                            <ul id="avia-menu" class="menu av-main-nav" >
-                                        
-                                                <li id="menu-item-785"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-top-level menu-item-top-level-1">
-                                                    <a href="https://chirag-agarwall.github.io/" itemprop="url"><span
-                                                            class="avia-bullet"></span><span class="avia-menu-text">Home</span><span
-                                                            class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                    class="avia-arrow"></span></span></span></a>
-                                                </li>
-                                                <li id="menu-item-787"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-top-level menu-item-top-level-3">
-                                                    <a href="./about.html"><span
-                                                            class="avia-bullet"></span><span
-                                                            class="avia-menu-text">About</span><span
-                                                            class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                    class="avia-arrow"></span></span></span></a>
-                                                </li>
-                                                <li id="menu-item-787"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-3">
-                                                    <a href="research.html"><span
-                                                            class="avia-bullet"></span><span
-                                                            class="avia-menu-text">Research</span><span
-                                                            class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                    class="avia-arrow"></span></span></span></a>
-                                                </li>
-                                                <li id="menu-item-787"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-3">
-                                                    <a href="publications.html"><span
-                                                            class="avia-bullet"></span><span
-                                                            class="avia-menu-text">Publications</span><span
-                                                            class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                    class="avia-arrow"></span></span></span></a>
-                                                </li>
-                                                <li id="menu-item-787"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-3">
-                                                    <a href="team.html"><span
-                                                            class="avia-bullet"></span><span
-                                                            class="avia-menu-text">Team</span><span
-                                                            class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                    class="avia-arrow"></span></span></span></a>
-                                                </li>
-                                                <li id="menu-item-835"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-4">
-                                                    <a href="teaching.html"><span
-                                                            class="avia-bullet"></span><span
-                                                            class="avia-menu-text">Teaching</span><span class="avia-menu-fx"><span
-                                                                class="avia-arrow-wrap"><span
-                                                                    class="avia-arrow"></span></span></span></a>
-                                                </li>
-                                                <li id="menu-item-835"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-4">
-                                                    <a href="outreach.html"><span
-                                                            class="avia-bullet"></span><span
-                                                            class="avia-menu-text">Outreach</span><span class="avia-menu-fx"><span
-                                                                class="avia-arrow-wrap"><span
-                                                                    class="avia-arrow"></span></span></span></a>
-                                                </li>
-                                                <li id="menu-item-835"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-4">
-                                                    <a href="talks.html"><span
-                                                            class="avia-bullet"></span><span
-                                                            class="avia-menu-text">Talks</span><span class="avia-menu-fx"><span
-                                                                class="avia-arrow-wrap"><span
-                                                                    class="avia-arrow"></span></span></span></a>
-                                                </li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-2 menu-item-top-level menu-item-top-level-1 open_position_responsive">
-                                                    <a href="./positions.html"> Open Positions </a>
-                                                </li>
-                                       
-                                                <li class="av-burger-menu-main menu-item-avia-special ">
-                                                    <a href="#" aria-label="Menu" aria-hidden="false">
-                                                        <span class="av-hamburger av-hamburger--spin av-js-hamburger">
-                                                            <span class="av-hamburger-box">
-                                                                <span class="av-hamburger-inner"></span>
-                                                                <strong>Menu</strong>
-                                                            </span>
-                                                        </span>
-                                                        <span class="avia_hidden_link_text">Menu</span>
-                                                    </a>
-                                                </li>
+  <!-- Twitter inline -->
+  <div class="bio-twitter-grid reveal" style="transition-delay:.4s">
+    <div>
+      <div class="twitter-col-label">Latest on <span>Twitter / X</span></div>
+      <p style="font-size:0.92rem;line-height:1.8;color:var(--ink-3);margin-bottom:1.2rem;">Follow <a href="https://twitter.com/_cagarwal" style="color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(46,127,158,0.3);">@_cagarwal</a> for research updates, paper announcements, and thoughts on Trustworthy AI.</p>
+      <a href="https://twitter.com/_cagarwal" class="btn-saffron" style="font-size:0.82rem;" target="_blank">Follow on X →</a>
+    </div>
+    <div class="twitter-embed-wrap">
+      <a class="twitter-timeline"
+         data-height="560"
+         data-width="100%"
+         data-theme="light"
+         data-chrome="noheader nofooter noborders transparent"
+         href="https://twitter.com/_cagarwal?ref_src=twsrc%5Etfw">
+        Tweets by @_cagarwal
+      </a>
+    </div>
+  </div>
+</section>
 
+<footer>
+  <div><div class="footer-logo">
+    <img src="./images/aikyam_logo.jpg" class="nav-logo-icon" width="30" height="30" alt="Aikyam Lab Logo" />
+    <div><div class="footer-logo-en">Aikyam <span class="lab">Lab</span></div><span class="footer-logo-dev">ऐक्यम् · University of Virginia</span></div>
+  </div></div>
+  <div class="footer-links"><a href="./research.html">Research</a><a href="./publications.html">Publications</a><a href="./team.html">Team</a><a href="./teaching.html">Teaching</a><a href="./outreach.html">Outreach</a><a href="#">Contact</a></div>
+  <div class="footer-mono">Data Science &amp; CS · Charlottesville, VA</div>
+</footer>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script>
 
-                                            </ul>
-                                        </div>
-                                        
-                                    </nav>
-                                </div>
-                                        </div>
-                                  
-                                    <div class="header_flex open_position"><a href="./positions.html" style="color:black; text-decoration: none"> Open Positions </a></div>
-                                </div>
-                            </div>
-                            <!-- end container_wrap-->
-                        </div>
-                        <div class='header_bg'></div>
-
-                        <!-- end header -->
-                    </header>
-
-                        <div id="main" class="all_colors main-publ" data-scroll-offset="88">
-                            <div class="parallax page_header_background">
-                                <!--layer 1 will be the bottom layer, layer 3 will be the top layer-->
-                                <div class="parallax-container layer1 page_header_position" style="color: white; padding-top:140px; justify-content: flex-start;">
-                                    <div class='avia_textblock  ' style='font-size:35px; ' itemprop="text">
-                                        <p class="image-text">
-                                            ABOUT 
-                                        </p>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                 
-                            <div class="main_color container_wrap_first container_wrap sidebar_right">
-                                <div class="container av-section-cont-open">
-                                    <main role="main" itemprop="mainContentOfPage" class="template-page av-content alpha units">
-                                        <div class='post-entry post-entry-type-page post-entry-2'>
-                                            <div class='entry-content-wrapper clearfix'>
-                                                <div
-                                                    class='flex_column_table av-4mtw-00d392e8891036f163c437448bd1d5e2 sc-av_three_fourth av-equal-height-column-flextable'>
-                                                    <div
-                                                        class='flex_column av-4mtw-00d392e8891036f163c437448bd1d5e2 av_two_third  avia-builder-el-0  el_before_av_one_third  avia-builder-el-first  first  av-equal-height-column av-align-middle av-zero-column-padding '>
-
-                                                        <section class="av_textblock_section " itemscope="itemscope" style="padding-top:10px;" 
-                                                            itemtype="https://schema.org/CreativeWork">
-                                                            <div class='avia_textblock' style='font-size:20px;' itemprop="text">
-                                                                <p>
-                                                                    Chirag Agarwal is an Assistant Professor at the University of Virginia with appointments in the <a href="https://datascience.virginia.edu/" target="_blank">Data Science School</a> and the <a href="https://engineering.virginia.edu/department/computer-science" target="_blank">Department of Computer Science</a>. Before joining UVA, he was a postdoctoral fellow at Harvard University. He received his Ph.D. in Electrical and Computer Engineering from University of Illinois at Chicago. Dr. Agarwal researches on developing Trustworthy Machine Learning Frameworks that go beyond training models for specific downstream tasks and satisfy trustworthy properties, such as explainability, fairness, and robustness.
-                                                                </p>   
-                                                                <p>
-                                                                    He has authored in top-tier machine learning and computer vision conferences and leading scientific journals. His research has received Spotlight and Oral presentations at NeurIPS, ICML, CVPR, and ICIP. Dr. Agarwal has received industrial grants from Adobe, Microsoft, and Google to support his work on Trustworthy Machine Learning. His algorithm are used to understand industry-scale models in Amazon for surfacing important data points and showing that deploying an industry scale model trained only on half the data as surfaced does not lead to performance degradations.
-                                                                </p>
-                                                                <p>
-                                                                    Dr. Agarwal is the founder of the <a href="./outreach.html">Agyeya Research Foundation</a>, which focuses on democratizing research by supporting open collaboration in ML research and training the next generation of AI students in India.                 
-                                                                </p>
-                                                                <p style="text-align: left;">For more details about him and his research, please check out his <a href="./docs/Chirag_Agarwal_CV.pdf" target="_blank" rel="noopener">CV</a>.
-                                                                </p>
-                                                            </div>
-                                                        </section>
-                                                    </div>
-                                                    <div
-                                                        class='flex_column av-476k-8955c48c3cbacee1d8e3c2ffeb0c9c5f av_one_third  avia-builder-el-2  el_after_av_two_third  el_before_av_section  avia-builder-el-last  av-equal-height-column av-align-middle av-zero-column-padding '>
-                                                        <section class="av_textblock_section " itemscope="itemscope"
-                                                            itemtype="https://schema.org/CreativeWork">
-                                                           <div id="twitter_embed"
-                                                class="widget_text clearfix widget_custom_html" >
-                                                <div class="textwidget custom-html-widget">
-                            <a class="twitter-timeline light-theme" data-lang="en" data-theme="light" href="https://twitter.com/_cagarwal?ref_src=twsrc%5Etfw">Loading Tweets</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-                                                    <script>
-                                                        var widgetCSS = "" +
-                                                            "#twitter-widget-0{width: 100% !important;}" +
-                                                            ".timeline-Tweet-text{font-size:12px !important;}" +
-                                                            ".timeline-Tweet-text{line-height: 16px !important;}" +
-                                                            ".timeline-Tweet-text{font-weight: 400 !important;}";
-
-                                                            "#twitter-widget-1{width: 100% !important;}" +
-                                                            ".timeline-Tweet-text{font-size:12px !important;}" +
-                                                            ".timeline-Tweet-text{line-height: 16px !important;}" +
-                                                            ".timeline-Tweet-text{font-weight: 400 !important;}";
-
-
-                                                        function customTwitter() {
-                                                            var w = document.getElementById("twitter-widget-0").contentDocument;
-                                                            var w1 = document.getElementById("twitter-widget-1").contentDocument;
-
-                                                            var s = document.createElement("style");
-                                                            s.innerHTML = widgetCSS;
-                                                            s.type = "text/css";
-                                                            w.head.appendChild(s);
-                                                            w1.head.appendChild(s);
-                                                        }
-                                                    </script> 
-                                                </div>
-                                            </div>
-                                            </section>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </main>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <script type="text/javascript" src="js/menu.js" id="avia-module-menu-js"></script>
-                <script type="text/javascript" src="js/menu-toggle.js" id="avia-module-toggles-js"></script>
-                <script type="text/javascript" src="js/hamburger-menu.js" id="avia-hamburger-menu-js"></script>
-
-                <script type="text/javascript" src="js/mega-menu.js" id="avia-megamenu-js"></script>
-                <script type="text/javascript" src="js/sticky-header.js" id="avia-sticky-header-js"></script>
-    </body>
+window.addEventListener('scroll',()=>document.getElementById('mainNav').classList.toggle('scrolled',scrollY>50),{passive:true});
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');ro.unobserve(x.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+</script>
+<script>
+// Mobile nav
+document.addEventListener('DOMContentLoaded', function() {
+  var ham = document.getElementById('navHamburger');
+  var drawer = document.getElementById('navDrawer');
+  if (!ham || !drawer) return;
+  ham.addEventListener('click', function() {
+    ham.classList.toggle('open');
+    drawer.classList.toggle('open');
+  });
+  drawer.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      ham.classList.remove('open');
+      drawer.classList.remove('open');
+    });
+  });
+});
+</script>
+</body>
 </html>
-

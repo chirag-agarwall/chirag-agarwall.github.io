@@ -1,551 +1,442 @@
-            <!DOCTYPE html>
-                        <html lang="en-US"
-                            class="html_stretched responsive av-preloader-disabled  html_header_top html_logo_left html_main_nav_header html_menu_right html_slim html_header_sticky html_header_shrinking_disabled html_header_transparency html_mobile_menu_tablet html_header_searchicon html_content_align_center html_header_unstick_top_disabled html_header_stretch_disabled html_av-overlay-side html_av-overlay-side-classic html_av-submenu-noclone html_entry_id_2 av-cookies-no-cookie-consent av-default-lightbox av-no-preview html_text_menu_active av-mobile-menu-switch-default">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Team — Aikyam Lab · UVA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Sans+Devanagari:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --sand:#f5ede0;--sand-2:#ede0cc;--white:#faf7f2;
+  --saffron:#e07b2a;--saffron-d:#c4611a;--saffron-l:#f0a060;
+  --turmeric:#d4a030;--terracotta:#b85c38;
+  --indigo:#2e3a6e;
+  --ink:#1e1a14;--ink-3:#6b5e4a;
+  --rule:rgba(30,26,20,0.12);
+  --teal:#2e7f9e;--teal-l:#5aacc8;
+}
+html{scroll-behavior:smooth}
+body{background:var(--sand);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden;}
+body::after{content:'';position:fixed;inset:0;z-index:500;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;opacity:.7}
 
-                        <head>
-                            <meta charset="UTF-8" />
-                            <!-- mobile setting -->
-                            <meta name="viewport" content="width=device-width, initial-scale=1">
-                            <!-- Scripts/CSS and wp_head hook -->
-                            <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.4rem 4rem;display:flex;align-items:center;justify-content:space-between;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(245,237,224,.95);backdrop-filter:blur(16px);border-color:var(--rule)}
+.nav-logo{text-decoration:none;display:flex;align-items:center;gap:.75rem}
+.nav-logo-icon{flex-shrink:0;transition:transform .35s}
+.nav-logo:hover .nav-logo-icon{transform:rotate(12deg) scale(1.08)}
+.nav-logo-en{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--ink);display:block}
+.nav-logo-en .lab{color:var(--teal);font-style:italic}
+.nav-logo-dev{font-family:'Noto Sans Devanagari',sans-serif;font-size:.68rem;color:var(--teal);display:block;margin-top:1px;opacity:.85}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{font-size:.92rem;font-weight:500;letter-spacing:.05em;color:var(--ink-3);text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--saffron)}
+.nav-cta{background:var(--saffron);color:var(--white)!important;padding:.55rem 1.5rem;border-radius:100px;font-size:.88rem;font-weight:600;text-decoration:none!important;transition:background .2s}
+.nav-cta:hover{background:var(--saffron-d)}
 
-                            <title>Home - Chirag Agarwal</title>
-                            <link rel="canonical" href="https://chirag-agarwall.github.io/" />
-                            <meta property="og:locale" content="en_US" />
-                            <meta property="og:type" content="website" />
-                            <meta property="og:title" content="Home - Chirag Agarwal" />
-                            <meta property="og:url" content="https://chirag-agarwall.github.io/" />
-                            <meta property="og:site_name" content="Chirag Agarwal" />
-                            <!-- <meta property="article:modified_time" content="2021-10-22T02:34:37+00:00" /> -->
-                            <meta property="og:image" content="images/background.jpg" />
+.textile{height:6px;background:repeating-linear-gradient(90deg,var(--saffron) 0,var(--saffron) 12px,var(--turmeric) 12px,var(--turmeric) 24px,var(--terracotta) 24px,var(--terracotta) 36px,var(--indigo) 36px,var(--indigo) 48px,var(--saffron-l) 48px,var(--saffron-l) 60px);opacity:.35}
 
-                            <link rel='stylesheet' id='avia-grid-css' href='css/style.css' type='text/css' media='all' />
-                            <link rel='stylesheet' id='avia-base-css' href='css/base.css' type='text/css' media='all' />
-                            <link rel='stylesheet' id='avia-layout-css' href='css/layout.css' type='text/css' media='all' />
-                            <link rel='stylesheet' id='avia-layout-css' href='css/grid.css' type='text/css' media='all' />
+/* HERO */
+.page-hero{position:relative;min-height:clamp(220px,30vh,340px);display:flex;align-items:flex-end;padding:0 4rem 2.5rem;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;z-index:2;background:repeating-linear-gradient(90deg,var(--saffron) 0,var(--saffron) 16px,var(--turmeric) 16px,var(--turmeric) 32px,var(--terracotta) 32px,var(--terracotta) 48px,var(--indigo) 48px,var(--indigo) 64px,var(--saffron-l) 64px,var(--saffron-l) 80px)}
+.geo{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.geo-c{position:absolute;border-radius:50%;border:1px solid rgba(224,123,42,.1)}
+.geo-c:nth-child(1){width:600px;height:600px;right:-150px;top:-150px;background:radial-gradient(circle,rgba(212,160,48,.05) 0%,transparent 65%)}
+.geo-c:nth-child(2){width:420px;height:420px;right:-40px;top:-40px;border-color:rgba(184,92,56,.08)}
+.geo-c:nth-child(3){width:260px;height:260px;right:50px;top:50px;border-color:rgba(224,123,42,.15)}
+.page-hero-inner{position:relative;z-index:2;padding-top:8rem}
+.page-eyebrow{display:flex;align-items:center;gap:.75rem;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron);margin-bottom:.8rem;opacity:0;animation:fadeUp .6s .1s forwards}
+.page-eyebrow::before{content:'';display:block;width:32px;height:2px;background:var(--saffron)}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,5.5vw,6rem);font-weight:300;line-height:.97;color:var(--ink);opacity:0;animation:fadeUp .8s .3s forwards}
+.page-title em{color:var(--saffron-d);font-style:italic}
 
-                            <link rel='stylesheet' id='avia-dynamic-css' href='css/avia-dynamic.css' type='text/css' media='all' />
-                            <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js'
-                                id='jquery-core-js'></script>
-                            <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-                            <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
-                            <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-                            <link rel="stylesheet" href="css/animate.css">
-                            <link rel="stylesheet" href="css/owl.carousel.min.css">
-                            <link rel="stylesheet" href="css/owl.theme.default.min.css">
-                            <link rel="stylesheet" href="css/magnific-popup.css">
-                            <link rel="stylesheet" href="css/aos.css">
-                            <link rel="stylesheet" href="css/ionicons.min.css">
-                            <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-                            <link rel="stylesheet" href="css/jquery.timepicker.css">
-                            <link rel="stylesheet" href="css/flaticon.css">
-                            <link rel="stylesheet" href="css/icomoon.css">
-                            <link rel="stylesheet" href="css/style.css">
-                        </head>
+/* TEAM SECTION */
+.team-section{background:var(--sand);padding:5rem 4rem;position:relative;z-index:1}
 
-                        <body id="top" itemscope="itemscope" itemtype="https://schema.org/WebPage">
-                            <div id="team">
-                            <div id='wrap_all' class="responsive_wrap">
-                <header id='header'
-                            class='all_colors header_color light_bg_color  av_header_top av_logo_left av_main_nav_header av_menu_right av_slim av_header_sticky av_header_shrinking_disabled av_header_stretch_disabled av_mobile_menu_tablet av_header_transparency av_header_searchicon av_header_unstick_top_disabled av_bottom_nav_disabled  av_header_border_disabled' 
-                            role="banner" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
-                            <div id='header_main' class='container_wrap container_wrap_logo'>
-                                <div class='container av-logo-container'>
-                                    <div class='inner-container' style="display:flex; justify-content: space-around;">
+/* Grid */
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3.5rem 2.5rem}
 
-                                        <div class='logo avia-standard-logo header-name' style="width:1000px">
-                                            <div class="header_title header_flex "><a href='https://chirag-agarwall.github.io/'>AIKYAM LAB</a></div>
-                                             <div class="header_flex" > 
-                                              <nav class='main_menu navigation-desktop' data-selectname='Select a page' role="navigation" itemscope="itemscope"
-                                            itemtype="https://schema.org/SiteNavigationElement" >
-                                            <div class="avia-menu av-main-nav-wrap av_menu_icon_beside">
-                                                <ul id="avia-menu" class="menu av-main-nav" >
-                                            
-                                                    <li id="menu-item-785"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-top-level menu-item-top-level-1">
-                                                        <a href="https://chirag-agarwall.github.io/" itemprop="url"><span
-                                                                class="avia-bullet"></span><span class="avia-menu-text">Home</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-787"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-3">
-                                                        <a href="./about.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">About</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-787"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-3">
-                                                        <a href="research.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Research</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-787"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-3">
-                                                        <a href="publications.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Publications</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-787"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-top-level menu-item-top-level-3">
-                                                        <a href="team.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Team</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-835"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-4">
-                                                        <a href="teaching.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Teaching</span><span class="avia-menu-fx"><span
-                                                                    class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-835"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-4">
-                                                        <a href="outreach.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Outreach</span><span class="avia-menu-fx"><span
-                                                                    class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-835"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-4">
-                                                        <a href="talks.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Talks</span><span class="avia-menu-fx"><span
-                                                                    class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-2 menu-item-top-level menu-item-top-level-1 open_position_responsive">
-                                                        <a href="./positions.html"> Open Positions </a>
-                                                    </li>
-                                           
-                                                    <li class="av-burger-menu-main menu-item-avia-special ">
-                                                        <a href="#" aria-label="Menu" aria-hidden="false">
-                                                            <span class="av-hamburger av-hamburger--spin av-js-hamburger">
-                                                                <span class="av-hamburger-box">
-                                                                    <span class="av-hamburger-inner"></span>
-                                                                    <strong>Menu</strong>
-                                                                </span>
-                                                            </span>
-                                                            <span class="avia_hidden_link_text">Menu</span>
-                                                        </a>
-                                                    </li>
+/* Card */
+.team-card{display:flex;flex-direction:column;align-items:center;text-align:center;}
 
+/* Circular avatar */
+.team-avatar{width:220px;height:220px;border-radius:50%;overflow:hidden;position:relative;flex-shrink:0;margin-bottom:1.3rem;background:var(--sand-2)}
+.team-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:filter .3s,transform .3s}
+.team-card:hover .team-avatar img{filter:brightness(.4);transform:scale(1.07)}
 
-                                                </ul>
-                                            </div>
-                                            
-                                        </nav>
-                                    </div>
-                                            </div>
-                                      
-                                        <div class="header_flex open_position"><a href="./positions.html" style="color:black; text-decoration: none"> Open Positions </a></div>
-                                    </div>
-                                </div>
-                                <!-- end container_wrap-->
-                            </div>
-                            <div class='header_bg'></div>
+/* Social icons — fade in on hover */
+.avatar-socials{position:absolute;inset:0;border-radius:50%;display:flex;align-items:center;justify-content:center;gap:.65rem;opacity:0;transition:opacity .25s}
+.team-card:hover .avatar-socials{opacity:1}
+.social-btn{width:36px;height:36px;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:1.5em;font-weight:700;color:var(--ink);text-decoration:none;transform:translateY(5px);transition:background .2s,color .2s,transform .2s}
+.team-card:hover .social-btn{transform:translateY(0)}
+.team-card:hover .social-btn:nth-child(2){transition-delay:.05s}
+.social-btn:hover{background:var(--saffron);color:var(--white)}
 
-                            <!-- end header -->
-                        </header>
+/* Name */
+.team-name{font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:.4rem;line-height:1.3}
+/* Role chip — standalone line below name */
+.role-chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.58rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:.22rem .65rem;border-radius:100px;line-height:1;white-space:nowrap;margin-bottom:.38rem}
+.role-chip.pi{background:rgba(224,123,42,.12);color:var(--saffron-d);border:1px solid rgba(224,123,42,.3)}
+.role-chip.postdoc{background:rgba(46,58,110,.1);color:var(--indigo);border:1px solid rgba(46,58,110,.25)}
+.role-chip.phd{background:rgba(46,127,158,.08);color:var(--teal);border:1px solid rgba(46,127,158,.22)}
+.role-chip.undergrad{background:rgba(180,92,56,.08);color:var(--terracotta);border:1px solid rgba(180,92,56,.22)}
+.team-role{font-size:.75rem;color:var(--ink-3);line-height:1.4}
 
-                                <div id="main" class="all_colors main-publ" data-scroll-offset="88">
-                                    <div class="parallax page_header_background">
-                                        <!--layer 1 will be the bottom layer, layer 3 will be the top layer-->
-                                        <div class="parallax-container layer1 page_header_position" style="color: white; padding-top:140px; justify-content: flex-start;">
-                                            <div class='avia_textblock  ' style='font-size:35px; ' itemprop="text">
-                                                <p class="image-text">
-                                                    OUR TEAM
-                                                </p>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="main_color container_wrap_first container_wrap sidebar_right">
-                                        <div class="container av-section-cont-open">
-                                            <main role="main" itemprop="mainContentOfPage" class="template-page av-content alpha units">
-                                                <div class='post-entry post-entry-type-page post-entry-2'>
-                                                    <div class="container-team">
-                                                        <div class="row-team">
-                                                            <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/chirag.jpeg">
-                                                                        <ul class="social">
-                                                                            <li><a href="https://twitter.com/_cagarwal" target="_blank"><i class="ri--twitter-x-fill"    style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://scholar.google.com/citations?hl=en&amp;user=AFEjd1QAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank"><i class="icon-google" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://www.linkedin.com/in/chirag-agarwal-0a6a43a1/" target="_blank"><i class="icon-linkedin" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://github.com/chirag-agarwall" target="_blank"><i class="icon-github" style="font-size: 1.5em"></i> </a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Chirag Agarwal</h3>
-                                                                            <span class="pub1">Assistant Professor</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+/* ALUMNI + SPONSORS (light bg) */
+.section{position:relative;z-index:1;padding:5rem 4rem}
+.section-alt{background:var(--white)}
+.sec-eyebrow{display:flex;align-items:center;gap:.75rem;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron);margin-bottom:.6rem}
+.sec-eyebrow::before{content:'';display:block;width:24px;height:2px;background:var(--saffron); }
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,2.8vw,2.6rem);font-weight:400;color:var(--ink);line-height:1.1;margin-bottom:3rem}
+.sec-title em{color:var(--saffron-d);font-style:italic}
+.alumni-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.alumni-year-block{background:var(--white);border:1px solid var(--rule);border-radius:14px;padding:1.6rem 2rem}
+.alumni-year{font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:700;color:var(--saffron);letter-spacing:.1em;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.alumni-year::after{content:'';flex:1;height:1px;background:var(--rule)}
+.alumni-item{padding:.55rem 0;border-bottom:1px solid var(--rule);font-size:.85rem;color:#3a3228;line-height:1.5}
+.alumni-item:last-child{border-bottom:none}
+.alumni-item strong{color:var(--ink);font-weight:600}
+.alumni-item em{color:var(--teal);font-style:normal;font-size:.78rem}
+.sponsor-grid{display:flex;flex-wrap:wrap;align-items:center;gap:2.5rem 5rem}
+.sponsor-logo{height:72px;object-fit:contain;filter:none;transition:transform .2s,opacity .2s;opacity:.9}
+.sponsor-logo:hover{transform:scale(1.05);opacity:1}
 
-                                                            <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/tim.jpg">
-                                                                        <ul class="social">
-                                                                            <li><a href="https://timbhiggins.github.io/" target="_blank"><i class="icon-globe" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://scholar.google.com/citations?user=sBuPY1YAAAAJ&hl=en" target="_blank"><i class="icon-google" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://github.com/timbhiggins" target="_blank"><i class="icon-github" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="http://www.linkedin.com/in/timothy-b-higgins-phd-918778194" target="_blank"><i class="icon-linkedin" style="font-size: 1.5em"></i> </a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Tim Higgins</h3>
-                                                                            <span class="pub1">Postdoc, Climate Fellow</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+/* FOOTER */
+footer{background:var(--ink);padding:3.5rem 4rem;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--saffron) 0,var(--saffron) 16px,var(--turmeric) 16px,var(--turmeric) 32px,var(--terracotta) 32px,var(--terracotta) 48px,var(--indigo) 48px,var(--indigo) 64px)}
+.footer-logo{display:flex;align-items:center;gap:.6rem}
+.footer-logo-en{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--sand)}
+.footer-logo-en .lab{color:var(--teal-l);font-style:italic}
+.footer-logo-dev{font-family:'Noto Sans Devanagari',sans-serif;font-size:.72rem;color:rgba(90,172,200,.65);display:block;margin-top:2px}
+.footer-links{display:flex;gap:2.5rem}
+.footer-links a{font-size:.75rem;font-weight:500;letter-spacing:.06em;color:rgba(245,237,224,.4);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--saffron-l)}
+.footer-mono{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:rgba(245,237,224,.2)}
 
-                                                            <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/jun.webp">
-                                                                        <ul class="social">
-                                                                            <li><a href="https://scholar.google.com/citations?user=Y4zT5ZUAAAAJ&hl=en" target="_blank"><i class="icon-google" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://www.linkedin.com/in/jun-yuan" target="_blank"><i class="icon-linkedin" style="font-size: 1.5em"></i> </a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Jun Yuan</h3>
-                                                                            <span class="pub1">Postdoc, DTD Lab @UVA</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>                                                            
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
-                                                            <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/eileanor.jpg">
-                                                                        <ul class="social">
-                                                                            <li><a href="https://scholar.google.com/citations?user=qe956VsAAAAJ&hl=en" target="_blank"><i class="icon-google" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://github.com/eplarocco" target="_blank"><i class="icon-github" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://www.linkedin.com/in/eileanorlarocco/" target="_blank"><i class="icon-linkedin" style="font-size: 1.5em"></i> </a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Eileanor LaRocco</h3>
-                                                                            <span class="pub1">PhD Student, UVA</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+@media(max-width:960px){
+  nav{padding:1.2rem 2rem}.nav-links{display:none}
+  .page-hero{padding:6rem 2rem 3rem}
+  .team-section,.section{padding:4rem 2rem}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .team-avatar{width:150px;height:150px}
+  .alumni-grid{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:2rem;padding:3rem 2rem;text-align:center}
+  .footer-links{flex-wrap:wrap;justify-content:center}
+}
 
-                                                            <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/eric.jpg">
-                                                                        <ul class="social">
-                                                                            <li><a href="https://www.linkedin.com/in/eric-onyame-2249371b4/" target="_blank"><i class="icon-linkedin" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://github.com/Eric-Onyame" target="_blank"><i class="icon-github" style="font-size: 1.5em"></i> </a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Eric N. Onyame</h3>
-                                                                            <span class="pub1">PhD Student, UVA</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/madelyn.jpg">
-                                                                        <ul class="social">
-                                                                            <li><a href="https://www.linkedin.com/in/madelynmathai/" target="_blank"><i class="icon-linkedin" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://github.com/mathaim" target="_blank"><i class="icon-github" style="font-size: 1.5em"></i> </a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Madelyn Mathai</h3>
-                                                                            <span class="pub1">PhD Student, UVA</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/ahson.avif">
-                                                                        <ul class="social">
-                                                                            <li><a href="https://blog.ahson.io/" target="_blank"><i class="icon-globe" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://scholar.google.com/citations?user=SR_3fUwAAAAJ&hl=en" target="_blank"><i class="icon-google" style="font-size: 1.5em"></i></a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Ahson Saiyed</h3>
-                                                                            <span class="pub1">Ph.D. Student, UVA</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/miles.jpeg">
-                                                                        <ul class="social">
-                                                                            <li><a href="https://scholar.google.com/citations?user=MwzCTYYAAAAJ&hl=en" target="_blank"><i class="icon-google" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://www.linkedin.com/in/runtaozhou/" target="_blank"><i class="icon-linkedin" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://github.com/Runtaozhou" target="_blank"><i class="icon-github" style="font-size: 1.5em"></i> </a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Runtao Zhou</h3>
-                                                                            <span class="pub1">Ph.D. Student, UVA</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-<!--                                                             <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/kefan.jpg">
-                                                                        <ul class="social">
-                                                                            <li><a href="https://www.linkedin.com/in/gary-song-emory" target="_blank"><i class="icon-linkedin" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://github.com/garified" target="_blank"><i class="icon-github" style="font-size: 1.5em"></i> </a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Kefan Song</h3>
-                                                                            <span class="pub1">Ph.D. Student, UVA</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>                                                              -->
-                                                            <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/yuyang.png">
-                                                                        <ul class="social">
-                                                                            <li><a href="https://github.com/EstherrCheng" target="_blank"><i class="icon-github" style="font-size: 1.5em"></i> </a></li>
-                                                                            <li><a href="https://www.linkedin.com/in/yuyangcheng/#main-content" target="_blank"><i class="icon-linkedin" style="font-size: 1.5em"></i></a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Yuyang Cheng</h3>
-                                                                            <span class="pub1">PhD Student, UVA</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>                                                            
-                                                            <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/ZD.jpg">
-                                                                        <ul class="social">
-                                                                            <li><a href="https://github.com/PeanutButter6488" target="_blank"><i class="icon-github" style="font-size: 1.5em"></i> </a></li>
-                                                                            <li><a href="https://www.linkedin.com/in/ding-zhang-621297221/" target="_blank"><i class="icon-linkedin" style="font-size: 1.5em"></i></a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Ding Zhang</h3>
-                                                                            <span class="pub1">PhD Student, UVA</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>                                                            
-                                                            <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/akash.jpg">
-                                                                        <ul class="social">
-                                                                            <li><a href="https://www.linkedin.com/in/akash-ghosh-4b199811a/" target="_blank"><i class="icon-linkedin" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://scholar.google.co.in/citations?user=NWc6Pw8AAAAJ&hl=en" target="_blank"><i class="icon-google" style="font-size: 1.5em"></i></a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Akash Ghosh</h3>
-                                                                            <span class="pub1">PhD Student, IIT-P</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>  
-                                                            <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/nishitha.png">
-                                                                        <ul class="social">
-                                                                            <li><a href="https://nishithakhasnavis.github.io/Landing-page/" target="_blank"><i class="icon-globe" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://github.com/NishithaKhasnavis" target="_blank"><i class="icon-github" style="font-size: 1.5em"></i> </a></li>
-                                                                            <li><a href="https://www.linkedin.com/in/nishitha-khasnavis/" target="_blank"><i class="icon-linkedin" style="font-size: 1.5em"></i></a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Nishitha Khasnavis</h3>
-                                                                            <span class="pub1">Undergraduate student, UVA</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>                                                   
-<!--                                                             <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/ashish.jpeg">
-                                                                        <ul class="social">
-                                                                            <li><a href="https://github.com/cs20s030" target="_blank"><i class="icon-github" style="font-size: 1.5em"></i> </a></li>
-                                                                            <li><a href="https://scholar.google.com/citations?user=aBn1e34AAAAJ&hl=en" target="_blank"><i class="icon-google" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://cs20s030.github.io/" target="_blank"><i class="icon-globe" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://www.linkedin.com/in/ashish-seth-bb9a4a233/" target="_blank"><i class="icon-linkedin" style="font-size: 1.5em"></i></a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Ashish Seth</h3>
-                                                                            <span class="pub1">PhD Student, UMD</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div> -->
-<!--                                                             <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/simra.jpg" alt="Simra Shahid">
+/* Hamburger */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;padding:.4rem;cursor:pointer;z-index:201}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .3s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* Mobile drawer */
+.nav-drawer{display:none;position:fixed;inset:0;z-index:199;background:rgba(245,237,224,.98);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;pointer-events:none;transition:opacity .3s}
+.nav-drawer.open{opacity:1;pointer-events:all}
+.nav-drawer a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:.02em;transition:color .2s}
+.nav-drawer a:hover,.nav-drawer a.active{color:var(--saffron)}
+.nav-drawer .drawer-cta{background:var(--saffron);color:var(--white)!important;padding:.7rem 2rem;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:600;margin-top:1rem}
+.nav-drawer .drawer-cta:hover{background:var(--saffron-d)}
+@media(max-width:960px){
+  nav{padding:1.2rem 2rem}
+  .nav-links,.nav-cta{display:none}
+  .nav-hamburger{display:flex}
+  .nav-drawer{display:flex}
+}
+</style>
+</head>
+<body>
+<nav id="mainNav">
+  <a href="./" class="nav-logo">
+    <img src="./images/aikyam_logo.jpg" class="nav-logo-icon" width="30" height="30" alt="Aikyam Lab Logo" />
+    <div><span class="nav-logo-en">Aikyam <span class="lab">Lab</span></span><span class="nav-logo-dev">ऐक्यम् — University of Virginia</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="./">Home</a></li>
+    <li><a href="./about.html">About</a></li>
+    <li><a href="./research.html">Research</a></li>
+    <li><a href="./publications.html">Publications</a></li>
+    <li><a href="./team.html" class="active">Team</a></li>
+    <li><a href="./teaching.html">Teaching</a></li>
+    <li><a href="./outreach.html">Outreach</a></li>
+    <li><a href="./talks.html">Talks</a></li>
+  </ul>
+  <a href="./positions.html" class="nav-cta">Open Positions</a>
+<button id="navHamburger" class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div id="navDrawer" class="nav-drawer">
+  <a href="./">Home</a>
+  <a href="./about.html">About</a>
+  <a href="./research.html">Research</a>
+  <a href="./publications.html">Publications</a>
+  <a href="./team.html" class="active">Team</a>
+  <a href="./teaching.html">Teaching</a>
+  <a href="./outreach.html">Outreach</a>
+  <a href="./talks.html">Talks</a>
+  <a href="./positions.html" class="drawer-cta">Open Positions</a>
+</div>
 
-                                                                        <ul class="social">
-                                                                            <li><a href="https://x.com/simcyy" target="_blank"><i class="ri--twitter-x-fill"    style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://scholar.google.com/citations?user=RXM-KSQAAAAJ&hl=en" target="_blank"><i class="icon-google" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://sites.google.com/view/simra-shahid/" target="_blank"><i class="icon-globe" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://github.com/simra-shahid" target="_blank"><i class="icon-github" style="font-size: 1.5em"></i> </a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Simra Shahid</h3>
-                                                                            <span class="pub1">Visting Researcher from Adobe</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div> -->
+<div class="page-hero">
+  <div class="geo"><div class="geo-c"></div><div class="geo-c"></div><div class="geo-c"></div></div>
+  <div class="page-hero-inner">
+    <div class="page-eyebrow">Aikyam Lab · University of Virginia</div>
+    <h1 class="page-title">Our <em>Team</em></h1>
+  </div>
+</div>
+<div class="textile"></div>
 
-<!--                                                             <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/surgan.jpeg">
-                                                                        <ul class="social">
-                                                                            <li><a href="https://x.com/JandialSurgan" target="_blank"><i class="ri--twitter-x-fill"    style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://scholar.google.com/citations?user=1sWyXaoAAAAJ&hl=en&authuser=1" target="_blank"><i class="icon-google" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://surgan12.github.io/" target="_blank"><i class="icon-globe" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://www.linkedin.com/in/xsurgan-jandial-9a085a14b/" target="_blank"><i class="icon-linkedin" style="font-size: 1.5em"></i> </a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Surgan Jandial</h3>
-                                                                            <span class="pub1">Incoming Student @ CMU</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div> -->
+<!-- ════════════════ TEAM SECTION ════════════════ -->
+<div class="team-section">
+  <div class="team-grid reveal">
 
-<!--                                                             <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/susmit.png">
-                                                                        <ul class="social">
-                                                                            <li><a href="https://github.com/Susmit-A" target="_blank"><i class="icon-github" style="font-size: 1.5em"></i> </a></li>
-                                                                            <li><a href="https://scholar.google.com/citations?user=dwx-5E0AAAAJ&hl=en" target="_blank"><i class="icon-google" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://susmit-a.github.io/" target="_blank"><i class="icon-globe" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://www.linkedin.com/in/susmitagrawal" target="_blank"><i class="icon-linkedin" style="font-size: 1.5em"></i> </a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Susmit Agrawal</h3>
-                                                                            <span class="pub1">Visting Researcher from IIT-H</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div> -->
+    <div class="team-card">
+      <div class="team-avatar">
+        <img src="./images/chirag.jpeg" alt="Chirag Agarwal"/>
+        <div class="avatar-socials">
+          <a href="https://twitter.com/_cagarwal" class="social-btn" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="https://scholar.google.com/citations?user=AFEjd1QAAAAJ" class="social-btn" target="_blank"><i class="fa fa-google"></i></a>
+          <a href="https://www.linkedin.com/in/chiragagarwall" class="social-btn" target="_blank"><i class="fa fa-linkedin"></i></a>
+          <a href="https://github.com/chirag-agarwall" class="social-btn" target="_blank"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+      <div class="team-name">Chirag Agarwal</div>
+      <span class="role-chip pi">Principal Investigator</span>
+      <div class="team-role">Assistant Professor</div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-avatar">
+        <img src="./images/tim.jpg" alt="Tim Higgins"/>
+        <div class="avatar-socials">
+          <a href="https://timbhiggins.github.io/" class="social-btn" target="_blank"><i class="fa fa-globe"></i></a>
+          <a href="https://scholar.google.com/citations?user=sBuPY1YAAAAJ&hl=en" class="social-btn" target="_blank"><i class="fa fa-google"></i></a>
+          <a href="https://github.com/timbhiggins" class="social-btn" target="_blank"><i class="fa fa-github"></i></a>
+          <a href="http://www.linkedin.com/in/timothy-b-higgins-phd-918778194" class="social-btn" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="team-name">Tim Higgins</div>
+      <span class="role-chip postdoc">Postdoc</span>
+      <div class="team-role">Climate Fellow</div>
+    </div>
+
+<!--    <div class="team-card">-->
+<!--      <div class="team-avatar">-->
+<!--        <img src="./images/jun.webp" alt="Jun Yuan"/>-->
+<!--        <div class="avatar-socials">-->
+<!--          <a href="https://scholar.google.com/citations?user=Y4zT5ZUAAAAJ&hl=en" class="social-btn" target="_blank"><i class="fa fa-google"></i></a>-->
+<!--          <a href="https://www.linkedin.com/in/jun-yuan" class="social-btn" target="_blank"><i class="fa fa-linkedin"></i></a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="team-name">Jun Yuan</div>-->
+<!--      <span class="role-chip postdoc">Postdoc</span>-->
+<!--      <div class="team-role">DTD Lab @UVA</div>-->
+<!--    </div>-->
+
+    <div class="team-card">
+      <div class="team-avatar">
+        <img src="./images/eileanor.jpg" alt="Eileanor LaRocco"/>
+        <div class="avatar-socials">
+          <a href="https://scholar.google.com/citations?user=qe956VsAAAAJ&hl=en" class="social-btn" target="_blank"><i class="fa fa-google"></i></a>
+          <a href="https://github.com/eplarocco" class="social-btn" target="_blank"><i class="fa fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/eileanorlarocco/" class="social-btn" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="team-name">Eileanor LaRocco</div>
+      <span class="role-chip phd">PhD Student</span>
+      <div class="team-role">UVA</div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-avatar">
+        <img src="./images/eric.jpg" alt="Eric N. Onyame"/>
+        <div class="avatar-socials">
+          <a href="https://www.linkedin.com/in/eric-onyame-2249371b4/" class="social-btn" target="_blank"><i class="fa fa-linkedin"></i></a>
+          <a href="https://github.com/Eric-Onyame" class="social-btn" target="_blank"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+      <div class="team-name">Eric N. Onyame</div>
+      <span class="role-chip phd">PhD Student</span>
+      <div class="team-role">UVA</div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-avatar">
+        <img src="./images/madelyn.jpg" alt="Madelyn Mathai"/>
+        <div class="avatar-socials">
+          <a href="https://www.linkedin.com/in/madelynmathai/" class="social-btn" target="_blank"><i class="fa fa-linkedin"></i></a>
+          <a href="https://github.com/mathaim" class="social-btn" target="_blank"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+      <div class="team-name">Madelyn Mathai</div>
+      <span class="role-chip phd">PhD Student</span>
+      <div class="team-role">UVA</div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-avatar">
+        <img src="./images/ahson.avif" alt="Ahson Saiyed"/>
+        <div class="avatar-socials">
+          <a href="https://blog.ahson.io/" class="social-btn" target="_blank"><i class="fa fa-globe"></i></a>
+          <a href="https://scholar.google.com/citations?user=SR_3fUwAAAAJ&hl=en" class="social-btn" target="_blank"><i class="fa fa-google"></i></a>
+        </div>
+      </div>
+      <div class="team-name">Ahson Saiyed</div>
+      <span class="role-chip phd">PhD Student</span>
+      <div class="team-role">UVA</div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-avatar">
+        <img src="./images/miles.jpeg" alt="Runtao Zhou"/>
+        <div class="avatar-socials">
+          <a href="https://scholar.google.com/citations?user=MwzCTYYAAAAJ&hl=en" class="social-btn" target="_blank"><i class="fa fa-google"></i></a>
+          <a href="https://www.linkedin.com/in/runtaozhou/" class="social-btn" target="_blank"><i class="fa fa-linkedin"></i></a>
+          <a href="https://github.com/Runtaozhou" class="social-btn" target="_blank"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+      <div class="team-name">Runtao Zhou</div>
+      <span class="role-chip phd">PhD Student</span>
+      <div class="team-role">UVA</div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-avatar">
+        <img src="./images/yuyang.png" alt="Yuyang Cheng"/>
+        <div class="avatar-socials">
+          <a href="https://github.com/EstherrCheng" class="social-btn" target="_blank"><i class="fa fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/yuyangcheng/#main-content" class="social-btn" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="team-name">Yuyang Cheng</div>
+      <span class="role-chip phd">PhD Student</span>
+      <div class="team-role">UVA</div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-avatar">
+        <img src="./images/ZD.jpg" alt="Ding Zhang"/>
+        <div class="avatar-socials">
+          <a href="https://github.com/PeanutButter6488" class="social-btn" target="_blank"><i class="fa fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/ding-zhang-621297221/" class="social-btn" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="team-name">Ding Zhang</div>
+      <span class="role-chip phd">PhD Student</span>
+      <div class="team-role">UVA</div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-avatar">
+        <img src="./images/akash.jpg" alt="Akash Ghosh"/>
+        <div class="avatar-socials">
+          <a href="https://www.linkedin.com/in/akash-ghosh-4b199811a/" class="social-btn" target="_blank"><i class="fa fa-linkedin"></i></a>
+          <a href="https://scholar.google.co.in/citations?user=NWc6Pw8AAAAJ&hl=en" class="social-btn" target="_blank"><i class="fa fa-google"></i></a>
+        </div>
+      </div>
+      <div class="team-name">Akash Ghosh</div>
+      <span class="role-chip phd">PhD Student</span>
+      <div class="team-role">IIT-P</div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-avatar">
+        <img src="./images/nishitha.png" alt="Nishitha Khasnavis"/>
+        <div class="avatar-socials">
+          <a href="https://nishithakhasnavis.github.io/" class="social-btn" target="_blank"><i class="fa fa-globe"></i></a>
+          <a href="https://github.com/NishithaKhasnavis" class="social-btn" target="_blank"><i class="fa fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/nishitha-khasnavis/" class="social-btn" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="team-name">Nishitha Khasnavis</div>
+      <span class="role-chip undergrad">Undergraduate</span>
+      <div class="team-role">UVA</div>
+    </div>
+
+  </div>
+</div><!-- /team-section -->
+<div class="textile"></div>
+
+<!-- ALUMNI -->
+<section class="section section-alt">
+  <div class="sec-eyebrow reveal">Alumni</div>
+  <h2 class="sec-title reveal" style="transition-delay:.05s">Lab <em>Alumni</em></h2>
+  <div class="alumni-grid reveal" style="transition-delay:.1s">
+    <div class="alumni-year-block">
+      <div class="alumni-year">2025</div>
+      <div class="alumni-item"><strong>Ashish Seth</strong> — <em>Ph.D. Student at UMD</em></div>
+      <div class="alumni-item"><strong>Simra Shahid</strong> — <em>Research Scientist · Adobe → Microsoft</em></div>
+      <div class="alumni-item"><strong>Susmit Agrawal</strong> — <em>IIT-H → Ph.D. Student at Tübingen (IMPRS-IS)</em></div>
+    </div>
+    <div class="alumni-year-block">
+      <div class="alumni-year">2024</div>
+      <div class="alumni-item"><strong>Abhinav Java</strong> — <em>Research Fellow · Adobe → Microsoft</em></div>
+      <div class="alumni-item"><strong>Tarun Menta</strong> — <em>Research Intern · Adobe → DataLab</em></div>
+      <div class="alumni-item"><strong>Surgan Jandial</strong> — <em>Research Intern · Adobe → MS @ CMU</em></div>
+    </div>
+  </div>
+</section>
+<div class="textile"></div>
+
+<!-- SPONSORS -->
+<section class="section">
+  <div class="sec-eyebrow reveal">Acknowledgements</div>
+  <h2 class="sec-title reveal" style="transition-delay:.05s">Our <em>Sponsors</em></h2>
+  <div class="sponsor-grid reveal" style="transition-delay:.1s">
+    <img class="sponsor-logo" src="./images/darden.jpg" alt="Darden School"/>
+    <img class="sponsor-logo" src="./images/EI_Full_0.png" alt="Environmental Institute"/>
+    <img class="sponsor-logo" src="./images/openai-logo.png" alt="OpenAI"/>
+    <img class="sponsor-logo" src="./images/cohere-logo.png" alt="Cohere"/>
+    <img class="sponsor-logo" src="./images/capitalone.png" alt="Capital One"/>
+    <img class="sponsor-logo" src="./images/thinking_machines.png" alt="Thinking Machines"/>
+  </div>
+</section>
+
+<footer>
+  <div><div class="footer-logo">
+    <img src="./images/aikyam_logo.jpg" class="nav-logo-icon" width="30" height="30" alt="Aikyam Lab Logo" />
+    <div><div class="footer-logo-en">Aikyam <span class="lab">Lab</span></div><span class="footer-logo-dev">ऐक्यम् · University of Virginia</span></div>
+  </div></div>
+  <div class="footer-links">
+    <a href="./research.html">Research</a>
+    <a href="./publications.html">Publications</a>
+    <a href="./team.html">Team</a>
+    <a href="./teaching.html">Teaching</a>
+    <a href="./outreach.html">Outreach</a>
+    <a href="./positions.html">Join Us</a>
+  </div>
+  <div class="footer-mono">Data Science &amp; CS · Charlottesville, VA</div>
+</footer>
+
+<script>
+
+window.addEventListener('scroll',()=>document.getElementById('mainNav').classList.toggle('scrolled',scrollY>50),{passive:true});
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');ro.unobserve(x.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
 
-<!--                                                             <div class="col-md-3 col-sm-6">
-                                                                <div class="our-team">
-                                                                    <div class="pic">
-                                                                        <img src="images/tarun.jpeg">
-                                                                        <ul class="social">
-                                                                            <li><a href="https://github.com/peppermenta" target="_blank"><i class="icon-github" style="font-size: 1.5em"></i> </a></li>
-                                                                            <li><a href="https://scholar.google.com/citations?user=8HC8W9EAAAAJ&hl=en" target="_blank"><i class="icon-google" style="font-size: 1.5em"></i></a></li>
-                                                                            <li><a href="https://x.com/peppermentaaa" target="_blank"><i class="ri--twitter-x-fill"    style="font-size: 1.5em"></i></a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="team-content">
-                                                                        <div class="team-info">
-                                                                            <h3 class="title">Tarun Menta</h3>
-                                                                            <span class="pub1">Visting Researcher from Adobe</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div> -->                                              
-                                                        </div>
-                                                    </div>
-                                                    <h1 class="pub1" style="font-size: 30px;">Lab Alumni</h1>
-                                                    <h3>2025</h3>
-                                                    <ul class="social">
-                                                        <li> Ashish Seth: Ph.D. student at UMD</li>
-                                                        <li>Simra Shahid: Research Scientist from Adobe to Microsoft</li>
-                                                        <li>Susmit Agrawal: IIT-H to PhD Student at Tubingen (IMPRS-IS)</li>
-                                                        <li></li>
-                                                    </ul>
-                                                    <h3>2024</h3>
-                                                    <ul class="social">
-                                                        <li>Abhinav Java: Researh Fellow from Adobe to Microsoft</li>
-                                                        <li>Tarun Menta: Research Intern from Adobe to <a href="https://www.datalab.to" target="_blank">DataLab</a></li>
-                                                        <li>Surgan Jandial: Research Intern from Adobe to MS @ CMU</li>
-                                                    </ul>
-                                                    <h1 class="pub1" style="font-size: 30px;">Sponsors</h1>
-							                         <div class="sponsor-img-container">
-                                                        <img src="images/darden.jpg">
-                                                        <img src="images/EI_Full_0.png">
-                                                        <img src="images/openai-logo.png">
-                                                        <img src="images/cohere-logo.png">
-                                                    </div>
-                                                     <div class="sponsor-img-container">
-                                                        <img src="images/capitalone.png">
-                                                    </div>                                                    
-                                                </div>                                                
-                                            </main>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-            <script type="text/javascript" src="js/menu.js" id="avia-module-menu-js"></script>
-            <script type="text/javascript" src="js/menu-toggle.js" id="avia-module-toggles-js"></script>
-            <script type="text/javascript" src="js/hamburger-menu.js" id="avia-hamburger-menu-js"></script>
-
-            <script type="text/javascript" src="js/mega-menu.js" id="avia-megamenu-js"></script>
-            <script type="text/javascript" src="js/sticky-header.js" id="avia-sticky-header-js"></script>
-        </body>
-    </html>
-
+// Mobile nav
+document.addEventListener('DOMContentLoaded', function() {
+  var ham = document.getElementById('navHamburger');
+  var drawer = document.getElementById('navDrawer');
+  if (!ham || !drawer) return;
+  ham.addEventListener('click', function() {
+    ham.classList.toggle('open');
+    drawer.classList.toggle('open');
+  });
+  drawer.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      ham.classList.remove('open');
+      drawer.classList.remove('open');
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,600 +1,549 @@
-    <!DOCTYPE html>
-    <html lang="en-US"
-        class="html_stretched responsive av-preloader-disabled html_header_top html_logo_left html_main_nav_header html_menu_right html_slim html_header_sticky html_header_shrinking_disabled html_header_transparency html_mobile_menu_tablet html_header_searchicon html_content_align_center html_header_unstick_top_disabled html_header_stretch_disabled html_av-overlay-side html_av-overlay-side-classic html_av-submenu-noclone html_entry_id_39 av-cookies-no-cookie-consent av-default-lightbox av-no-preview html_text_menu_active av-mobile-menu-switch-default">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Publications — Chirag Agarwal · Aikyam Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Sans+Devanagari:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --sand:#f5ede0;--sand-2:#ede0cc;--sand-3:#dfd0b5;--white:#faf7f2;
+  --saffron:#e07b2a;--saffron-d:#c4611a;--saffron-l:#f0a060;
+  --turmeric:#d4a030;--terracotta:#b85c38;
+  --indigo:#2e3a6e;--indigo-l:#4a5a9a;
+  --ink:#1e1a14;--ink-2:#3a3228;--ink-3:#6b5e4a;
+  --rule:rgba(30,26,20,0.12);
+  --teal:#2e7f9e;--teal-d:#1f6680;--teal-l:#5aacc8;--teal-bg:rgba(46,127,158,0.08);
+}
+html{scroll-behavior:smooth}
+body{background:var(--sand);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden;}
+body::after{content:'';position:fixed;inset:0;z-index:500;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;opacity:.7}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.4rem 4rem;display:flex;align-items:center;justify-content:space-between;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(245,237,224,.95);backdrop-filter:blur(16px);border-color:var(--rule)}
+.nav-logo{text-decoration:none;display:flex;align-items:center;gap:.75rem}
+.nav-logo-icon{flex-shrink:0;transition:transform .35s}
+.nav-logo:hover .nav-logo-icon{transform:rotate(12deg) scale(1.08)}
+.nav-logo-en{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--ink);display:block}
+.nav-logo-en .lab{color:var(--teal);font-style:italic}
+.nav-logo-dev{font-family:'Noto Sans Devanagari',sans-serif;font-size:.68rem;color:var(--teal);display:block;margin-top:1px;opacity:.85}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{font-size:.92rem;font-weight:500;letter-spacing:.05em;color:var(--ink-3);text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--saffron)}
+.nav-cta{background:var(--saffron);color:var(--white);padding:.55rem 1.5rem;border-radius:100px;font-size:.88rem;font-weight:600;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--saffron-d)}
+.textile{height:6px;background:repeating-linear-gradient(90deg,var(--saffron) 0,var(--saffron) 12px,var(--turmeric) 12px,var(--turmeric) 24px,var(--terracotta) 24px,var(--terracotta) 36px,var(--indigo) 36px,var(--indigo) 48px,var(--saffron-l) 48px,var(--saffron-l) 60px);opacity:.35}
+/* PAGE HERO */
+.page-hero{position:relative;min-height:clamp(220px,30vh,340px);display:flex;align-items:flex-end;padding:0 4rem 2.5rem;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;z-index:2;background:repeating-linear-gradient(90deg,var(--saffron) 0,var(--saffron) 16px,var(--turmeric) 16px,var(--turmeric) 32px,var(--terracotta) 32px,var(--terracotta) 48px,var(--indigo) 48px,var(--indigo) 64px,var(--saffron-l) 64px,var(--saffron-l) 80px)}
+.geo{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.geo-c{position:absolute;border-radius:50%;border:1px solid rgba(224,123,42,.1)}
+.geo-c:nth-child(1){width:600px;height:600px;right:-150px;top:-150px;background:radial-gradient(circle,rgba(212,160,48,.05) 0%,transparent 65%)}
+.geo-c:nth-child(2){width:420px;height:420px;right:-40px;top:-40px;border-color:rgba(184,92,56,.08)}
+.geo-c:nth-child(3){width:260px;height:260px;right:50px;top:50px;border-color:rgba(224,123,42,.15)}
+.page-hero-inner{position:relative;z-index:2;padding-top:8rem;display:flex;align-items:flex-end;justify-content:space-between;width:100%;gap:2rem}
+.page-eyebrow{display:flex;align-items:center;gap:.75rem;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron);margin-bottom:.8rem;opacity:0;animation:fadeUp .6s .1s forwards}
+.page-eyebrow::before{content:'';display:block;width:32px;height:2px;background:var(--saffron)}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,5.5vw,6rem);font-weight:300;line-height:.97;color:var(--ink);opacity:0;animation:fadeUp .8s .2s forwards}
+.page-title em{font-style:italic;color:var(--saffron-d)}
+/* Filter bar */
+.filter-bar{display:flex;gap:.5rem;flex-wrap:wrap;align-self:flex-end;padding-bottom:.5rem;opacity:0;animation:fadeUp .6s .4s forwards}
+.filter-btn{font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.45rem 1rem;border-radius:100px;border:1.5px solid var(--rule);background:var(--white);color:var(--ink-3);transition:all .2s}
+.filter-btn:hover,.filter-btn.active{background:var(--saffron);color:var(--white);border-color:var(--saffron)}
+/* SECTIONS */
+.section{position:relative;z-index:1;padding:5rem 4rem}
+.section-alt{background:var(--white)}
+.year-group{margin-bottom:3.5rem}
+.year-label{font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:700;letter-spacing:.12em;color:var(--saffron);text-transform:uppercase;margin-bottom:1.2rem;display:flex;align-items:center;gap:.75rem}
+.year-label::after{content:'';flex:1;height:1px;background:var(--rule)}
+/* 2-column pub card grid */
+.pub-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.pub-card{background:var(--white);border:1px solid var(--rule);border-radius:14px;overflow:hidden;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;position:relative;z-index:0}
+.pub-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(30,26,20,.1)}
+.pub-thumb{width:100%;height:160px;position:relative;overflow:hidden;background:var(--sand-2);flex-shrink:0}
+.pub-thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:saturate(.4) sepia(.15);transition:filter .35s,transform .35s}
+.pub-card:hover .pub-thumb img{filter:saturate(.85);transform:scale(1.04)}
+.pub-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(30,26,20,.35) 0%,transparent 55%);pointer-events:none}
+.pub-venue-badge{position:absolute;bottom:.5rem;left:.6rem;font-family:'JetBrains Mono',monospace;font-size:.6rem;font-weight:700;color:var(--white);background:var(--saffron);padding:.15rem .5rem;border-radius:4px;z-index:2;letter-spacing:.04em;white-space:nowrap}
+.pub-venue-badge.oral{background:var(--terracotta)}
+.pub-venue-badge.award{background:var(--indigo)}
+.pub-body{padding:1.2rem 1.4rem;display:flex;flex-direction:column;flex:1;position:relative;z-index:2}
+.pub-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.55rem}
+.pub-tag{font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);background:rgba(30,26,20,.05);border:1px solid var(--rule);padding:.1rem .4rem;border-radius:100px}
+.pub-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;line-height:1.3;color:var(--ink);margin-bottom:.4rem;flex:1}
+.pub-authors{font-size:.75rem;color:var(--ink-3);margin-bottom:.25rem;line-height:1.45}
+.pub-authors .me{color:var(--teal);font-weight:500}
+.pub-venue{font-size:.72rem;font-weight:700;color:var(--saffron-d);letter-spacing:.04em;margin-bottom:.6rem}
+.pub-links{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:auto;padding-top:.6rem;position:relative;z-index:2}
+.pub-link{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:600;letter-spacing:.04em;color:var(--teal);text-decoration:none;border:1px solid rgba(46,127,158,.35);padding:.28rem .7rem;border-radius:100px;transition:background .2s,color .2s,border-color .2s;display:inline-block}
+.pub-link:hover{background:var(--teal);color:var(--white);border-color:var(--teal)}
+/* FOOTER */
+footer{background:var(--ink);padding:3.5rem 4rem;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--saffron) 0,var(--saffron) 16px,var(--turmeric) 16px,var(--turmeric) 32px,var(--terracotta) 32px,var(--terracotta) 48px,var(--indigo) 48px,var(--indigo) 64px)}
+.footer-logo{display:flex;align-items:center;gap:.6rem}
+.footer-logo-en{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--sand)}
+.footer-logo-en .lab{color:var(--teal-l);font-style:italic}
+.footer-logo-dev{font-family:'Noto Sans Devanagari',sans-serif;font-size:.72rem;color:rgba(90,172,200,.65);display:block;margin-top:2px}
+.footer-links{display:flex;gap:2.5rem}
+.footer-links a{font-size:.75rem;font-weight:500;letter-spacing:.06em;color:rgba(245,237,224,.4);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--saffron-l)}
+.footer-mono{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:rgba(245,237,224,.2)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:960px){
+  nav{padding:1.2rem 2rem}.nav-links{display:none}
+  .page-hero{padding:6rem 2rem 3rem;flex-direction:column;align-items:flex-start}
+  .page-hero-inner{flex-direction:column;align-items:flex-start}
+  .section{padding:4rem 2rem}
+  .pub-grid{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:2rem;padding:3rem 2rem;text-align:center}
+  .footer-links{flex-wrap:wrap;justify-content:center}
+}
 
-    <head>
-        <meta charset="UTF-8" />
-        <!-- mobile setting -->
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!-- Scripts/CSS and wp_head hook -->
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+/* Hamburger */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;padding:.4rem;cursor:pointer;z-index:201}
+.nav-hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .3s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* Mobile drawer */
+.nav-drawer{display:none;position:fixed;inset:0;z-index:199;background:rgba(245,237,224,.98);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:2rem;opacity:0;pointer-events:none;transition:opacity .3s}
+.nav-drawer.open{opacity:1;pointer-events:all}
+.nav-drawer a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:400;color:var(--ink);text-decoration:none;letter-spacing:.02em;transition:color .2s}
+.nav-drawer a:hover,.nav-drawer a.active{color:var(--saffron)}
+.nav-drawer .drawer-cta{background:var(--saffron);color:var(--white)!important;padding:.7rem 2rem;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:600;margin-top:1rem}
+.nav-drawer .drawer-cta:hover{background:var(--saffron-d)}
+@media(max-width:960px){
+  nav{padding:1.2rem 2rem}
+  .nav-links,.nav-cta{display:none}
+  .nav-hamburger{display:flex}
+  .nav-drawer{display:flex}
+}
+</style>
+</head>
+<body>
+<nav id="mainNav">
+  <a href="./" class="nav-logo">
+    <img src="./images/aikyam_logo.jpg" class="nav-logo-icon" width="30" height="30" alt="Aikyam Lab Logo" />
+    <div><span class="nav-logo-en">Aikyam <span class="lab">Lab</span></span><span class="nav-logo-dev">ऐक्यम् — University of Virginia</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="./">Home</a></li>
+    <li><a href="./about.html">About</a></li>
+    <li><a href="./research.html">Research</a></li>
+    <li><a href="./publications.html" class="active">Publications</a></li>
+    <li><a href="./team.html">Team</a></li>
+    <li><a href="./teaching.html">Teaching</a></li>
+    <li><a href="./outreach.html">Outreach</a></li>
+    <li><a href="./talks.html">Talks</a></li>
+  </ul>
+  <a href="./positions.html" class="nav-cta">Open Positions</a>
+<button id="navHamburger" class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div id="navDrawer" class="nav-drawer">
+  <a href="./">Home</a>
+  <a href="./about.html">About</a>
+  <a href="./research.html">Research</a>
+  <a href="./publications.html" class="active">Publications</a>
+  <a href="./team.html">Team</a>
+  <a href="./teaching.html">Teaching</a>
+  <a href="./outreach.html">Outreach</a>
+  <a href="./talks.html">Talks</a>
+  <a href="./positions.html" class="drawer-cta">Open Positions</a>
+</div>
 
-        <title>Home - Chirag Agarwal</title>
-        <link rel="canonical" href="https://chirag-agarwall.github.io/" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Home - Chirag Agarwal" />
-        <meta property="og:url" content="https://chirag-agarwall.github.io/" />
-        <meta property="og:site_name" content="Chirag Agarwal" />
-        <!-- <meta property="article:modified_time" content="2021-10-22T02:34:37+00:00" /> -->
-        <meta property="og:image" content="images/background.jpg" />
-
-        <!-- google webfont font replacement -->
-
-        <!-- <link rel="stylesheet" href="css/style.css"> -->
-
-        <link rel="stylesheet" id="avia-grid-css"
-            href="https://www.dovwaxman.org/wp-content/themes/enfold/css/grid.css?ver=4.8.6.5" type="text/css"
-            media="all" />
-        <link rel="stylesheet" id="avia-base-css" href="css/base.css" type="text/css" media="all" />
-        <link rel="stylesheet" id="avia-layout-css" href="css/layout.css" type="text/css" media="all" />
-        <link rel="stylesheet" id="avia-layout-css" href="css/grid.css" type="text/css" media="all" />
-
-        <link rel="stylesheet" id="avia-dynamic-css" href="css/avia-dynamic.css" type="text/css" media="all" />
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-            id="jquery-core-js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-        <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
-        <link rel="stylesheet" href="css/animate.css" />
-        <link rel="stylesheet" href="css/owl.carousel.min.css" />
-        <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-        <link rel="stylesheet" href="css/magnific-popup.css" />
-        <link rel="stylesheet" href="css/aos.css" />
-        <link rel="stylesheet" href="css/ionicons.min.css" />
-        <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
-        <link rel="stylesheet" href="css/jquery.timepicker.css" />
-        <link rel="stylesheet" href="css/flaticon.css" />
-        <link rel="stylesheet" href="css/icomoon.css" />
-        <link rel="stylesheet" href="css/style.css" />
-        
-    </head>
-
-    <body id="top" itemscope="itemscope" itemtype="https://schema.org/WebPage">
-        <div id="publications">
-        <div id="wrap_all" class="responsive_wrap">
-            <header id='header'
-                            class='all_colors header_color light_bg_color  av_header_top av_logo_left av_main_nav_header av_menu_right av_slim av_header_sticky av_header_shrinking_disabled av_header_stretch_disabled av_mobile_menu_tablet av_header_transparency av_header_searchicon av_header_unstick_top_disabled av_bottom_nav_disabled  av_header_border_disabled' 
-                            role="banner" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
-                            <div id='header_main' class='container_wrap container_wrap_logo'>
-                                <div class='container av-logo-container'>
-                                    <div class='inner-container' style="display:flex; justify-content: space-around;">
-
-                                        <div class='logo avia-standard-logo header-name' style="width:1000px">
-                                            <div class="header_title header_flex "><a href='https://chirag-agarwall.github.io/'>AIKYAM LAB</a></div>
-                                             <div class="header_flex" > 
-                                              <nav class='main_menu navigation-desktop' data-selectname='Select a page' role="navigation" itemscope="itemscope"
-                                            itemtype="https://schema.org/SiteNavigationElement" >
-                                            <div class="avia-menu av-main-nav-wrap av_menu_icon_beside">
-                                                <ul id="avia-menu" class="menu av-main-nav" >
-                                            
-                                                    <li id="menu-item-785"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-top-level menu-item-top-level-1">
-                                                        <a href="https://chirag-agarwall.github.io/" itemprop="url"><span
-                                                                class="avia-bullet"></span><span class="avia-menu-text">Home</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-787"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-3">
-                                                        <a href="./about.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">About</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-787"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-3">
-                                                        <a href="research.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Research</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-787"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item  menu-item-top-level menu-item-top-level-3">
-                                                        <a href="publications.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Publications</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-787"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-3">
-                                                        <a href="team.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Team</span><span
-                                                                class="avia-menu-fx"><span class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-835"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-4">
-                                                        <a href="teaching.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Teaching</span><span class="avia-menu-fx"><span
-                                                                    class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-835"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-4">
-                                                        <a href="outreach.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Outreach</span><span class="avia-menu-fx"><span
-                                                                    class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li id="menu-item-835"
-                                                        class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-top-level menu-item-top-level-4">
-                                                        <a href="talks.html"><span
-                                                                class="avia-bullet"></span><span
-                                                                class="avia-menu-text">Talks</span><span class="avia-menu-fx"><span
-                                                                    class="avia-arrow-wrap"><span
-                                                                        class="avia-arrow"></span></span></span></a>
-                                                    </li>
-                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page_item page-item-2 menu-item-top-level menu-item-top-level-1 open_position_responsive">
-                                                        <a href="./positions.html"> Open Positions </a>
-                                                    </li>
-                                           
-                                                    <li class="av-burger-menu-main menu-item-avia-special ">
-                                                        <a href="#" aria-label="Menu" aria-hidden="false">
-                                                            <span class="av-hamburger av-hamburger--spin av-js-hamburger">
-                                                                <span class="av-hamburger-box">
-                                                                    <span class="av-hamburger-inner"></span>
-                                                                    <strong>Menu</strong>
-                                                                </span>
-                                                            </span>
-                                                            <span class="avia_hidden_link_text">Menu</span>
-                                                        </a>
-                                                    </li>
-
-
-                                                </ul>
-                                            </div>
-                                            
-                                        </nav>
-                                    </div>
-                                            </div>
-                                      
-                                        <div class="header_flex open_position"><a href="./positions.html" style="color:black; text-decoration: none"> Open Positions </a></div>
-                                    </div>
-                                </div>
-                                <!-- end container_wrap-->
-                            </div>
-                            <div class='header_bg'></div>
-
-                            <!-- end header -->
-                        </header>
-
-            <div id="main" class="all_colors main-publ" data-scroll-offset="88">
-                <div class="parallax page_header_background">
-                                <!--layer 1 will be the bottom layer, layer 3 will be the top layer-->
-                                <div class="parallax-container layer1 page_header_position" style="color: white; padding-top:140px; justify-content: flex-start;">
-                                    <div class='avia_textblock image-text' style='font-size:35px; ' itemprop="text">
-                                        <p style="text-align: center;">
-                                            PUBLICATIONS
-                                        </p>
-                                        <span class="publication-scholar" style='font-size:25px'>
-                                            &nbsp; &nbsp; For a complete publication list, visit my
-                                            <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=AFEjd1QAAAAJ&view_op=list_works&sortby=pubdate">   Google Scholar 
-                                            </a>
-                                            &nbsp;page. 
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                 
-                <div class="main_color container_wrap_first container_wrap sidebar_right">
-                    <div class="container av-section-cont-open">
-                        <main role="main" itemprop="mainContentOfPage" class="template-page av-content alpha units">
-                            <div class="post-entry post-entry-type-page post-entry-39">
-                                <div class="entry-content-wrapper clearfix">
-                                    <div class="tabcontainer top_tab avia-builder-el-0 avia-builder-el-no-sibling"
-                                        role="tablist">
-                                        <section class="av_tab_section" itemscope="itemscope"
-                                            itemtype="https://schema.org/CreativeWork">
-                                            <div class="tab_content active_tab_content" aria-hidden="false">
-                                                <div class="tab_inner_content invers-color" itemprop="text">
-                                                    <!-- New Publication Template -->
-                                                    <div id="gridid" class="col-pub-2">
-                                                        <br>
-                                                    <a class="pub2">* below indicates equal contribution</a>
-                                                    <br>
-                                                    <div class="rowpub_outer">
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                            <a href="https://arxiv.org/abs/2511.21737" target="_blank">
-                                                                <img src="./images/polarity.jpg" class="img-responsive" width="125px" style="float: left">
-                                                            </a>
-                                                         <div class="paper_content">
-                                                             <p class="pub_title">Polarity-Aware Probing for Quantifying Latent Alignment in Language Models</p>
-                                                          <p class="desktop-only">S. Sadiekh, E. Ericheva, C. Agarwal: <b>AAAI, 2026</b></p>
-                                                          <p class="desktop-only"><b>Oral Acceptance</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://arxiv.org/pdf/2511.21737" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/SadSabrina/polarity-probing" target="_blank">Code</a> | <a class="pub2" href="https://huggingface.co/datasets/SabrinaSadiekh/not_hate_dataset" target="_blank">HuggingFace</a> | <a class="pub2" href="https://www.youtube.com/watch?v=4GBd_QPKvjU" target="_blank">Video</a>
-                                                          </p>
-                                                         </div>
-                                                        </div>
-                                                      </div>
-
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                            <a href="https://arxiv.org/abs/2512.11437" target="_blank">
-                                                                <img src="./images/clinic.jpg" class="img-responsive" width="125px" style="float: left">
-                                                            </a>
-                                                         <div class="paper_content">
-                                                             <p class="pub_title">CLINIC: Evaluating Multilingual Trustworthiness in Language Models for Healthcare</p>
-                                                          <p class="desktop-only">A. Ghosh, S. Sridhar, RK Ravi, M. Muhsin, S. Saha, C. Agarwal: <b>arxiv, 2025</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://arxiv.org/pdf/2512.11437" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/AikyamLab/clinic?tab=readme-ov-file" target="_blank">Code</a> | <a class="pub2" href="https://huggingface.co/datasets/Agcs12/CLINIC" target="_blank">HuggingFace</a></p>
-                                                         </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                    <div class="rowpub_outer">
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                            <a href="https://arxiv.org/abs/2502.09457" target="_blank">
-                                                                <img src="./images/multilingual.jpg" class="img-responsive" width="125px" style="float: left">
-                                                            </a>
-                                                         <div class="paper_content">
-                                                             <p class="pub_title">The Multilingual Mind: A Survey of Multilingual Reasoning in Language Models</p>
-                                                          <p class="desktop-only">A. Ghosh, D. Datta, S. Saha, C. Agarwal: <b>EMNLP, 2025</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://arxiv.org/pdf/2502.09457" target="_blank">Paper</a></p>
-                                                         </div>
-                                                        </div>
-                                                      </div>
-
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                            <a href="https://arxiv.org/abs/2508.12687" target="_blank">
-                                                                <img src="./images/egoillusion.jpg" class="img-responsive" width="125px" style="float: left">
-                                                            </a>
-                                                         <div class="paper_content">
-                                                             <p class="pub_title">EGOILLUSION: Benchmarking Hallucinations in Egocentric Video Understanding</p>
-                                                          <p class="desktop-only">A. Seth, U. Tyagi, R. Selvakumar, N. Anand, S. Kumar, S. Ghosh, R. Duraiswami, C. Agarwal, D. Manocha: <b>EMNLP, 2025</b></p>
-                                                          <p class="desktop-only"><b>Main Conference</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://arxiv.org/pdf/2508.12687" target="_blank">Paper</a> | <a class="pub2" href="https://sites.google.com/view/egoillusion-demo/home" target="_blank">Website</a></p>
-                                                         </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-
-                                                    <div class="rowpub_outer">
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                            <a href="https://arxiv.org/abs/2412.20622" target="_blank">
-                                                                <img src="./images/hallucinogen.jpg" class="img-responsive" width="125px" style="float: left">
-                                                            </a>
-                                                         <div class="paper_content">
-                                                             <p class="pub_title">Towards a Systematic Evaluation of Hallucinations in Large-Vision Language Models</p>
-                                                          <p class="desktop-only">A. Seth, D. Manocha, C. Agarwal: <b>EMNLP, 2025</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://arxiv.org/pdf/2412.20622" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/AikyamLab/hallucinogen/tree/main" target="_blank">Code</a></p>
-                                                         </div>
-                                                        </div>
-                                                      </div>
-
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                            <a href="https://arxiv.org/abs/2501.05078" target="_blank">
-                                                                <img src="./images/memorization.jpg" class="img-responsive" width="125px" style="float: left">
-                                                            </a>
-                                                         <div class="paper_content">
-                                                             <p class="pub_title">Analyzing Memorization in Large Language Models through the Lens of Model Attribution</p>
-                                                          <p class="desktop-only">TR Menta, S. Agrawal, C. Agarwal: <b>NAACL, 2025</b></p>
-                                                          <p class="desktop-only"><b>Oral Acceptance</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://arxiv.org/pdf/2501.05078" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/AikyamLab/llm-memorization" target="_blank">Code</a></p>
-                                                         </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                    <div class="rowpub_outer">
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                            <a href="https://arxiv.org/abs/2411.08506" target="_blank">
-                                                            <img src="./images/regtext.jpg" class="img-responsive" width="125px" style="float: left"></a>
-                                                            <div class="paper_content">
-                                                                <p class="pub_title">Towards Operationalizing Right to Data Protection</p>
-                                                                <p class="desktop-only">A. Java, S. Shahid, C. Agarwal: <b>NAACL, 2025</b></p>
-                                                                <p class="desktop-only"><a class="pub2" href="https://arxiv.org/pdf/2411.08506" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/AikyamLab/regtext" target="_blank">Code</a></p>
-                                                            </div>
-                                                        </div>
-                                                      </div>
-
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                            <a href="https://arxiv.org/abs/2411.15382" target="_blank">
-                                                            <img src="./images/cotimpact.jpg" class="img-responsive" width="125px" style="float: left"></a>
-                                                            <div class="paper_content">
-                                                                <p class="pub_title">On the Impact of Fine-tuning on Chain-of-Thought Reasoning</p>
-                                                                <p class="desktop-only">E. Lobo, C. Agarwal, H. Lakkaraju: <b>NAACL, 2025</b></p>
-                                                                <p class="desktop-only"><a class="pub2" href="https://arxiv.org/pdf/2411.15382" target="_blank">Paper</a></p>
-                                                            </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>                                                    
-
-                                                    <div class="rowpub_outer">
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                            <a href="https://proceedings.mlr.press/v238/harsha-tanneru24a/harsha-tanneru24a.pdf" target="_blank">
-                                                                <img src="./images/uncertainty.png" class="img-responsive" width="125px" style="float: left">
-                                                            </a>
-                                                         <div class="paper_content">
-                                                             <p class="pub_title">Quantifying Uncertainty in Natural Language Explanations of Large Language Models</p>
-                                                          <p class="desktop-only">S. H. Tanneru, C. Agarwal, H. Lakkaraju: <b>AISTATS, 2024</b></p>
-                                                          <p class="desktop-only"><b>Spotlight at the NeurIPS R0-FoMo Workshop, 2023</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://proceedings.mlr.press/v238/harsha-tanneru24a/harsha-tanneru24a.pdf" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/harsha070/uncertainty-quantification-nle" target="_blank">Code</a></p>
-                                                         </div>
-                                                        </div>
-                                                      </div>
-
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                            <a href="https://arxiv.org/pdf/2403.03744" target="_blank">
-                                                                <img src="./images/medicalllm.png" class="img-responsive" width="125px" style="float: left">
-                                                            </a>
-                                                            <div class="paper_content">
-                                                                <p class="pub_title">Towards Safe Large Language Models for Medicine</p>
-                                                                <p class="desktop-only">T. Han, A. Kumar, C. Agarwal, and H. Lakkaraju: <b>NeurIPS, 2024</b></p>
-                                                                <p class="desktop-only"><a class="pub2" href="https://arxiv.org/pdf/2403.03744" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/AI4LIFE-GROUP/med-safety-bench" target="_blank">Code</a></p>
-                                                            </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-
-                                                    <div class="rowpub_outer">                            
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                        <a href="https://arxiv.org/abs/2402.06625" target="_blank">
-                                                            <img src="./images/iterative.png" class="img-responsive" width="125px" style="float: left">
-                                                        </a>
-                                                        <div class="paper_content">
-                                                          <p class="pub_title">Understanding the Effects of Iterative Prompting on Truthfulness</p>
-                                                          <p class="desktop-only">S. Krishna, C. Agarwal, and H. Lakkaraju: <b>ICML, 2024</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://arxiv.org/abs/2402.06625" target="_blank">Paper</a></p>
-                                                      </div>
-                                                        </div>
-                                                      </div>
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                        <a href="https://arxiv.org/abs/2309.02705" target="_blank">
-                                                            <img src="./images/certify.png" class="img-responsive" width="125px" style="float: left">
-                                                        </a>
-                                                        <div class="paper_content">
-                                                          <p class="pub_title">Certifying llm safety against adversarial prompting</p>
-                                                          <p class="desktop-only">A. Kumar, C. Agarwal, S. Srinivas, A. Li, S. Feizi, H. Lakkaraju: <b>COLM, 2024</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://arxiv.org/abs/2309.02705" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/aounon/certified-llm-safety" target="_blank">Code</a> | <a class="pub2" href="https://www.sciencenews.org/article/generative-ai-chatbots-chatgpt-safety-concerns?trk=feed_main-feed-card_feed-article-content" target="_blank">Science News</a> | <a class="pub2" href="https://d3.harvard.edu/certifying-llm-safety-against-adversarial-prompting/" target="_blank">Harvard D3 Institute</a></p>
-                                                        </div>
-                                                        </div> 
-                                                      </div>
-                                                    </div>
-                                                    <div class="rowpub_outer">
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                        <a href="https://openaccess.thecvf.com/content/CVPR2024W/L3D-IVU/papers/Menta_Active_Transferability_Estimation_CVPRW_2024_paper.pdf" target="_blank">
-                                                            <img src="./images/haste.png" class="img-responsive" width="125px" style="float: left">
-                                                        </a>
-                                                        <div class="paper_content">
-                                                          <p class="pub_title">Active Transferability Estimation</p>
-                                                          <p class="desktop-only">T. Menta, S. Jandial, A. Patil, S. Bachu, V. K B, V. Balasubramanian, B. Krishnamurthy, M. Sarkar, C. Agarwal: <b>Workshop on Learning with Limited Labelled Data for Image and Video Understanding, CVPR 2024</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://openaccess.thecvf.com/content/CVPR2024W/L3D-IVU/papers/Menta_Active_Transferability_Estimation_CVPRW_2024_paper.pdf" target="_blank">Paper</a></p>
-                                                        </div>
-                                                        </div>
-                                                      </div>
-
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                        <a href="https://openreview.net/pdf?id=1G7n7LW3mF" target="_blank">
-                                                            <img src="./images/llmexplainer.png" class="img-responsive" width="125px" style="float: left">
-                                                        </a>
-                                                        <div class="paper_content">
-                                                          <p class="pub_title">Are Large Language Models Post Hoc Explainers?</p>
-                                                          <p class="desktop-only">N. Kroeger*, D. Ley*, S. Krishna, C. Agarwal, and H. Lakkaraju</p>
-                                                          <p class="desktop-only"><b>R0-FoMo workshop, NeurIPS 2023</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://openreview.net/pdf?id=1G7n7LW3mF" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/AI4LIFE-GROUP/LLM_Explainer" target="_blank">Code</a></p>
-                                                      </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-
-                                                    <div class="rowpub_outer">                            
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                        <a href="https://openreview.net/pdf?id=sXYJpfoW1V" target="_blank">
-                                                            <img src="./images/bird.png" class="img-responsive" width="125px" style="float: left">
-                                                        </a>
-                                                        <div class="paper_content">
-                                                          <p class="pub_title">Towards Fair Knowledge Distillation using Student Feedback</p>
-                                                          <p class="desktop-only">A. Java*, S. Jandial*, and C. Agarwal</p>
-                                                          <p class="desktop-only"><b>Efficient Systems for Foundation Models Workshop, ICML 2023</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://openreview.net/pdf?id=sXYJpfoW1V" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/ekyaim/BIRD" target="_blank">Code</a></p>
-                                                        </div>
-                                                        </div>
-                                                      </div>
-
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                        <a href="https://arxiv.org/pdf/2304.12631" target="_blank">
-                                                            <img src="./images/bm25.png" class="img-responsive" width="125px" style="float: left">
-                                                        </a>
-                                                        <div class="paper_content">
-                                                          <p class="pub_title">Explain like I am BM25: Interpreting a Dense Model's Ranked-List with a Sparse Approximation</p>
-                                                          <p class="desktop-only">M. Llordes, D. Ganguly, S. Bhatia, C. Agarwal: <b>SIGIR, 2023</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://arxiv.org/pdf/2304.12631" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/micllordes/elibm25" target="_blank">Code</a></p>
-                                                      </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-
-                                                    <div class="rowpub_outer">                            
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                        <a href="https://openreview.net/pdf?id=5Egggz1q575" target="_blank">
-                                                            <img src="./images/rltrajectory.png" class="img-responsive" width="125px" style="float: left">
-                                                        </a>
-                                                        <div class="paper_content">
-                                                          <p class="pub_title">Explaining RL decisions with trajectories</p>
-                                                          <p class="desktop-only">S. Deshmukh*, A. Dasgupta*, B. Krishnamurthy, N. Jiang, C. Agarwal, G. Theocharous, J. Subramanian: <b>ICLR, 2023</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://openreview.net/pdf?id=5Egggz1q575" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/shripaddeshmukh/xrl_with_trajectories" target="_blank">Code</a></p>
-                                                      </div>
-                                                        </div>
-                                                      </div>
-
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                            <a href="https://openreview.net/pdf?id=X9yCkmT5Qrl" target="_blank">
-                                                                <img src="./images/gnndelete.png" class="img-responsive" width="125px" style="float: left">
-                                                            </a>
-                                                        <div class="paper_content">
-                                                          <p class="pub_title">GNNDelete: A general strategy for unlearning in graph neural networks</p>
-                                                          <p class="desktop-only">J. Cheng, G. Dasoulas*, H. He*, C. Agarwal, M. Zitnik: <b>ICLR, 2023</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://openreview.net/pdf?id=X9yCkmT5Qrl" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/mims-harvard/GNNDelete" target="_blank">Code</a></p>
-                                                      </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                    <div class="rowpub_outer">
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                        <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Seth_DeAR_Debiasing_Vision-Language_Models_With_Additive_Residuals_CVPR_2023_paper.pdf" target="_blank">
-                                                            <img src="./images/dear.png" class="img-responsive" width="125px" style="float: left">
-                                                        </a>
-                                                        <div class="paper_content">
-                                                          <p class="pub_title">Dear: Debiasing vision-language models with additive residuals</p>
-                                                          <p class="desktop-only">A. Seth, M. Hemani, C. Agarwal: <b>CVPR, 2023</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://openaccess.thecvf.com/content/CVPR2023/papers/Seth_DeAR_Debiasing_Vision-Language_Models_With_Additive_Residuals_CVPR_2023_paper.pdf" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/pata-fairness/pata_dataset" target="_blank">Protected-Attribute Tag Association dataset</a></p>
-                                                      </div>
-                                                        </div>
-                                                      </div>
-
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                        <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/65398a0eba88c9b4a1c38ae405b125ef-Paper-Datasets_and_Benchmarks.pdf" target="_blank">
-                                                            <img src="./images/openxai.png" class="img-responsive" width="125px" style="float: left">
-                                                        </a>
-                                                        <div class="paper_content">
-                                                          <p class="pub_title">OpenXAI: Towards a Transparent Evaluation of Post hoc Model Explanations</p>
-                                                          <p class="desktop-only">C. Agarwal, S. Krishna, E. Saxena, M. Pawelczyk, N. Johnson, I. Puri, M. Zitnik, H. Lakkaraju: <b>NeurIPS Dataset and Benchmark, 2023</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://proceedings.neurips.cc/paper_files/paper/2022/file/65398a0eba88c9b4a1c38ae405b125ef-Paper-Datasets_and_Benchmarks.pdf" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/AI4LIFE-GROUP/OpenXAI" target="_blank">Code</a> | <a class="pub2" href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi%3A10.7910%2FDVN%2FHIBCFL&version=DRAFT" target="_blank">Harvard Dataverse</a> | <a class="pub2">218 GitHub <span style="color:gold;">&starf;</span></a></p>
-                                                      </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                    <div class="rowpub_outer">                            
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                        <a href="https://www.nature.com/articles/s41597-023-01974-x" target="_blank">
-                                                            <img src="./images/graphxai.png" class="img-responsive" width="125px" style="float: left">
-                                                        </a>
-                                                        <div class="paper_content">
-                                                          <p class="pub_title">Evaluating explainability for graph neural networks</p>
-                                                          <p class="desktop-only">C. Agarwal, O. Queen, H. Lakkaraju, and M. Zitnik: <b>Nature Scientific Data, 2023</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://www.nature.com/articles/s41597-023-01974-x" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/mims-harvard/GraphXAI" target="_blank">Code</a> | <a class="pub2" href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/KULOS8" target="_blank">Harvard Dataverse</a> | <a class="pub2">142 GitHub <span style="color:gold;">&starf;</span></a></p>
-                                                      </div>
-                                                        </div>
-                                                      </div>
-
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                        <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Agarwal_Estimating_Example_Difficulty_Using_Variance_of_Gradients_CVPR_2022_paper.pdf" target="_blank"> 
-                                                            <img src="./images/vog.png" class="img-responsive" width="125px" style="float: left">
-                                                        </a>
-                                                        <div class="paper_content">
-                                                          <p class="pub_title">Estimating example difficulty using variance of gradients</p>
-                                                          <p class="desktop-only">C. Agarwal, D. D'souza, and S. Hooker: <b>CVPR, 2022</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://openaccess.thecvf.com/content/CVPR2022/papers/Agarwal_Estimating_Example_Difficulty_Using_Variance_of_Gradients_CVPR_2022_paper.pdf" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/chirag-agarwall/VOG" target="_blank">Code</a> | <a class="pub2" href="https://varianceofgradients.github.io/" target="_blank">Project Website</a> | <a class="pub2">58 GitHub <span style="color:gold;">&starf;</span></a></p>
-                                                      </div>
-                                                        </div>
-                                                      </div>                                                  
-                                                    </div>  
-
-                                                    <div class="rowpub_outer">                            
-
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                        <a href="https://proceedings.mlr.press/v151/agarwal22b/agarwal22b.pdf" target="_blank">
-                                                            <img src="./images/gnnprobing.png" class="img-responsive" width="125px" style="float: left">
-                                                        </a>
-                                                        <div class="paper_content">
-                                                          <p class="pub_title">Probing gnn explainers: A rigorous theoretical and empirical analysis of gnn explanation methods</p>
-                                                          <p class="desktop-only">C. Agarwal, M. Zitnik*, H. Lakkaraju*: <b>AISTATS, 2022</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://proceedings.mlr.press/v151/agarwal22b/agarwal22b.pdf" target="_blank">Paper</a></p>
-                                                      </div>
-                                                        </div>
-                                                      </div>    
-
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                        <a href="https://proceedings.mlr.press/v151/pawelczyk22a/pawelczyk22a.pdf" target="_blank">
-                                                            <img src="./images/advcount.png" class="img-responsive" width="125px" style="float: left">
-                                                        </a>
-                                                        <div class="paper_content">
-                                                          <p class="pub_title">Exploring counterfactual explanations through the lens of adversarial examples: A theoretical and empirical analysis</p>
-                                                          <p class="desktop-only">M. Pawelczyk, C. Agarwal, S. Joshi, S. Upadhyay, H. Lakkaraju: <b>AISTATS, 2022</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://proceedings.mlr.press/v151/pawelczyk22a/pawelczyk22a.pdf" target="_blank">Paper</a></p>
-                                                      </div>
-                                                        </div>
-                                                      </div>
-
-                                                    </div>
-
-                                                    <div class="rowpub_outer">                            
-
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                        <a href="https://proceedings.mlr.press/v198/giunchiglia22a/giunchiglia22a.pdf" target="_blank">
-                                                            <img src="./images/expass.png" class="img-responsive" width="125px" style="float: left">
-                                                        </a>
-                                                        <div class="paper_content">
-                                                          <p class="pub_title">Towards Training GNNs using Explanation Directed Message Passing</p>
-                                                          <p class="desktop-only">V. Giunchiglia*, CV. Shukla*, G. Gonzalez, C. Agarwal: <b>LOG, 2022</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://proceedings.mlr.press/v198/giunchiglia22a/giunchiglia22a.pdf" target="_blank">Paper</a> | <a class="pub2" href="https://github.com/ekyaim/Expass" target="_blank">Code</a></p>
-                                                      </div>
-                                                        </div>
-                                                      </div> 
-
-                                                      <div class="col-pub clearfix">
-                                                        <div class="rowpub">
-                                                        <a href="https://proceedings.mlr.press/v198/giunchiglia22a/giunchiglia22a.pdf" target="_blank">
-                                                            <img src="./images/nifty.png" class="img-responsive" width="125px" style="float: left">
-                                                        </a>
-                                                        <div class="paper_content">
-                                                          <p class="pub_title">Towards a unified framework for fair and stable graph representation learning</a></p>
-                                                          <p class="desktop-only">C. Agarwal, H. Lakkaraju, and M. Zitnik: <b>UAI, 2021</b></p>
-                                                          <p class="desktop-only"><a class="pub2" href="https://proceedings.mlr.press/v198/giunchiglia22a/giunchiglia22a.pdf" target="_blank">Paper</a> | <a class="pub2" href="https://proceedings.mlr.press/v161/agarwal21b/agarwal21b.pdf" target="_blank"> Code</a> | <a class="pub2">37 GitHub <span style="color:gold;">&starf;</span></a></p>
-                                                      </div>
-                                                        </div>
-                                                      </div>                                                                                                    
-                                                    </div>
-
-                                                    </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                        </main>
-                        <!-- close content main element -->
-                        <!-- section close by builder template -->
-                    </div>
-                    <!--end builder template-->
-                </div>
-                <!-- close default .container_wrap element -->
-
-                <!-- end main -->
-            </div>
-
-            <!-- end wrap_all -->
-        </div>
+<div class="page-hero">
+  <div class="geo"><div class="geo-c"></div><div class="geo-c"></div><div class="geo-c"></div></div>
+  <div class="page-hero-inner">
+    <div>
+      <div class="page-eyebrow">Trustworthy AI · Aikyam Lab</div>
+      <h1 class="page-title">Publi<em>cations</em></h1>
     </div>
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterPubs('all',this)">All</button>
+      <button class="filter-btn" onclick="filterPubs('xai',this)">XAI</button>
+      <button class="filter-btn" onclick="filterPubs('robustness',this)">Robustness</button>
+      <button class="filter-btn" onclick="filterPubs('privacy',this)">Privacy</button>
+      <button class="filter-btn" onclick="filterPubs('nlp',this)">NLP / LLMs</button>
+    </div>
+  </div>
+</div>
+<div class="textile"></div>
 
-        <script type="text/javascript" src="js/menu.js" id="avia-module-menu-js"></script>
-        <script type="text/javascript" src="js/menu-toggle.js" id="avia-module-toggles-js"></script>
-        <script type="text/javascript" src="js/hamburger-menu.js" id="avia-hamburger-menu-js"></script>
+<section class="section">
+  <!-- 2026 -->
+  <div class="year-group reveal">
+    <div class="year-label">2026</div>
+    <div class="pub-grid">
 
-        <script type="text/javascript" src="js/mega-menu.js" id="avia-megamenu-js"></script>
-        <script type="text/javascript" src="js/sticky-header.js" id="avia-sticky-header-js"></script>
-    </body>
+      <div class="pub-card" data-topic="robustness nlp">
+        <div class="pub-thumb"><img src="./images/egs.jpg" alt=""/><div class="pub-venue-badge oral">arxiv'26</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Explainability</span><span class="pub-tag">GNNs</span><span class="pub-tag">Generalization</span></div>
+          <div class="pub-title">Quantifying Explanation Quality in Graph Neural Networks using Out-of-Distribution Generalization</div>
+          <div class="pub-authors">D. Zhang, S. Betala, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">arxiv, 2026</div>
+          <div class="pub-links">
+            <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2602.07708" class="pub-link">PDF</a>
+          </div>
+        </div>
+      </div>
 
-    </html>
+      <div class="pub-card" data-topic="robustness nlp">
+        <div class="pub-thumb"><img src="./images/cud.jpg" alt=""/><div class="pub-venue-badge oral">arxiv'26</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Mechanistic Interpretability</span><span class="pub-tag">Unlearning</span><span class="pub-tag">LLMs</span></div>
+          <div class="pub-title">Towards Understanding Unlearning Difficulty: A Mechanistic Perspective and Circuit-Guided Difficulty Metric</div>
+          <div class="pub-authors">J. Cheng, Z. Chen, <span class="me">C. Agarwal, </span>H. Amiri</div>
+          <div class="pub-venue">arxiv, 2026</div>
+          <div class="pub-links">
+            <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2601.09624" class="pub-link">PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="xai nlp">
+        <div class="pub-thumb"><img src="./images/igraph.jpg" alt=""/><div class="pub-venue-badge">IUI'26</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">XAI</span><span class="pub-tag">LLM Reasoning</span><span class="pub-tag">Interactive</span></div>
+          <div class="pub-title">Improving Human Verification of LLM Reasoning through Interactive Explanation Interfaces</div>
+          <div class="pub-authors">R. Zhou, G. Nguyen, N. Kharya, A. T. Nguyen, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">IUI 2026</div>
+          <div class="pub-links">
+            <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2510.22922" class="pub-link">PDF</a>
+            <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=_AVPUMP4jiY" class="pub-link">Video</a>
+            <a target="_blank" rel="noopener" href="https://huggingface.co/spaces/Miles1999/interactive-llm-xai-TEST" class="pub-link">HuggingFace</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="pub-card" data-topic="robustness nlp">
+        <div class="pub-thumb"><img src="./images/polarity.jpg" alt=""/><div class="pub-venue-badge oral">AAAI'26 Oral 🏆</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Alignment</span><span class="pub-tag">Probing</span><span class="pub-tag">LLMs</span></div>
+          <div class="pub-title">Polarity-Aware Probing for Quantifying Latent Alignment in Language Models</div>
+          <div class="pub-authors">S. Sadiekh, E. Ericheva, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">AAAI 2026 — Oral Presentation</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2511.21737" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/SadSabrina/polarity-probing" class="pub-link">Code</a><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=4GBd_QPKvjU" class="pub-link">Video</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="xai nlp">
+        <div class="pub-thumb"><img src="./images/cure-med.jpg" alt=""/><div class="pub-venue-badge">arxiv'26</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Multilingual</span><span class="pub-tag">LLM Reasoning</span></div>
+          <div class="pub-title">CURE-Med: Curriculum-Informed Reinforcement Learning for Multilingual Medical Reasoning</div>
+          <div class="pub-authors">E. Onyame, A. Ghosh, S. Baidya, S. Saha, X. Chen, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">arxiv 2026</div>
+          <div class="pub-links">
+            <a target="_blank" rel="noopener" href="https://cure-med.github.io/" class="pub-link">Website</a>
+            <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2601.13262" class="pub-link">PDF</a>
+            <a target="_blank" rel="noopener" href="https://github.com/AikyamLab/cure-med" class="pub-link">GitHub</a>
+            <a target="_blank" rel="noopener" href="https://huggingface.co/datasets/Aikyam-Lab/CUREMED-BENCH" class="pub-link">Dataset</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- 2025 -->
+  <div class="year-group reveal" style="transition-delay:.1s">
+    <div class="year-label">2025</div>
+    <div class="pub-grid">
+
+      <div class="pub-card" data-topic="nlp">
+        <div class="pub-thumb"><img src="./images/rethinking.jpg" alt=""/><div class="pub-venue-badge">arXiv</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Multimodal Explainability</span><span class="pub-tag">Interpretability</span><span class="pub-tag">Multimodal AI</span></div>
+          <div class="pub-title">Rethinking Explainability in the Era of Multimodal AI</div>
+          <div class="pub-authors"><span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">arXiv 2025</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2506.13060" class="pub-link">PDF</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="nlp">
+        <div class="pub-thumb"><img src="./images/clegr.jpg" alt=""/><div class="pub-venue-badge">arXiv</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Benchmark</span><span class="pub-tag">GNNs</span><span class="pub-tag">Multimodal LLMs</span></div>
+          <div class="pub-title">A Graph Talks, But Who’s Listening? Rethinking Evaluations for Graph-Language Models</div>
+          <div class="pub-authors">S. Petkar, H. Aakash K, A. Vempati, A. Sinha, P. Kumaraguru, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">arXiv 2025</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2508.20583" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/rethinking-graph-language-evals/CLEGR" class="pub-link">Code</a><a target="_blank" rel="noopener" href="https://huggingface.co/datasets/tenseisoham/CLEGR" class="pub-link">HuggingFace</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="nlp">
+        <div class="pub-thumb"><img src="./images/clinic.jpg" alt=""/><div class="pub-venue-badge">arXiv</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Multilingual</span><span class="pub-tag">Healthcare</span><span class="pub-tag">LLMs</span></div>
+          <div class="pub-title">CLINIC: Evaluating Multilingual Trustworthiness in Language Models for Healthcare</div>
+          <div class="pub-authors">A. Ghosh, S. Sridhar, R.K. Ravi, M. Muhsin, S. Saha, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">arXiv 2025</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2512.11437" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/AikyamLab/clinic" class="pub-link">Code</a><a target="_blank" rel="noopener" href="https://huggingface.co/datasets/Agcs12/CLINIC" class="pub-link">HuggingFace</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="nlp">
+        <div class="pub-thumb"><img src="./images/multilingual.jpg" alt=""/><div class="pub-venue-badge">EMNLP'25</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Multilingual</span><span class="pub-tag">Reasoning</span><span class="pub-tag">Survey</span></div>
+          <div class="pub-title">The Multilingual Mind: A Survey of Multilingual Reasoning in Language Models</div>
+          <div class="pub-authors">A. Ghosh, D. Datta, S. Saha, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">EMNLP 2025</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2502.09457" class="pub-link">PDF</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="robustness nlp">
+        <div class="pub-thumb"><img src="./images/egoillusion.jpg" alt=""/><div class="pub-venue-badge">EMNLP'25</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Hallucination</span><span class="pub-tag">Video</span><span class="pub-tag">Multimodal</span></div>
+          <div class="pub-title">EGOILLUSION: Benchmarking Hallucinations in Egocentric Video Understanding</div>
+          <div class="pub-authors">A. Seth, U. Tyagi, R. Selvakumar, N. Anand, S. Kumar, S. Ghosh, R. Duraiswami, <span class="me">C. Agarwal</span>, D. Manocha</div>
+          <div class="pub-venue">EMNLP 2025 — Main Conference</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2508.12687" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://sites.google.com/view/egoillusion-demo/home" class="pub-link">Website</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="robustness nlp">
+        <div class="pub-thumb"><img src="./images/hallucinogen.jpg" alt=""/><div class="pub-venue-badge">EMNLP'25</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Hallucination</span><span class="pub-tag">Vision-Language</span><span class="pub-tag">VQA</span></div>
+          <div class="pub-title">HALLUCINOGEN: Benchmarking Hallucination in Implicit Reasoning within Large Vision Language Models</div>
+          <div class="pub-authors">A. Seth, D. Manocha, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">UncertaiNLP Workshop @ EMNLP 2025</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2412.20622" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/AikyamLab/hallucinogen" class="pub-link">Code</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="privacy nlp">
+        <div class="pub-thumb"><img src="./images/memorization.jpg" alt=""/><div class="pub-venue-badge oral">NAACL'25 Oral</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Memorization</span><span class="pub-tag">Attribution</span><span class="pub-tag">LLMs</span></div>
+          <div class="pub-title">Analyzing Memorization in Large Language Models through the Lens of Model Attribution</div>
+          <div class="pub-authors">TR Menta, S. Agrawal, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">NAACL 2025 — Oral 🏆</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2501.05078" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/AikyamLab/llm-memorization" class="pub-link">Code</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="privacy nlp">
+        <div class="pub-thumb"><img src="./images/regtext.jpg" alt=""/><div class="pub-venue-badge">NAACL'25</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Privacy</span><span class="pub-tag">NLP</span><span class="pub-tag">Unlearnable</span></div>
+          <div class="pub-title">Towards Operationalizing Right to Data Protection</div>
+          <div class="pub-authors">A. Java, S. Shahid, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">NAACL 2025</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2411.08506" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/AikyamLab/regtext" class="pub-link">Code</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="nlp">
+        <div class="pub-thumb"><img src="./images/cotimpact.jpg" alt=""/><div class="pub-venue-badge">NAACL'25</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Chain-of-Thought</span><span class="pub-tag">Fine-tuning</span></div>
+          <div class="pub-title">On the Impact of Fine-tuning on Chain-of-Thought Reasoning</div>
+          <div class="pub-authors">E. Lobo, <span class="me">C. Agarwal</span>, H. Lakkaraju</div>
+          <div class="pub-venue">NAACL 2025</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2411.15382" class="pub-link">PDF</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2024 -->
+  <div class="year-group reveal" style="transition-delay:.15s">
+    <div class="year-label">2024</div>
+    <div class="pub-grid">
+
+      <div class="pub-card" data-topic="xai nlp">
+        <div class="pub-thumb"><img src="./images/uncertainty.png" alt=""/><div class="pub-venue-badge award">AISTATS'24 · NeurIPS Spotlight</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Uncertainty</span><span class="pub-tag">NL Explanations</span></div>
+          <div class="pub-title">Quantifying Uncertainty in Natural Language Explanations of Large Language Models</div>
+          <div class="pub-authors">S. H. Tanneru, <span class="me">C. Agarwal</span>, H. Lakkaraju</div>
+          <div class="pub-venue">AISTATS 2024</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://proceedings.mlr.press/v238/harsha-tanneru24a/harsha-tanneru24a.pdf" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/harsha070/uncertainty-quantification-nle" class="pub-link">Code</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="robustness nlp">
+        <div class="pub-thumb"><img src="./images/medicalllm.png" alt=""/><div class="pub-venue-badge">NeurIPS'24</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Safety</span><span class="pub-tag">Medicine</span><span class="pub-tag">LLMs</span></div>
+          <div class="pub-title">Towards Safe Large Language Models for Medicine</div>
+          <div class="pub-authors">T. Han, A. Kumar, <span class="me">C. Agarwal</span>, H. Lakkaraju</div>
+          <div class="pub-venue">NeurIPS 2024</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2403.03744" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/AI4LIFE-GROUP/med-safety-bench" class="pub-link">Code</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="nlp">
+        <div class="pub-thumb"><img src="./images/iterative.png" alt=""/><div class="pub-venue-badge">ICML'24</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Truthfulness</span><span class="pub-tag">Prompting</span></div>
+          <div class="pub-title">Understanding the Effects of Iterative Prompting on Truthfulness</div>
+          <div class="pub-authors">S. Krishna, <span class="me">C. Agarwal</span>, H. Lakkaraju</div>
+          <div class="pub-venue">ICML 2024</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2402.06625" class="pub-link">PDF</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="robustness nlp">
+        <div class="pub-thumb"><img src="./images/certify.png" alt=""/><div class="pub-venue-badge">COLM'24</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Robustness</span><span class="pub-tag">Certified Safety</span></div>
+          <div class="pub-title">Certifying LLM Safety Against Adversarial Prompting</div>
+          <div class="pub-authors">A. Kumar, <span class="me">C. Agarwal</span>, S. Srinivas, A. Li, S. Feizi, H. Lakkaraju</div>
+          <div class="pub-venue">COLM 2024</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2309.02705" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/aounon/certified-llm-safety" class="pub-link">Code</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2022–2023 Selected -->
+  <div class="year-group reveal" style="transition-delay:.2s">
+    <div class="year-label">2022 – 2023 · Selected</div>
+    <div class="pub-grid">
+
+      <div class="pub-card" data-topic="xai">
+        <div class="pub-thumb"><img src="./images/openxai.png" alt=""/><div class="pub-venue-badge">NeurIPS'22</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">XAI</span><span class="pub-tag">Benchmark</span></div>
+          <div class="pub-title">OpenXAI: Towards a Transparent Evaluation of Post hoc Model Explanations</div>
+          <div class="pub-authors"><span class="me">C. Agarwal</span>, S. Krishna, E. Saxena, M. Pawelczyk, et al.</div>
+          <div class="pub-venue">NeurIPS Dataset &amp; Benchmark 2022 · 218 ★</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://proceedings.neurips.cc/paper_files/paper/2022/file/65398a0eba88c9b4a1c38ae405b125ef-Paper-Datasets_and_Benchmarks.pdf" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/AI4LIFE-GROUP/OpenXAI" class="pub-link">Code</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="xai">
+        <div class="pub-thumb"><img src="./images/vog.png" alt=""/><div class="pub-venue-badge">CVPR'22</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Saliency</span><span class="pub-tag">Vision</span></div>
+          <div class="pub-title">Estimating Example Difficulty Using Variance of Gradients</div>
+          <div class="pub-authors"><span class="me">C. Agarwal</span>, D. D'souza, S. Hooker</div>
+          <div class="pub-venue">CVPR 2022 · 58 ★</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2022/papers/Agarwal_Estimating_Example_Difficulty_Using_Variance_of_Gradients_CVPR_2022_paper.pdf" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/chirag-agarwall/VOG" class="pub-link">Code</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="xai">
+        <div class="pub-thumb"><img src="./images/graphxai.png" alt=""/><div class="pub-venue-badge">Nature'23</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">GNN</span><span class="pub-tag">XAI</span></div>
+          <div class="pub-title">Evaluating Explainability for Graph Neural Networks</div>
+          <div class="pub-authors"><span class="me">C. Agarwal</span>, O. Queen, H. Lakkaraju, M. Zitnik</div>
+          <div class="pub-venue">Nature Scientific Data 2023 · 142 ★</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41597-023-01974-x" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/mims-harvard/GraphXAI" class="pub-link">Code</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="robustness xai">
+        <div class="pub-thumb"><img src="./images/dear.png" alt=""/><div class="pub-venue-badge">CVPR'23</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Debiasing</span><span class="pub-tag">Vision-Language</span></div>
+          <div class="pub-title">DeAR: Debiasing Vision-Language Models with Additive Residuals</div>
+          <div class="pub-authors">A. Seth, M. Hemani, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">CVPR 2023</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2023/papers/Seth_DeAR_Debiasing_Vision-Language_Models_With_Additive_Residuals_CVPR_2023_paper.pdf" class="pub-link">PDF</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="privacy xai">
+        <div class="pub-thumb"><img src="./images/gnndelete.png" alt=""/><div class="pub-venue-badge">ICLR'23</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Unlearning</span><span class="pub-tag">GNN</span></div>
+          <div class="pub-title">GNNDelete: A General Strategy for Unlearning in Graph Neural Networks</div>
+          <div class="pub-authors">J. Cheng, G. Dasoulas*, H. He*, <span class="me">C. Agarwal</span>, M. Zitnik</div>
+          <div class="pub-venue">ICLR 2023</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://openreview.net/pdf?id=X9yCkmT5Qrl" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/mims-harvard/GNNDelete" class="pub-link">Code</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="xai">
+        <div class="pub-thumb"><img src="./images/rltrajectory.png" alt=""/><div class="pub-venue-badge">ICLR'23</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">RL</span><span class="pub-tag">Explanations</span></div>
+          <div class="pub-title">Explaining RL Decisions with Trajectories</div>
+          <div class="pub-authors">S. Deshmukh*, A. Dasgupta*, B. Krishnamurthy, N. Jiang, <span class="me">C. Agarwal</span>, et al.</div>
+          <div class="pub-venue">ICLR 2023</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://openreview.net/pdf?id=5Egggz1q575" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/shripaddeshmukh/xrl_with_trajectories" class="pub-link">Code</a></div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="xai nlp">
+        <div class="pub-thumb"><img src="./images/bm25.png" alt=""/><div class="pub-venue-badge">SIGIR'23</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">IR</span><span class="pub-tag">Interpretability</span></div>
+          <div class="pub-title">Explain like I am BM25: Interpreting a Dense Model's Ranked-List with a Sparse Approximation</div>
+          <div class="pub-authors">M. Llordes, D. Ganguly, S. Bhatia, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">SIGIR 2023</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2304.12631" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/micllordes/elibm25" class="pub-link">Code</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="reveal" style="transition-delay:.3s;text-align:center;padding-top:1rem">
+    <a href="https://scholar.google.com/citations?hl=en&user=AFEjd1QAAAAJ" class="btn-saffron" target="_blank" rel="noopener">
+      View All Papers on Google Scholar →
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div><div class="footer-logo"><img src="./images/aikyam_logo.jpg" width="30" height="30" alt="Aikyam Lab" style="border-radius:6px;opacity:.9;" /><div><div class="footer-logo-en">Aikyam <span class="lab">Lab</span></div><span class="footer-logo-dev">ऐक्यम् · University of Virginia</span></div></div></div>
+  <div class="footer-links"><a href="./research.html">Research</a><a href="./publications.html">Publications</a><a href="./team.html">Team</a><a href="./teaching.html">Teaching</a><a href="./outreach.html">Outreach</a><a href="#">Contact</a></div>
+  <div class="footer-mono">Data Science &amp; CS · Charlottesville, VA</div>
+</footer>
+<script>
+
+window.addEventListener('scroll',()=>document.getElementById('mainNav').classList.toggle('scrolled',scrollY>50),{passive:true});
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');ro.unobserve(x.target);}});},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+function filterPubs(topic, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.pub-card').forEach(card=>{
+    const show = topic==='all' || card.dataset.topic.includes(topic);
+    card.style.display = show ? 'flex' : 'none';
+  });
+  document.querySelectorAll('.year-group').forEach(g=>{
+    const visible=[...g.querySelectorAll('.pub-card')].some(c=>c.style.display!=='none');
+    g.style.display=visible?'block':'none';
+  });
+}
+
+
+// Mobile nav
+document.addEventListener('DOMContentLoaded', function() {
+  var ham = document.getElementById('navHamburger');
+  var drawer = document.getElementById('navDrawer');
+  if (!ham || !drawer) return;
+  ham.addEventListener('click', function() {
+    ham.classList.toggle('open');
+    drawer.classList.toggle('open');
+  });
+  drawer.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      ham.classList.remove('open');
+      drawer.classList.remove('open');
+    });
+  });
+});
+</script>
+</body>
+</html>
