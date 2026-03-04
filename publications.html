@@ -165,9 +165,12 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
     <div class="filter-bar">
       <button class="filter-btn active" onclick="filterPubs('all',this)">All</button>
       <button class="filter-btn" onclick="filterPubs('xai',this)">XAI</button>
-      <button class="filter-btn" onclick="filterPubs('robustness',this)">Robustness</button>
-      <button class="filter-btn" onclick="filterPubs('privacy',this)">Privacy</button>
-      <button class="filter-btn" onclick="filterPubs('nlp',this)">NLP / LLMs</button>
+      <button class="filter-btn" onclick="filterPubs('interpretability',this)">Interpretability</button>
+      <button class="filter-btn" onclick="filterPubs('safety',this)">Robustness/Safety</button>
+      <button class="filter-btn" onclick="filterPubs('unlearning',this)">Unlearning</button>
+      <button class="filter-btn" onclick="filterPubs('reasoning',this)">Reasoning</button>
+      <button class="filter-btn" onclick="filterPubs('multimodal',this)">Multimodal</button>
+      <button class="filter-btn" onclick="filterPubs('benchmark',this)">Benchmark</button>
     </div>
   </div>
 </div>
@@ -179,10 +182,10 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
     <div class="year-label">2026</div>
     <div class="pub-grid">
 
-      <div class="pub-card" data-topic="robustness nlp">
+      <div class="pub-card" data-topic="xai">
         <div class="pub-thumb"><img src="./images/egs.jpg" alt=""/><div class="pub-venue-badge oral">arxiv'26</div></div>
         <div class="pub-body">
-          <div class="pub-tags"><span class="pub-tag">Explainability</span><span class="pub-tag">GNNs</span><span class="pub-tag">Generalization</span></div>
+          <div class="pub-tags"><span class="pub-tag">Explainability</span><span class="pub-tag">GNNs</span><span class="pub-tag">OOD</span></div>
           <div class="pub-title">Quantifying Explanation Quality in Graph Neural Networks using Out-of-Distribution Generalization</div>
           <div class="pub-authors">D. Zhang, S. Betala, <span class="me">C. Agarwal</span></div>
           <div class="pub-venue">arxiv, 2026</div>
@@ -192,10 +195,10 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="robustness nlp">
+      <div class="pub-card" data-topic="interpretability unlearning">
         <div class="pub-thumb"><img src="./images/cud.jpg" alt=""/><div class="pub-venue-badge oral">arxiv'26</div></div>
         <div class="pub-body">
-          <div class="pub-tags"><span class="pub-tag">Mechanistic Interpretability</span><span class="pub-tag">Unlearning</span><span class="pub-tag">LLMs</span></div>
+          <div class="pub-tags"><span class="pub-tag">Interpretability</span><span class="pub-tag">Unlearning</span><span class="pub-tag">LLMs</span></div>
           <div class="pub-title">Towards Understanding Unlearning Difficulty: A Mechanistic Perspective and Circuit-Guided Difficulty Metric</div>
           <div class="pub-authors">J. Cheng, Z. Chen, <span class="me">C. Agarwal, </span>H. Amiri</div>
           <div class="pub-venue">arxiv, 2026</div>
@@ -205,7 +208,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="xai nlp">
+      <div class="pub-card" data-topic="reasoning xai">
         <div class="pub-thumb"><img src="./images/igraph.jpg" alt=""/><div class="pub-venue-badge">IUI'26</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">XAI</span><span class="pub-tag">LLM Reasoning</span><span class="pub-tag">Interactive</span></div>
@@ -221,7 +224,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
       </div>
 
 
-      <div class="pub-card" data-topic="robustness nlp">
+      <div class="pub-card" data-topic="interpretability safety">
         <div class="pub-thumb"><img src="./images/polarity.jpg" alt=""/><div class="pub-venue-badge oral">AAAI'26 Oral 🏆</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">Alignment</span><span class="pub-tag">Probing</span><span class="pub-tag">LLMs</span></div>
@@ -232,7 +235,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="xai nlp">
+      <div class="pub-card" data-topic="reasoning benchmark">
         <div class="pub-thumb"><img src="./images/cure-med.jpg" alt=""/><div class="pub-venue-badge">arxiv'26</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">Multilingual</span><span class="pub-tag">LLM Reasoning</span></div>
@@ -251,13 +254,12 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
     </div>
   </div>
 
-
   <!-- 2025 -->
   <div class="year-group reveal" style="transition-delay:.1s">
     <div class="year-label">2025</div>
     <div class="pub-grid">
 
-      <div class="pub-card" data-topic="nlp">
+      <div class="pub-card" data-topic="multimodal xai interpretability">
         <div class="pub-thumb"><img src="./images/rethinking.jpg" alt=""/><div class="pub-venue-badge">arXiv</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">Multimodal Explainability</span><span class="pub-tag">Interpretability</span><span class="pub-tag">Multimodal AI</span></div>
@@ -268,7 +270,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="nlp">
+      <div class="pub-card" data-topic="benchmark reasoning multimodal">
         <div class="pub-thumb"><img src="./images/clegr.jpg" alt=""/><div class="pub-venue-badge">arXiv</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">Benchmark</span><span class="pub-tag">GNNs</span><span class="pub-tag">Multimodal LLMs</span></div>
@@ -279,7 +281,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="nlp">
+      <div class="pub-card" data-topic="benchmark reasoning safety">
         <div class="pub-thumb"><img src="./images/clinic.jpg" alt=""/><div class="pub-venue-badge">arXiv</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">Multilingual</span><span class="pub-tag">Healthcare</span><span class="pub-tag">LLMs</span></div>
@@ -290,7 +292,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="nlp">
+      <div class="pub-card" data-topic="reasoning">
         <div class="pub-thumb"><img src="./images/multilingual.jpg" alt=""/><div class="pub-venue-badge">EMNLP'25</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">Multilingual</span><span class="pub-tag">Reasoning</span><span class="pub-tag">Survey</span></div>
@@ -301,7 +303,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="robustness nlp">
+      <div class="pub-card" data-topic="benchmark safety multimodal">
         <div class="pub-thumb"><img src="./images/egoillusion.jpg" alt=""/><div class="pub-venue-badge">EMNLP'25</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">Hallucination</span><span class="pub-tag">Video</span><span class="pub-tag">Multimodal</span></div>
@@ -312,7 +314,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="robustness nlp">
+      <div class="pub-card" data-topic="benchmark safety multimodal">
         <div class="pub-thumb"><img src="./images/hallucinogen.jpg" alt=""/><div class="pub-venue-badge">EMNLP'25</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">Hallucination</span><span class="pub-tag">Vision-Language</span><span class="pub-tag">VQA</span></div>
@@ -323,7 +325,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="privacy nlp">
+      <div class="pub-card" data-topic="interpretability unlearning">
         <div class="pub-thumb"><img src="./images/memorization.jpg" alt=""/><div class="pub-venue-badge oral">NAACL'25 Oral</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">Memorization</span><span class="pub-tag">Attribution</span><span class="pub-tag">LLMs</span></div>
@@ -334,7 +336,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="privacy nlp">
+      <div class="pub-card" data-topic="unlearning">
         <div class="pub-thumb"><img src="./images/regtext.jpg" alt=""/><div class="pub-venue-badge">NAACL'25</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">Privacy</span><span class="pub-tag">NLP</span><span class="pub-tag">Unlearnable</span></div>
@@ -345,7 +347,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="nlp">
+      <div class="pub-card" data-topic="reasoning xai">
         <div class="pub-thumb"><img src="./images/cotimpact.jpg" alt=""/><div class="pub-venue-badge">NAACL'25</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">Chain-of-Thought</span><span class="pub-tag">Fine-tuning</span></div>
@@ -364,7 +366,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
     <div class="year-label">2024</div>
     <div class="pub-grid">
 
-      <div class="pub-card" data-topic="xai nlp">
+      <div class="pub-card" data-topic="xai reasoning">
         <div class="pub-thumb"><img src="./images/uncertainty.png" alt=""/><div class="pub-venue-badge award">AISTATS'24 · NeurIPS Spotlight</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">Uncertainty</span><span class="pub-tag">NL Explanations</span></div>
@@ -375,7 +377,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="robustness nlp">
+      <div class="pub-card" data-topic="benchmark safety reasoning">
         <div class="pub-thumb"><img src="./images/medicalllm.png" alt=""/><div class="pub-venue-badge">NeurIPS'24</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">Safety</span><span class="pub-tag">Medicine</span><span class="pub-tag">LLMs</span></div>
@@ -386,7 +388,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="nlp">
+      <div class="pub-card" data-topic="safety reasoning">
         <div class="pub-thumb"><img src="./images/iterative.png" alt=""/><div class="pub-venue-badge">ICML'24</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">Truthfulness</span><span class="pub-tag">Prompting</span></div>
@@ -397,7 +399,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="robustness nlp">
+      <div class="pub-card" data-topic="safety">
         <div class="pub-thumb"><img src="./images/certify.png" alt=""/><div class="pub-venue-badge">COLM'24</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">Robustness</span><span class="pub-tag">Certified Safety</span></div>
@@ -416,7 +418,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
     <div class="year-label">2022 – 2023 · Selected</div>
     <div class="pub-grid">
 
-      <div class="pub-card" data-topic="xai">
+      <div class="pub-card" data-topic="benchmark xai">
         <div class="pub-thumb"><img src="./images/openxai.png" alt=""/><div class="pub-venue-badge">NeurIPS'22</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">XAI</span><span class="pub-tag">Benchmark</span></div>
@@ -430,7 +432,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
       <div class="pub-card" data-topic="xai">
         <div class="pub-thumb"><img src="./images/vog.png" alt=""/><div class="pub-venue-badge">CVPR'22</div></div>
         <div class="pub-body">
-          <div class="pub-tags"><span class="pub-tag">Saliency</span><span class="pub-tag">Vision</span></div>
+          <div class="pub-tags"><span class="pub-tag">XAI</span><span class="pub-tag">Training Dynamics</span></div>
           <div class="pub-title">Estimating Example Difficulty Using Variance of Gradients</div>
           <div class="pub-authors"><span class="me">C. Agarwal</span>, D. D'souza, S. Hooker</div>
           <div class="pub-venue">CVPR 2022 · 58 ★</div>
@@ -438,7 +440,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="xai">
+      <div class="pub-card" data-topic="benchmark xai">
         <div class="pub-thumb"><img src="./images/graphxai.png" alt=""/><div class="pub-venue-badge">Nature'23</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">GNN</span><span class="pub-tag">XAI</span></div>
@@ -449,7 +451,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="robustness xai">
+      <div class="pub-card" data-topic="xai multimodal">
         <div class="pub-thumb"><img src="./images/dear.png" alt=""/><div class="pub-venue-badge">CVPR'23</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">Debiasing</span><span class="pub-tag">Vision-Language</span></div>
@@ -460,7 +462,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="privacy xai">
+      <div class="pub-card" data-topic="unlearning xai">
         <div class="pub-thumb"><img src="./images/gnndelete.png" alt=""/><div class="pub-venue-badge">ICLR'23</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">Unlearning</span><span class="pub-tag">GNN</span></div>
@@ -482,7 +484,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-      <div class="pub-card" data-topic="xai nlp">
+      <div class="pub-card" data-topic="xai">
         <div class="pub-thumb"><img src="./images/bm25.png" alt=""/><div class="pub-venue-badge">SIGIR'23</div></div>
         <div class="pub-body">
           <div class="pub-tags"><span class="pub-tag">IR</span><span class="pub-tag">Interpretability</span></div>
