@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<link rel="icon" type="image/jpeg" href="./images/aikyam_logo.jpg" />
+<link rel="apple-touch-icon" href="./images/aikyam_logo.jpg" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>About — Chirag Agarwal · Aikyam Lab</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -63,7 +65,7 @@ nav.scrolled{background:rgba(245,237,224,.95);backdrop-filter:blur(16px);border-
 .btn-indigo:hover{background:var(--indigo);color:var(--white)!important;transform:translateY(-2px)}
 /* BIO GRID */
 .bio-grid{display:grid;grid-template-columns:1fr 310px;gap:5rem;align-items:start}
-.bio-lead{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;line-height:1.45;color:var(--ink);margin-bottom:1.4rem}
+.bio-lead{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,1.2vw,2rem) !important;font-style:italic;line-height:1.35;max-width:900px;color:var(--ink);margin-bottom:1.4rem}
 .bio-body p{font-size:1rem;line-height:1.85;color:var(--ink-2);margin-bottom:1.1rem}
 .bio-body p strong{color:var(--ink);font-weight:600}
 .bio-body p em{color:var(--saffron-d);font-style:italic}
@@ -270,25 +272,6 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
       </div>
     </div>
   </div>
-
-  <!-- Twitter inline -->
-  <div class="bio-twitter-grid reveal" style="transition-delay:.4s">
-    <div>
-      <div class="twitter-col-label">Latest on <span>Twitter / X</span></div>
-      <p style="font-size:0.92rem;line-height:1.8;color:var(--ink-3);margin-bottom:1.2rem;">Follow <a href="https://twitter.com/_cagarwal" style="color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(46,127,158,0.3);">@_cagarwal</a> for research updates, paper announcements, and thoughts on Trustworthy AI.</p>
-      <a href="https://twitter.com/_cagarwal" class="btn-saffron" style="font-size:0.82rem;" target="_blank">Follow on X →</a>
-    </div>
-    <div class="twitter-embed-wrap">
-      <a class="twitter-timeline"
-         data-height="560"
-         data-width="100%"
-         data-theme="light"
-         data-chrome="noheader nofooter noborders transparent"
-         href="https://twitter.com/_cagarwal?ref_src=twsrc%5Etfw">
-        Tweets by @_cagarwal
-      </a>
-    </div>
-  </div>
 </section>
 
 <footer>
@@ -299,7 +282,6 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
   <div class="footer-links"><a href="./research.html">Research</a><a href="./publications.html">Publications</a><a href="./team.html">Team</a><a href="./teaching.html">Teaching</a><a href="./outreach.html">Outreach</a><a href="#">Contact</a></div>
   <div class="footer-mono">Data Science &amp; CS · Charlottesville, VA</div>
 </footer>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script>
 
 window.addEventListener('scroll',()=>document.getElementById('mainNav').classList.toggle('scrolled',scrollY>50),{passive:true});
