@@ -79,7 +79,7 @@ nav.scrolled{background:rgba(245,237,224,.95);backdrop-filter:blur(16px);border-
 .pub-authors .me{color:var(--teal);font-weight:500}
 .pub-venue{font-size:.72rem;font-weight:700;color:var(--saffron-d);letter-spacing:.04em;margin-bottom:.6rem}
 .pub-links{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:auto;padding-top:.6rem;position:relative;z-index:2}
-.pub-link{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:600;letter-spacing:.04em;color:var(--teal);text-decoration:none;border:1px solid rgba(46,127,158,.35);padding:.28rem .7rem;border-radius:100px;transition:background .2s,color .2s,border-color .2s;display:inline-block}
+.pub-link{font-family:'JetBrains Mono',monospace;font-size:.65rem;font-weight:600;letter-spacing:.04em;color:var(--teal);text-decoration:none;border:1.5px solid rgba(46,127,158,.35);padding:.28rem .7rem;border-radius:100px;transition:background .2s,color .2s,border-color .2s;display:inline-block}
 .pub-link:hover{background:var(--teal);color:var(--white);border-color:var(--teal)}
 /* FOOTER */
 footer{background:var(--ink);padding:3.5rem 4rem;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
@@ -184,29 +184,58 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
     <div class="year-label">2026</div>
     <div class="pub-grid">
 
-      <div class="pub-card" data-topic="interpretability reasoning">
-        <div class="pub-thumb"><img src="./images/strucagent.jpg" alt=""/><div class="pub-venue-badge oral">arxiv'26</div></div>
+
+      <div class="pub-card" data-topic="benchmark safety reasoning">
+        <div class="pub-thumb"><img src="./images/clinic.jpg" alt=""/><div class="pub-venue-badge">ICML'26</div></div>
         <div class="pub-body">
-          <div class="pub-tags"><span class="pub-tag">Interpretability</span><span class="pub-tag">Agent</span><span class="pub-tag">LLM Reasoning</span></div>
-          <div class="pub-title">STRUCTUREDAGENT: Planning with AND/OR Trees for Long-Horizon Web Tasks</div>
-          <div class="pub-authors">E. Lobo, X. Chen, J. Meng, N. Xi, Y. Jiao, <span class="me">C. Agarwal</span>, Y. Zick, Y. Gao </div>
-          <div class="pub-venue">arxiv, 2026</div>
+          <div class="pub-tags"><span class="pub-tag">Multilingual</span><span class="pub-tag">Healthcare</span><span class="pub-tag">LLMs</span></div>
+          <div class="pub-title">CLINIC: Evaluating Multilingual Trustworthiness in Language Models for Healthcare</div>
+          <div class="pub-authors">A. Ghosh, S. Sridhar, R.K. Ravi, M. Muhsin, S. Saha, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">ICML 2026</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2512.11437" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/AikyamLab/clinic" class="pub-link">Code</a><a target="_blank" rel="noopener" href="https://huggingface.co/datasets/Agcs12/CLINIC" class="pub-link">HuggingFace</a></div>
+        </div>
+      </div>
+
+      <!-- CVPR Paper -->
+      <div class="pub-card" data-topic="multimodal reasoning interpretability">
+        <div class="pub-thumb"><img src="./images/vlm.png" alt=""/><div class="pub-venue-badge oral">TRUE-V Workshop CVPR'26 Oral 🏆</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Multimodal</span><span class="pub-tag">Vision-Language Models</span></div>
+          <div class="pub-title">Do Vision Language Models Need to Process Image Tokens?</div>
+          <div class="pub-authors">S. Ghosh, R. V. Babu, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">TRUE-V Workshop CVPR 2026 — Oral Presentation</div>
           <div class="pub-links">
-            <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2603.05294" class="pub-link">PDF</a>
+            <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2604.09425" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/sambitghsh/VLM-Token-Process" class="pub-link">Code</a>
           </div>
         </div>
       </div>
 
-
-      <div class="pub-card" data-topic="xai">
-        <div class="pub-thumb"><img src="./images/egs.jpg" alt=""/><div class="pub-venue-badge oral">arxiv'26</div></div>
+      <!-- ACL Papers -->
+     <div class="pub-card" data-topic="reasoning benchmark">
+        <div class="pub-thumb"><img src="./images/cure-med.jpg" alt=""/><div class="pub-venue-badge oral">ACL'26 Oral 🏆</div></div>
         <div class="pub-body">
-          <div class="pub-tags"><span class="pub-tag">Explainability</span><span class="pub-tag">GNNs</span><span class="pub-tag">OOD</span></div>
-          <div class="pub-title">Quantifying Explanation Quality in Graph Neural Networks using Out-of-Distribution Generalization</div>
-          <div class="pub-authors">D. Zhang, S. Betala, <span class="me">C. Agarwal</span></div>
-          <div class="pub-venue">arxiv, 2026</div>
+          <div class="pub-tags"><span class="pub-tag">Multilingual</span><span class="pub-tag">LLM Reasoning</span></div>
+          <div class="pub-title">CURE-Med: Curriculum-Informed Reinforcement Learning for Multilingual Medical Reasoning</div>
+          <div class="pub-authors">E. Onyame, A. Ghosh, S. Baidya, S. Saha, X. Chen, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">ACL 2026 — Oral Presentation</div>
           <div class="pub-links">
-            <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2602.07708" class="pub-link">PDF</a>
+            <a target="_blank" rel="noopener" href="https://cure-med.github.io/" class="pub-link">Website</a>
+            <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2601.13262" class="pub-link">PDF</a>
+            <a target="_blank" rel="noopener" href="https://github.com/AikyamLab/cure-med" class="pub-link">GitHub</a>
+            <a target="_blank" rel="noopener" href="https://huggingface.co/datasets/Aikyam-Lab/CUREMED-BENCH" class="pub-link">Dataset</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="safety interpretability">
+        <div class="pub-thumb"><img src="./images/sae.png" alt=""/><div class="pub-venue-badge">ACL'26</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Interpretability</span><span class="pub-tag">Sparse Autoencoders</span><span class="pub-tag">Robustness</span></div>
+          <div class="pub-title">Towards Understanding the Robustness of Sparse Autoencoders</div>
+          <div class="pub-authors">A. Saiyed, S. Sadiekh, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">ACL, 2026</div>
+          <div class="pub-links">
+            <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2604.18756" class="pub-link">PDF</a>
           </div>
         </div>
       </div>
@@ -220,6 +249,45 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
           <div class="pub-venue">ACL 2026</div>
           <div class="pub-links">
             <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2601.09624" class="pub-link">PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="benchmark reasoning multimodal">
+        <div class="pub-thumb"><img src="./images/clegr.jpg" alt=""/><div class="pub-venue-badge">ACL'26</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Benchmark</span><span class="pub-tag">GNNs</span><span class="pub-tag">Multimodal LLMs</span></div>
+          <div class="pub-title">A Graph Talks, But Who’s Listening? Rethinking Evaluations for Graph-Language Models</div>
+          <div class="pub-authors">S. Petkar, H. Aakash K, A. Vempati, A. Sinha, P. Kumaraguru, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">ACL 2026</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2508.20583" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/rethinking-graph-language-evals/CLEGR" class="pub-link">Code</a><a target="_blank" rel="noopener" href="https://huggingface.co/datasets/tenseisoham/CLEGR" class="pub-link">HuggingFace</a></div>
+        </div>
+      </div>
+
+      <!-- AAAI Paper -->
+      <div class="pub-card" data-topic="interpretability safety">
+        <div class="pub-thumb"><img src="./images/polarity.jpg" alt=""/><div class="pub-venue-badge oral">AAAI'26 Oral 🏆</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Alignment</span><span class="pub-tag">Probing</span><span class="pub-tag">LLMs</span></div>
+          <div class="pub-title">Polarity-Aware Probing for Quantifying Latent Alignment in Language Models</div>
+          <div class="pub-authors">S. Sadiekh, E. Ericheva, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">AAAI 2026 — Oral Presentation</div>
+          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2511.21737" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/SadSabrina/polarity-probing" class="pub-link">Code</a><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=4GBd_QPKvjU" class="pub-link">Video</a></div>
+        </div>
+      </div>
+
+      <!-- Climate Informatics Paper -->
+      <div class="pub-card" data-topic="benchmark reasoning multimodal">
+        <div class="pub-thumb"><img src="./images/synoptic.png" alt=""/><div class="pub-venue-badge oral">Climate Informatics'26 Oral 🏆</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Benchmark</span><span class="pub-tag">Vision-Language Models</span><span class="pub-tag">Climate</span></div>
+          <div class="pub-title">SynopticBench: Evaluating Vision-Language Models on Generating Weather Forecast Discussions of the Future</div>
+          <div class="pub-authors">T. Higgins, A. Mamalakis, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">Climate Informatics 2026 — Oral Presentation</div>
+          <div class="pub-links">
+            <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2604.16451" class="pub-link">PDF</a>
+            <a target="_blank" rel="noopener" href="https://huggingface.co/datasets/Aikyam-Lab/Synoptic-Bench" class="pub-link">HuggingFace</a>
+            <a target="_blank" rel="noopener" href="https://github.com/timbhiggins/Synoptic-Bench" class="pub-link">Code</a>
           </div>
         </div>
       </div>
@@ -239,42 +307,45 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         </div>
       </div>
 
-
-      <div class="pub-card" data-topic="interpretability safety">
-        <div class="pub-thumb"><img src="./images/polarity.jpg" alt=""/><div class="pub-venue-badge oral">AAAI'26 Oral 🏆</div></div>
+      <div class="pub-card" data-topic="multimodal reasoning interpretability">
+        <div class="pub-thumb"><img src="./images/pageguide.png" alt=""/><div class="pub-venue-badge">arxiv'26</div></div>
         <div class="pub-body">
-          <div class="pub-tags"><span class="pub-tag">Alignment</span><span class="pub-tag">Probing</span><span class="pub-tag">LLMs</span></div>
-          <div class="pub-title">Polarity-Aware Probing for Quantifying Latent Alignment in Language Models</div>
-          <div class="pub-authors">S. Sadiekh, E. Ericheva, <span class="me">C. Agarwal</span></div>
-          <div class="pub-venue">AAAI 2026 — Oral Presentation</div>
-          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2511.21737" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/SadSabrina/polarity-probing" class="pub-link">Code</a><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=4GBd_QPKvjU" class="pub-link">Video</a></div>
-        </div>
-      </div>
-
-      <div class="pub-card" data-topic="reasoning benchmark">
-        <div class="pub-thumb"><img src="./images/cure-med.jpg" alt=""/><div class="pub-venue-badge oral">ACL'26 Oral 🏆</div></div>
-        <div class="pub-body">
-          <div class="pub-tags"><span class="pub-tag">Multilingual</span><span class="pub-tag">LLM Reasoning</span></div>
-          <div class="pub-title">CURE-Med: Curriculum-Informed Reinforcement Learning for Multilingual Medical Reasoning</div>
-          <div class="pub-authors">E. Onyame, A. Ghosh, S. Baidya, S. Saha, X. Chen, <span class="me">C. Agarwal</span></div>
-          <div class="pub-venue">ACL 2026 — Oral Presentation</div>
+          <div class="pub-tags"><span class="pub-tag">Multimodal</span><span class="pub-tag">Agent</span></div>
+          <div class="pub-title">PageGuide: Browser extension to assist users in navigating a webpage and locating information</div>
+          <div class="pub-authors">T. Nguyen, T. T. Truong, R. Zhou, T. Bui, <span class="me">C. Agarwal</span>, A. T. Nguyen</div>
+          <div class="pub-venue">arXiv, 2026</div>
           <div class="pub-links">
-            <a target="_blank" rel="noopener" href="https://cure-med.github.io/" class="pub-link">Website</a>
-            <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2601.13262" class="pub-link">PDF</a>
-            <a target="_blank" rel="noopener" href="https://github.com/AikyamLab/cure-med" class="pub-link">GitHub</a>
-            <a target="_blank" rel="noopener" href="https://huggingface.co/datasets/Aikyam-Lab/CUREMED-BENCH" class="pub-link">Dataset</a>
+            <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2604.23772" class="pub-link">PDF</a>
+            <a target="_blank" rel="noopener" href="https://huggingface.co/papers/2604.23772" class="pub-link">HuggingFace</a>
+            <a target="_blank" rel="noopener" href="https://chromewebstore.google.com/detail/pageguide/jjamnggpgpgfjehkcmabopcjkichjgip?pli=1" class="pub-link">Chrome WebStore</a>
+            <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=WKfmqtED82s" class="pub-link">Video</a>
           </div>
         </div>
       </div>
 
-      <div class="pub-card" data-topic="benchmark reasoning multimodal">
-        <div class="pub-thumb"><img src="./images/clegr.jpg" alt=""/><div class="pub-venue-badge">arXiv</div></div>
+      <div class="pub-card" data-topic="interpretability reasoning">
+        <div class="pub-thumb"><img src="./images/strucagent.jpg" alt=""/><div class="pub-venue-badge oral">arxiv'26</div></div>
         <div class="pub-body">
-          <div class="pub-tags"><span class="pub-tag">Benchmark</span><span class="pub-tag">GNNs</span><span class="pub-tag">Multimodal LLMs</span></div>
-          <div class="pub-title">A Graph Talks, But Who’s Listening? Rethinking Evaluations for Graph-Language Models</div>
-          <div class="pub-authors">S. Petkar, H. Aakash K, A. Vempati, A. Sinha, P. Kumaraguru, <span class="me">C. Agarwal</span></div>
-          <div class="pub-venue">ACL 2026</div>
-          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2508.20583" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/rethinking-graph-language-evals/CLEGR" class="pub-link">Code</a><a target="_blank" rel="noopener" href="https://huggingface.co/datasets/tenseisoham/CLEGR" class="pub-link">HuggingFace</a></div>
+          <div class="pub-tags"><span class="pub-tag">Interpretability</span><span class="pub-tag">Agent</span><span class="pub-tag">LLM Reasoning</span></div>
+          <div class="pub-title">STRUCTUREDAGENT: Planning with AND/OR Trees for Long-Horizon Web Tasks</div>
+          <div class="pub-authors">E. Lobo, X. Chen, J. Meng, N. Xi, Y. Jiao, <span class="me">C. Agarwal</span>, Y. Zick, Y. Gao </div>
+          <div class="pub-venue">arxiv, 2026</div>
+          <div class="pub-links">
+            <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2603.05294" class="pub-link">PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-topic="xai">
+        <div class="pub-thumb"><img src="./images/egs.jpg" alt=""/><div class="pub-venue-badge oral">arxiv'26</div></div>
+        <div class="pub-body">
+          <div class="pub-tags"><span class="pub-tag">Explainability</span><span class="pub-tag">GNNs</span><span class="pub-tag">OOD</span></div>
+          <div class="pub-title">Quantifying Explanation Quality in Graph Neural Networks using Out-of-Distribution Generalization</div>
+          <div class="pub-authors">D. Zhang, S. Betala, <span class="me">C. Agarwal</span></div>
+          <div class="pub-venue">arxiv, 2026</div>
+          <div class="pub-links">
+            <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2602.07708" class="pub-link">PDF</a>
+          </div>
         </div>
       </div>
 
@@ -294,17 +365,6 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
           <div class="pub-authors"><span class="me">C. Agarwal</span></div>
           <div class="pub-venue">arXiv 2025</div>
           <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2506.13060" class="pub-link">PDF</a></div>
-        </div>
-      </div>
-
-      <div class="pub-card" data-topic="benchmark safety reasoning">
-        <div class="pub-thumb"><img src="./images/clinic.jpg" alt=""/><div class="pub-venue-badge">arXiv</div></div>
-        <div class="pub-body">
-          <div class="pub-tags"><span class="pub-tag">Multilingual</span><span class="pub-tag">Healthcare</span><span class="pub-tag">LLMs</span></div>
-          <div class="pub-title">CLINIC: Evaluating Multilingual Trustworthiness in Language Models for Healthcare</div>
-          <div class="pub-authors">A. Ghosh, S. Sridhar, R.K. Ravi, M. Muhsin, S. Saha, <span class="me">C. Agarwal</span></div>
-          <div class="pub-venue">arXiv 2025</div>
-          <div class="pub-links"><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2512.11437" class="pub-link">PDF</a><a target="_blank" rel="noopener" href="https://github.com/AikyamLab/clinic" class="pub-link">Code</a><a target="_blank" rel="noopener" href="https://huggingface.co/datasets/Agcs12/CLINIC" class="pub-link">HuggingFace</a></div>
         </div>
       </div>
 
