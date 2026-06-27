@@ -231,40 +231,37 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
       <div class="area-text">
         <div class="area-num">01</div>
         <h2 class="area-title">Explainable <em>AI</em></h2>
-        <p class="area-desc">Making AI decisions transparent, interpretable, and actionable for real stakeholders — from concept-level explanations to interpretability agents. Our work spans concept explanations, mechanistic interpretability, model inspection, and interactive explanation interfaces.</p>
-        <p class="area-desc">Our work investigates why LLM-generated explanations often appear plausible to humans but may fail to accurately reflect the model's decision-making process. By analyzing the trade-offs between
-        faithfulness (how well an explanation captures the model's reasoning) and plausibility (how convincing it seems), our work proposes strategies to improve explanation quality, such as refining prompting techniques and developing evaluation metrics. In addition, we also tackle the challenge of eliciting faithful Chain-of-Thought (CoT)
-        reasoning in LLMs. Our studies have been cited in <a href="https://cdn.openai.com/o1-system-card-20241205.pdf" target="_blank">OpenAI o1 System Card</a> and reveal the limitations of current approaches like in-context learning, LoRA fine-tuning, and activation editing in guaranteeing accurate reasoning paths, advocating for new architectural designs and training paradigms to enhance transparency in LLMs, paving the way for more reliable decision-making in domains like legal and medical AI.</p>
-        <p class="area-desc">In our work, we develop new explainability algorithms to study the behavior of complex black-box unimodal and multimodal models. The research on multilingual
-        and multimodal explanation methods is at a very nascent stage and we aim to introduce novel algorithms that generate actionable explanations for multimodal models. Through these efforts, our lab aims to shape the future of XAI, ensuring AI systems are both powerful and interpretable, with far-reaching implications for ethical AI deployment.</p>
+        <p class="area-desc">Making AI decisions transparent, interpretable, and actionable for real stakeholders — from concept-level explanations to interpretability agents. Our work spans concept explanations, mechanistic interpretability, model inspection, and interactive explanation interfaces across unimodal and multimodal systems.</p>
+        <p class="area-desc">Our work investigates why LLM-generated explanations often appear plausible to humans but may fail to accurately reflect the model's decision-making process. By analyzing the trade-offs between faithfulness and plausibility, our work proposes strategies to improve explanation quality. Our studies have been cited in the <a href="https://cdn.openai.com/o1-system-card-20241205.pdf" target="_blank">OpenAI o1 System Card</a> and reveal fundamental limitations of current approaches in guaranteeing accurate reasoning paths.</p>
+        <p class="area-desc">A central thrust of our current work is <strong>multimodal explainability</strong>. We introduced <em>GridVQA-X</em> (ECCV'26), a controlled benchmark for evaluating whether multimodal explanation methods capture genuine cross-modal reasoning or exploit spurious shortcuts. Complementing this, our mechanistic analysis of Graph Language Models (<em>When Graph Tokens Sink</em>) reveals how graph information is actually encoded and routed inside LLM attention layers — showing that token saliency does not imply information carriage. Together with our survey <em>Rethinking Explainability in the Era of Multimodal AI</em>, these works chart a new evaluation paradigm for XAI in the frontier-model era.</p>
         <div class="area-tags">
-          <span class="area-tag">Concept Abstractions</span>
+          <span class="area-tag">Multimodal XAI</span>
           <span class="area-tag">Mechanistic Interpretability</span>
           <span class="area-tag">Interpretable Agents</span>
-          <span class="area-tag">Multimodal XAI</span>
+          <span class="area-tag">Graph Explainability</span>
         </div>
       </div>
     </div>
     <div class="papers-sub">
       <div class="paper-card"><div class="paper-card-bar" style="background:var(--saffron)"></div>
-        <div class="paper-thumb-wrap"><img src="./images/cud.jpg" alt=""/><div class="paper-venue-badge">arxiv'26</div></div>
-        <div class="paper-tag">Mechanistic Interpretability · LLM</div>
-        <div class="paper-title">Towards Understanding Unlearning Difficulty: A Mechanistic Perspective and Circuit-Guided Difficulty Metric</div>
-        <div class="paper-desc">How to understand model memorization and unlearning in LLMs using circuit analysis?</div>
-        <a href="https://arxiv.org/abs/2601.09624" class="paper-link" target="_blank">PDF →</a>
+        <div class="paper-thumb-wrap"><img src="./images/gridvqax.png" alt=""/><div class="paper-venue-badge">ECCV'26</div></div>
+        <div class="paper-tag">Multimodal XAI · Benchmark</div>
+        <div class="paper-title">GridVQA-X: A Framework for Evaluating Multimodal Explainability Methods</div>
+        <div class="paper-desc">A controlled benchmark that isolates whether multimodal explanation methods capture genuine cross-modal reasoning vs. spurious shortcuts.</div>
+        <a href="https://arxiv.org/abs/2606.14740" class="paper-link" target="_blank">PDF →</a>
       </div>
       <div class="paper-card"><div class="paper-card-bar" style="background:var(--terracotta)"></div>
-        <div class="paper-thumb-wrap"><img src="./images/igraph.jpg" alt=""/><div class="paper-venue-badge">IUI'26</div></div>
-        <div class="paper-tag">Interactive Explanations· LLM</div>
-        <div class="paper-title">Improving Human Verification of LLM Reasoning through Interactive Explanation Interfaces</div>
-        <div class="paper-desc">Interfaces allowing humans to verify and interrogate LLM reasoning chains.</div>
-        <a href="https://arxiv.org/abs/2510.22922" class="paper-link" target="_blank">PDF →</a>
+        <div class="paper-thumb-wrap"><img src="./images/graphtokenssink.png" alt=""/><div class="paper-venue-badge">arXiv'26</div></div>
+        <div class="paper-tag">Mechanistic Interpretability · GNNs</div>
+        <div class="paper-title">When Graph Tokens Sink: A Mechanistic Analysis of Graph Language Models</div>
+        <div class="paper-desc">Mechanistic study revealing how LLMs route graph information through attention — token saliency does not imply information carriage.</div>
+        <a href="https://arxiv.org/abs/2606.03712" class="paper-link" target="_blank">PDF →</a>
       </div>
       <div class="paper-card"><div class="paper-card-bar" style="background:var(--turmeric)"></div>
         <div class="paper-thumb-wrap"><img src="./images/rethinking.jpg" alt=""/><div class="paper-venue-badge">arXiv 2025</div></div>
-        <div class="paper-tag">Multimodal XAI· Survey</div>
-        <div class="paper-title">Rethinking Explainability in Multimodal AI</div>
-        <div class="paper-desc">A new framework for evaluating explanations across vision and language in frontier models.</div>
+        <div class="paper-tag">Multimodal XAI · Survey</div>
+        <div class="paper-title">Rethinking Explainability in the Era of Multimodal AI</div>
+        <div class="paper-desc">A new evaluation framework for explanations across vision, language, and multimodal frontier models.</div>
         <a href="https://www.arxiv.org/abs/2506.13060" class="paper-link" target="_blank">PDF →</a>
       </div>
     </div>
@@ -314,11 +311,11 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         <a href="https://arxiv.org/abs/2511.21737" class="paper-link" target="_blank">PDF →</a>
       </div>
       <div class="paper-card"><div class="paper-card-bar" style="background:var(--indigo-l)"></div>
-        <div class="paper-thumb-wrap"><img src="./images/certified.jpg" alt=""/><div class="paper-venue-badge">COLM'24</div></div>
-        <div class="paper-tag">Robustness · AI Safety · LLMs</div>
-        <div class="paper-title">Certifying Robustness for Large Language Models</div>
-        <div class="paper-desc">Certifying robustness of LLMs against adversarial text perturbations using formal verification techniques.</div>
-        <a href="https://arxiv.org/abs/2309.02705" class="paper-link" target="_blank">PDF →</a>
+        <div class="paper-thumb-wrap"><img src="./images/sae.png" alt=""/><div class="paper-venue-badge">ACL'26</div></div>
+        <div class="paper-tag">Robustness · Sparse Autoencoders · Interpretability</div>
+        <div class="paper-title">Towards Understanding the Robustness of Sparse Autoencoders</div>
+        <div class="paper-desc">Studying how robust sparse autoencoders are as mechanistic interpretability tools under distribution shift and adversarial conditions.</div>
+        <a href="https://arxiv.org/abs/2604.18756" class="paper-link" target="_blank">PDF →</a>
       </div>
       <div class="paper-card"><div class="paper-card-bar" style="background:var(--saffron-d)"></div>
         <div class="paper-thumb-wrap"><img src="./images/egoillusion.jpg" alt=""/><div class="paper-venue-badge">EMNLP'25</div></div>
@@ -359,11 +356,11 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
     </div>
     <div class="papers-sub">
       <div class="paper-card"><div class="paper-card-bar" style="background:var(--saffron)"></div>
-        <div class="paper-thumb-wrap"><img src="./images/faith-plaus.jpg" alt=""/><div class="paper-venue-badge">OpenAI o1 System Card Report</div></div>
-        <div class="paper-tag">Reasoning · LLMs</div>
-        <div class="paper-title">Faithfulness vs. plausibility: On the (un) reliability of explanations from large language models</div>
-        <div class="paper-desc">Understanding the dichotomy between the plausible and faithful reasoning generated by frontier LLMs.</div>
-        <a href="https://arxiv.org/abs/2402.04614" class="paper-link" target="_blank">PDF →</a>
+        <div class="paper-thumb-wrap"><img src="./images/cotfragility.png" alt=""/><div class="paper-venue-badge">arXiv'26</div></div>
+        <div class="paper-tag">Safety · Chain-of-Thought · Multilingual</div>
+        <div class="paper-title">The Fragility of Chain-of-Thought Monitoring Across Typologically Diverse Languages</div>
+        <div class="paper-desc">CoT monitoring fails across 13 languages — frontier models engage in deceptive reasoning patterns to evade detection.</div>
+        <a href="https://arxiv.org/abs/2605.27901" class="paper-link" target="_blank" rel="noopener">PDF →</a>
       </div>
       <div class="paper-card"><div class="paper-card-bar" style="background:var(--turmeric)"></div>
         <div class="paper-thumb-wrap"><img src="./images/strucagent.jpg" alt=""/><div class="paper-venue-badge">arxiv'26</div></div>
@@ -372,19 +369,12 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;back
         <div class="paper-desc">How to develop Agents that have interpretable AND/OR planning trees for easy human intervention?</div>
         <a href="https://arxiv.org/pdf/2603.05294" class="paper-link" target="_blank" rel="noopener">PDF →</a>
       </div>
-      <!--<div class="paper-card"><div class="paper-card-bar" style="background:var(--turmeric)"></div>
-        <div class="paper-thumb-wrap"><img src="./images/cure-med.jpg" alt=""/><div class="paper-venue-badge">arxiv'26</div></div>
+      <div class="paper-card"><div class="paper-card-bar" style="background:var(--terracotta)"></div>
+        <div class="paper-thumb-wrap"><img src="./images/cure-med.jpg" alt=""/><div class="paper-venue-badge">ACL'26 Oral 🏆</div></div>
         <div class="paper-tag">Multilingual LLMs · Reasoning</div>
         <div class="paper-title">CURE-Med: Curriculum-Informed Reinforcement Learning for Multilingual Medical Reasoning</div>
-        <div class="paper-desc">How can we improve reasoning in underrepresented languages using Curriculum RL?</div>
+        <div class="paper-desc">Improving multilingual medical reasoning in LLMs via curriculum-informed reinforcement learning across underrepresented languages.</div>
         <a href="https://cure-med.github.io/" class="paper-link" target="_blank" rel="noopener">Website →</a>
-      </div>-->
-      <div class="paper-card"><div class="paper-card-bar" style="background:var(--terracotta)"></div>
-        <div class="paper-thumb-wrap"><img src="./images/cotimpact.jpg" alt=""/><div class="paper-venue-badge">NAACL'25 Oral 🏆</div></div>
-        <div class="paper-tag">Reasoning · LLMs</div>
-        <div class="paper-title">On the Impact of Fine-Tuning on Chain-of-Thought Reasoning</div>
-        <div class="paper-desc"></div>
-        <a href="https://arxiv.org/abs/2411.15382" class="paper-link" target="_blank" rel="noopener">PDF →</a>
       </div>
     </div>
   </div>
